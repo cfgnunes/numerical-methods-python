@@ -5,10 +5,10 @@ def briot_ruffini(a: np.array, raiz: float) -> [np.array, float]:
     """
     Divide um polinômio por outro ponilômio no formato (x-raiz)
     P(x) = Q(x) * (x-raiz) + resto
-    Parâmetros de entrada:
+    Inputs:
             a: Vetor que contém os coeficientes do polinômio de entrada
          raiz: Uma das raízes do polinômio
-    Parâmetros de saída:
+    Outpus:
             b: Vetor que contém os coeficientes do polinômio de saída
         resto: Resto da divisão do polinômio
     """

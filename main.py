@@ -1,8 +1,8 @@
 import numpy as np
 import math
-import interpolacao
-import polinomios
-import raizes
+import interpolation
+import polynomials
+import solutions
 
 """
 Numerical methods implementation in Python 3.
@@ -38,7 +38,7 @@ debug("tol")
 debug("iter_max")
 debug("a")
 debug("b")
-[raiz, iter, cond_erro] = raizes.bissecao(funcao, a, b, tol, iter_max)
+[raiz, iter, cond_erro] = solutions.bisection(funcao, a, b, tol, iter_max)
 debug("raiz")
 debug("iter")
 debug("cond_erro")
@@ -62,7 +62,7 @@ debug("tol")
 debug("iter_max")
 debug("a")
 debug("b")
-[raiz, iter, cond_erro] = raizes.secante(funcao, a, b, tol, iter_max)
+[raiz, iter, cond_erro] = solutions.secant(funcao, a, b, tol, iter_max)
 debug("raiz")
 debug("iter")
 debug("cond_erro")
@@ -74,7 +74,7 @@ x_int = 3
 debug("x")
 debug("y")
 debug("x_int")
-[y_int] = interpolacao.lagrange(x, y, x_int)
+[y_int] = interpolation.lagrange(x, y, x_int)
 debug("y_int")
 
 running_print("Neville method")
@@ -84,7 +84,7 @@ x_int = 1.5
 debug("x")
 debug("y")
 debug("x_int")
-[y_int, q] = interpolacao.neville(x, y, x_int)
+[y_int, q] = interpolation.neville(x, y, x_int)
 debug("y_int")
 debug("q")
 
@@ -93,7 +93,7 @@ a = np.array([2, 0, -3, 3, -4])
 raiz = -2
 debug("a")
 debug("raiz")
-[b, resto] = polinomios.briot_ruffini(a, raiz)
+[b, resto] = polynomials.briot_ruffini(a, raiz)
 debug("b")
 debug("resto")
 
@@ -102,5 +102,5 @@ x = np.array([1.0, 1.3, 1.6, 1.9, 2.2])
 y = np.array([0.7651977, 0.6200860, 0.4554022, 0.2818186, 0.1103623])
 debug("x")
 debug("y")
-[f] = polinomios.diferencas_divididas_newton(x, y)
+[f] = polynomials.diferencas_divididas_newton(x, y)
 debug("f")
