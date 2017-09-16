@@ -1,4 +1,3 @@
-import numpy as np
 import math
 
 
@@ -9,7 +8,7 @@ def bissecao(funcao, a: float, b: float, tol: float, iter_max: int) -> [float, i
             a: Limite inferior
             b: Limite superior
           tol: Tolerância
-      iterMax: Número máximo de iterações
+     iter_max: Número máximo de iterações
     Parâmetros de saída:
          raiz: Raiz
          iter: Número de iterações
@@ -25,19 +24,19 @@ def bissecao(funcao, a: float, b: float, tol: float, iter_max: int) -> [float, i
     Fb = funcao(b)
 
     if Fa * Fb > 0:
-        raise("Erro: A função não muda de sinal nos extremos do intervalo dado.")
+        raise ("Erro: A função não muda de sinal nos extremos do intervalo dado.")
 
-    deltaX = abs(b - a) / 2
+    deltaX = math.fabs(b - a) / 2
 
-    iter = 0
     x = 0
     cond_erro = True
+    iter = 0
     for iter in range(0, iter_max + 1):
         x = (a + b) / 2
 
         # Avalia a função em x
         Fx = funcao(x)
-        print('iter: %.3d\t a: %.4f\t Fa: %.4f\t b: %.4f\t Fb: %.4f\t x: %.4f\t Fx: %.4f\t deltaX: %.4f\n' % (iter, a, Fa, b, Fb, x, Fx, deltaX), end="")
+        print('iter: %.3d\t x: %+.4f\t Fx: %+.4f\t deltaX: %+.4f\n' % (iter, x, Fx, deltaX), end="")
 
         if deltaX <= tol and math.fabs(Fx) <= tol:
             cond_erro = False
@@ -50,6 +49,59 @@ def bissecao(funcao, a: float, b: float, tol: float, iter_max: int) -> [float, i
             b = x
 
         deltaX = deltaX / 2
+    else:
+        print("Aviso: O método não convergiu.")
+
+    raiz = x
+
+    return [raiz, iter, cond_erro]
+
+
+def secante(funcao, a: float, b: float, tol: float, iter_max: int) -> [float, int, bool]:
+    """
+    Calcula a raiz de uma equação pelo método da secante
+    Parâmetros de entrada:
+            a: limite inferior
+            b: limite superior
+        tol: tolerância
+      iterMax: número máximo de iterações
+    Parâmetros de saída:
+         raiz: raiz
+         iter: número de iterações gastas
+     cond_erro: condição de erro, sendo:
+                  cond_erro = 0 se a raiz foi encontrada
+                  cond_erro = 1 em caso contrário
+    """
+
+    # Avalia a função em a
+    Fa = funcao(a)
+
+    # Avalia a função em b
+    Fb = funcao(b)
+
+    if math.fabs(Fa) < math.fabs(Fb):
+        a, b = b, a
+        Fa, Fb = Fb, Fa
+
+    x = b
+    Fx = Fb
+
+    cond_erro = True
+    iter = 0
+    for iter in range(0, iter_max + 1):
+        deltaX = -Fx / (Fb - Fa) * (b - a)
+        x += deltaX
+
+        # Avalia a função em x
+        Fx = funcao(x)
+        print("iter: %.3d\t x: %+.4f\t Fx: %+.4f\t deltaX: %+.4f\n" % (iter, x, Fx, deltaX), end="")
+        if math.fabs(deltaX) <= tol and math.fabs(Fx) <= tol:
+            cond_erro = False
+            break
+
+        a, b = b, x
+        Fa, Fb = Fb, Fx
+
     else:
         print("Aviso: O método não convergiu.")
 

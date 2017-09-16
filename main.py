@@ -4,7 +4,7 @@ import interpolacao
 import polinomios
 import raizes
 
-# Método da bisseção (encontrar raízes de uma equação)
+# Método da Bisseção (encontrar raízes de uma equação)
 #   Vantagens:
 #       É um método confiável com convergência garantida;
 #       É um método simples que faz a busca da raíz por meio de uma busca binária;
@@ -13,7 +13,7 @@ import raizes
 #       Convergência lenta;
 #       É necessário informar um intervalo de busca [a, b];
 #       O intervalo informado tem que possuir uma troca de sinal, f(a)*f(b)<0.
-print("\n> Executando o método da bisseção:")
+print("\n> Executando o método da Bisseção:")
 funcao = lambda x: 4 * x ** 3 + x + math.cos(x) - 10
 tol = 10 ** -5
 iter_max = 100
@@ -24,6 +24,28 @@ print("iter_max:", iter_max)
 print("a:", a)
 print("b:", b)
 [raiz, iter, cond_erro] = raizes.bissecao(funcao, a, b, tol, iter_max)
+print("raiz:", raiz)
+print("iter:", iter)
+print("condErro:", cond_erro)
+
+# Método da Secante (encontrar raízes de uma equação)
+#   Vantagens:
+#       É um método rápido (mais lento que o método de Newton);
+#       É um método baseado no método de Newton, mas não utiliza a derivada da função.
+#   Desvantagem:
+#       Pode divergir se a função não for aproximadamente linear no intervalo que contém a raiz;
+#       É necessário informar dois pontos 'a' e 'b' em que f(a)-f(b) tem que ser diferente de zero.
+print("\n> Executando o método da Secante:")
+funcao = lambda x: 4 * x ** 3 + x + math.cos(x) - 10
+tol = 10 ** -5
+iter_max = 100
+a = 1.0
+b = 2.0
+print("tol:", tol)
+print("iter_max:", iter_max)
+print("a:", a)
+print("b:", b)
+[raiz, iter, cond_erro] = raizes.secante(funcao, a, b, tol, iter_max)
 print("raiz:", raiz)
 print("iter:", iter)
 print("condErro:", cond_erro)
