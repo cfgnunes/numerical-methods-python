@@ -69,8 +69,8 @@ def secante(funcao, a: float, b: float, tol: float, iter_max: int) -> [float, in
          raiz: raiz
          iter: número de iterações gastas
      cond_erro: condição de erro, sendo:
-                  cond_erro = 0 se a raiz foi encontrada
-                  cond_erro = 1 em caso contrário
+                  cond_erro = 0, se a raíz foi encontrada
+                  cond_erro = 1, caso contrário
     """
 
     # Avalia a função em a
