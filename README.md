@@ -8,6 +8,7 @@ Repositório: https://github.com/cfgnunes/numerical-methods
 
 ### Raízes de equações
 - Método da Bisseção
+- Método da Secante
 
 ### Interpolação
 - Método de Lagrange
