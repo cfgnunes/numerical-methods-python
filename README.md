@@ -1,6 +1,7 @@
 # Numerical Methods
 Implementação de métodos numéricos em Python 3.  
-Autor: Cristiano Fraga Guimarães Nunes <cfgnunes@gmail.com>
+Autor: Cristiano Fraga Guimarães Nunes  
+E-mail: <cfgnunes@gmail.com>  
 Repositório: https://github.com/cfgnunes/numerical-methods
 
 ## Algoritmos implementados
