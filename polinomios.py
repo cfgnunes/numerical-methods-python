@@ -16,12 +16,12 @@ def briot_ruffini(a: np.array, raiz: float) -> [np.array, float]:
     n = a.size - 1
     b = np.zeros(n)
 
-    b[0] = a[0];
+    b[0] = a[0]
 
     for i in range(1, n):
-        b[i] = b[i - 1] * raiz + a[i];
+        b[i] = b[i - 1] * raiz + a[i]
 
-    resto = b[n - 1] * raiz + a[n];
+    resto = b[n - 1] * raiz + a[n]
 
     return [b, resto]
 
