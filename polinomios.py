@@ -51,12 +51,12 @@ def diferencas_divididas_newton(x: np.array, y: np.array) -> [np.array]:
 
     # Imprime o polinômio
     print("Polinômio resultante:")
-    print("P(x)=%+.4f" % f[0], end="")
+    print("p(x)=%+.4f" % f[0], end="")
     for i in range(1, n):
         print("%+.4f" % f[i], end="")
         for j in range(1, i + 1):
             print("(x%+.4f)" % (x[j] * -1), end="")
 
-    print("\n")
+    print("")
 
     return [f]
