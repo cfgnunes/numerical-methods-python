@@ -6,6 +6,9 @@ Repositório: https://github.com/cfgnunes/numerical-methods
 
 ## Algoritmos implementados
 
+### Raízes de equações
+- Método da Bisseção
+
 ### Interpolação
 - Método de Lagrange
 - Método de Neville

@@ -1,6 +1,32 @@
 import numpy as np
+import math
 import interpolacao
 import polinomios
+import raizes
+
+# Método da bisseção (encontrar raízes de uma equação)
+#   Vantagens:
+#       É um método confiável com convergência garantida;
+#       É um método simples que faz a busca da raíz por meio de uma busca binária;
+#       Não há necessidade de calcular a derivada da função.
+#   Desvantagens:
+#       Convergência lenta;
+#       É necessário informar um intervalo de busca [a, b];
+#       O intervalo informado tem que possuir uma troca de sinal, f(a)*f(b)<0.
+print("\n> Executando o método da bisseção:")
+funcao = lambda x: 4 * x ** 3 + x + math.cos(x) - 10
+tol = 10 ** -5
+iter_max = 100
+a = 1.0
+b = 2.0
+print("tol:", tol)
+print("iter_max:", iter_max)
+print("a:", a)
+print("b:", b)
+[raiz, iter, cond_erro] = raizes.bissecao(funcao, a, b, tol, iter_max)
+print("raiz:", raiz)
+print("iter:", iter)
+print("condErro:", cond_erro)
 
 print("\n> Executando o método de Lagrange:")
 x = np.array([2, 11 / 4, 4])
@@ -23,9 +49,9 @@ print("x_int:", x_int)
 print("y_int:", y_int)
 print("q:\n", q)
 
-print("\n> Executando o método de Briot-Ruffini:");
+print("\n> Executando o método de Briot-Ruffini:")
 a = np.array([2, 0, -3, 3, -4])
-raiz = -2;
+raiz = -2
 print("a:", a)
 print("raiz:", raiz)
 [b, resto] = polinomios.briot_ruffini(a, raiz)
