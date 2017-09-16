@@ -1,19 +1,19 @@
 # Numerical Methods
-Implementação de métodos numéricos em Python 3.  
-Autor: Cristiano Fraga Guimarães Nunes  
+Numerical methods implementation in Python 3.  
+Author: Cristiano Nunes  
 E-mail: <cfgnunes@gmail.com>  
-Repositório: https://github.com/cfgnunes/numerical-methods
+Repository: https://github.com/cfgnunes/numerical-methods
 
-## Algoritmos implementados
+## Implementations
 
-### Raízes de equações
-- Método da Bisseção
-- Método da Secante
+### Solutions of equations
+- Bisection method
+- Secant method
 
-### Interpolação
-- Método de Lagrange
-- Método de Neville
+### Interpolation
+- Lagrange method
+- Neville method
 
-### Polinômios
-- Método de Briot-Ruffini
-- Método das Diferenças Divididas de Newton
+### Algorithms for polynomials
+- Briot-Ruffini method
+- Newton's Divided-Difference method
