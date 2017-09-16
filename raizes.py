@@ -11,7 +11,7 @@ def bissecao(funcao, a: float, b: float, tol: float, iter_max: int) -> [float, i
      iter_max: Número máximo de iterações
     Parâmetros de saída:
          raiz: Raiz
-         iter: Número de iterações
+         iter: Número de iterações utilizadas
     cond_erro: Condição de erro
         cond_erro = 0, se a raíz foi encontrada
         cond_erro = 1, caso contrário
@@ -61,14 +61,14 @@ def secante(funcao, a: float, b: float, tol: float, iter_max: int) -> [float, in
     """
     Calcula a raiz de uma equação pelo método da secante
     Parâmetros de entrada:
-            a: limite inferior
-            b: limite superior
-        tol: tolerância
-      iterMax: número máximo de iterações
+            a: Limite inferior
+            b: Limite superior
+          tol: Tolerância
+     iter_max: Número máximo de iterações
     Parâmetros de saída:
-         raiz: raiz
-         iter: número de iterações gastas
-     cond_erro: condição de erro, sendo:
+         raiz: Raiz
+         iter: Número de iterações utilizadas
+    cond_erro: Condição de erro
                   cond_erro = 0, se a raíz foi encontrada
                   cond_erro = 1, caso contrário
     """
