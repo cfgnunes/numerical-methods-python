@@ -101,7 +101,6 @@ def secante(funcao, a: float, b: float, tol: float, iter_max: int) -> [float, in
 
         a, b = b, x
         Fa, Fb = Fb, Fx
-
     else:
         print("Aviso: O método não convergiu.")
 
