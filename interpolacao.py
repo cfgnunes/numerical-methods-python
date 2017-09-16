@@ -3,7 +3,7 @@ import numpy as np
 
 def lagrange(x: np.array, y: np.array, x_int: float) -> [float]:
     """
-    Objetivo: Interpolar usando polinômio de Lagrange
+    Interpola um valor usando polinômio de Lagrange
     Parâmetros de entrada:
             x: Vetor contendo as abscissas
             y: Vetor contendo as ordenadas
@@ -27,7 +27,7 @@ def lagrange(x: np.array, y: np.array, x_int: float) -> [float]:
 
 def neville(x: np.array, y: np.array, x_int: float) -> [float, np.array]:
     """
-    Objetivo: Interpolar usando polinômio de Neville
+    Interpola um valor usando polinômio de Neville
     Parâmetros de entrada:
             x: Vetor contendo as abscissas
             y: Vetor contendo as ordenadas

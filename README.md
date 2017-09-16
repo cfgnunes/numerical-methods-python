@@ -12,3 +12,4 @@ Repositório: https://github.com/cfgnunes/numerical-methods
 
 ### Polinômios
 - Método de Briot-Ruffini
+- Método de Diferenças Divididas de Newton
