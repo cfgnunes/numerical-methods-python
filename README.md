@@ -19,6 +19,11 @@ Repository: https://github.com/cfgnunes/numerical-methods
 - Briot-Ruffini method
 - Newton's Divided-Difference method
 
+### Differentiation
+- Backward-difference method
+- Three-Point method
+- Five-Point method
+
 ## Examples
 To run all algorithms, use:
 

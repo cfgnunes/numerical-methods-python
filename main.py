@@ -1,5 +1,6 @@
 import numpy as np
 import math
+import differentiation
 import interpolation
 import polynomials
 import solutions
@@ -31,7 +32,7 @@ Bisection method (find roots of an equation)
         It is necessary to enter a search interval [a, b];
         The interval reported must have a signal exchange, f (a) * f (b) <0.
 """
-print_running("Bisection method")
+print_running("Solutions: Bisection method")
 f = lambda x: 4 * x ** 3 + x + math.cos(x) - 10
 tol = 10 ** -5
 iter_max = 100
@@ -55,7 +56,7 @@ Newton method (find roots of an equation)
         It is necessary to calculate the derivative of the function;
         It is necessary to give an initial x0 value where f'(x0) must be nonzero.
 """
-print_running("Newton method")
+print_running("Solutions: Newton method")
 f = lambda x: 4 * x ** 3 + x + math.cos(x) - 10
 df = lambda x: 12 * x ** 2 + 1 - math.sin(x)
 tol = 10 ** -5
@@ -78,7 +79,7 @@ Secant method (find roots of an equation)
         It may diverge if the function is not approximately linear in the range containing the root;
         It is necessary to give two points 'a' and 'b' where f(a)-f(b) must be nonzero.
 """
-print_running("Secant method")
+print_running("Solutions: Secant method")
 f = lambda x: 4 * x ** 3 + x + math.cos(x) - 10
 tol = 10 ** -5
 iter_max = 100
@@ -93,7 +94,7 @@ debug("root")
 debug("iter")
 debug("converged")
 
-print_running("Lagrange method")
+print_running("Interpolation: Lagrange method")
 x = np.array([2, 11 / 4, 4])
 y = np.array([1 / 2, 4 / 11, 1 / 4])
 x_int = 3
@@ -103,7 +104,7 @@ debug("x_int")
 [y_int] = interpolation.lagrange(x, y, x_int)
 debug("y_int")
 
-print_running("Neville method")
+print_running("Interpolation: Neville method")
 x = np.array([1.0, 1.3, 1.6, 1.9, 2.2])
 y = np.array([0.7651977, 0.6200860, 0.4554022, 0.2818186, 0.1103623])
 x_int = 1.5
@@ -114,7 +115,7 @@ debug("x_int")
 debug("y_int")
 debug("q")
 
-print_running("Briot-Ruffini method")
+print_running("Polynomials: Briot-Ruffini method")
 a = np.array([2, 0, -3, 3, -4])
 root = -2
 debug("a")
@@ -123,10 +124,34 @@ debug("root")
 debug("b")
 debug("rest")
 
-print_running("Newton's Divided-Difference method")
+print_running("Polynomials: Newton's Divided-Difference method")
 x = np.array([1.0, 1.3, 1.6, 1.9, 2.2])
 y = np.array([0.7651977, 0.6200860, 0.4554022, 0.2818186, 0.1103623])
 debug("x")
 debug("y")
 [f] = polynomials.newton_divided_difference(x, y)
 debug("f")
+
+print_running("Differentiation: Backward-difference method")
+x = np.array([0.0, 0.2, 0.4])
+y = np.array([0.00000, 0.74140, 1.3718])
+debug("x")
+debug("y")
+[dy] = differentiation.derivative_backward_difference(x, y)
+debug("dy")
+
+print_running("Differentiation: Three-Point method")
+x = np.array([1.1, 1.2, 1.3, 1.4])
+y = np.array([9.025013, 11.02318, 13.46374, 16.44465])
+debug("x")
+debug("y")
+[dy] = differentiation.derivative_three_point(x, y)
+debug("dy")
+
+print_running("Differentiation: Five-Point method")
+x = np.array([2.1, 2.2, 2.3, 2.4, 2.5, 2.6])
+y = np.array([-1.709847, -1.373823, -1.119214, -0.9160143, -0.7470223, -0.6015966])
+debug("x")
+debug("y")
+[dy] = differentiation.derivative_five_point(x, y)
+debug("dy")
