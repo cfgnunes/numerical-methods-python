@@ -3,13 +3,13 @@ import numpy as np
 
 def lagrange(x: np.array, y: np.array, x_int: float) -> [float]:
     """
-    Interpola um valor usando polinômio de Lagrange
-    Parâmetros de entrada:
-            x: Vetor contendo as abscissas
-            y: Vetor contendo as ordenadas
-        x_int: Valor a interpolar
-    Parâmetros de saída:
-        y_int: Valor interpolado
+    Interpolates a value using Lagrange polynomial
+    Inputs:
+            x: X values
+            y: Y values
+        x_int: Value to interpolate
+    Outputs:
+        y_int: Interpolated value
     """
 
     n = x.size
@@ -27,19 +27,19 @@ def lagrange(x: np.array, y: np.array, x_int: float) -> [float]:
 
 def neville(x: np.array, y: np.array, x_int: float) -> [float, np.array]:
     """
-    Interpola um valor usando polinômio de Neville
-    Parâmetros de entrada:
-            x: Vetor contendo as abscissas
-            y: Vetor contendo as ordenadas
-        x_int: Valor a interpolar
-    Parâmetros de saída:
-        y_int: Valor interpolado
-            q: Matriz de coeficientes
+    Interpolates a value using Neville polynomial
+    Inputs:
+            x: X values
+            y: Y values
+        x_int: Value to interpolate
+    Outputs:
+        y_int: Interpolated value
+            q: Coefficients matrix
     """
 
     n = x.size
     q = np.zeros((n, n - 1))
-    q = np.concatenate((y[:, None], q), axis=1)  # Insere y na primeira coluna da matriz q
+    q = np.concatenate((y[:, None], q), axis=1)  # Insert 'y' in the first column of the matrix 'q'
 
     for i in range(1, n):
         for j in range(1, i + 1):

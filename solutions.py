@@ -5,6 +5,7 @@ def bisection(f, a: float, b: float, tol: float, iter_max: int) -> [float, int, 
     """
     Calculates the root of an equation by Bisection method
     Inputs:
+            f: Function f(x)
             a: Lower limit
             b: Upper limit
           tol: Tolerance
@@ -55,6 +56,7 @@ def secant(f, a: float, b: float, tol: float, iter_max: int) -> [float, int, boo
     """
     Calculates the root of an equation by Secant method
     Inputs:
+            f: Function f(x)
             a: Lower limit
             b: Upper limit
           tol: Tolerance
