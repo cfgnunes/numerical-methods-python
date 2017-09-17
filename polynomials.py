@@ -28,7 +28,7 @@ def briot_ruffini(a: np.array, raiz: float) -> [np.array, float]:
 
 def newton_divided_difference(x: np.array, y: np.array) -> [np.array]:
     """
-    Encontra os coeficientes da diferença dividida de Newton
+    Find the coefficients of Newton's divided difference and the Newton's polynomial
     Inputs:
             x: X values
             y: Y values
@@ -38,7 +38,7 @@ def newton_divided_difference(x: np.array, y: np.array) -> [np.array]:
 
     n = x.size
     q = np.zeros((n, n - 1))
-    q = np.concatenate((y[:, None], q), axis=1) # Insert 'y' in the first column of the matrix 'q'
+    q = np.concatenate((y[:, None], q), axis=1)  # Insert 'y' in the first column of the matrix 'q'
 
     for i in range(1, n):
         for j in range(1, i + 1):
@@ -56,7 +56,6 @@ def newton_divided_difference(x: np.array, y: np.array) -> [np.array]:
         print("%+.4f" % f[i], end="")
         for j in range(1, i + 1):
             print("(x%+.4f)" % (x[j] * -1), end="")
-
     print("")
 
     return [f]

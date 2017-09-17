@@ -8,6 +8,7 @@ Repository: https://github.com/cfgnunes/numerical-methods
 
 ### Solutions of equations
 - Bisection method
+- Newton method
 - Secant method
 
 ### Interpolation

@@ -11,11 +11,14 @@ E-mail: <cfgnunes@gmail.com>
 Repository: https://github.com/cfgnunes/numerical-methods
 """
 
+
 def debug(variable):
-    print (variable, "=", eval(variable))
+    print(variable, "=", eval(variable))
+
 
 def print_running(message):
-    print("\n> Running", message)
+    print("\n\n> Running", message)
+
 
 """
 Bisection method (find roots of an equation)
@@ -44,13 +47,36 @@ debug("iter")
 debug("converged")
 
 """
+Newton method (find roots of an equation)
+    Pros:
+        It is a fast method.
+    Cons:
+        It may diverge;
+        It is necessary to calculate the derivative of the function;
+        It is necessary to give an initial x0 value where f'(x0) must be nonzero.
+"""
+print_running("Newton method")
+f = lambda x: 4 * x ** 3 + x + math.cos(x) - 10
+df = lambda x: 12 * x ** 2 + 1 - math.sin(x)
+tol = 10 ** -5
+iter_max = 100
+x0 = 1.0
+debug("tol")
+debug("iter_max")
+debug("x0")
+[root, iter, converged] = solutions.newton(f, df, x0, tol, iter_max)
+debug("root")
+debug("iter")
+debug("converged")
+
+"""
 Secant method (find roots of an equation)
     Pros:
         It is a fast method (slower than Newton's method);
         It is based on the Newton method, but does not need the derivative of the function.
     Cons:
         It may diverge if the function is not approximately linear in the range containing the root;
-        It is necessary to give two points 'a' and 'b' where f (a) -f (b) must be nonzero.
+        It is necessary to give two points 'a' and 'b' where f(a)-f(b) must be nonzero.
 """
 print_running("Secant method")
 f = lambda x: 4 * x ** 3 + x + math.cos(x) - 10
