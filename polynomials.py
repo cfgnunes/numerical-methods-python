@@ -3,7 +3,7 @@ import numpy as np
 
 def briot_ruffini(a: np.array, raiz: float) -> [np.array, float]:
     """
-    It divides a polynomial by another polynomial in the format (x-root)
+    Divides a polynomial by another polynomial in the format (x-root)
     P(x) = Q(x) * (x-raiz) + rest
     Inputs:
             a: Vector that contains the coefficients of the input polynomial
