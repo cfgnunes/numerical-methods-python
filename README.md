@@ -17,3 +17,10 @@ Repository: https://github.com/cfgnunes/numerical-methods
 ### Algorithms for polynomials
 - Briot-Ruffini method
 - Newton's Divided-Difference method
+
+## Examples
+To run all algorithms, use:
+
+```
+$ python3 main.py
+```
