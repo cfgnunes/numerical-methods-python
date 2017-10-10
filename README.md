@@ -2,7 +2,7 @@
 Numerical methods implementation in Python 3.  
 Author: Cristiano Nunes  
 E-mail: <cfgnunes@gmail.com>  
-Repository: https://github.com/cfgnunes/numerical-methods
+Repository: https://github.com/cfgnunes/numerical-methods-python
 
 ## Implementations
 
