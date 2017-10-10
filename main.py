@@ -1,17 +1,16 @@
+"""
+Numerical methods implementation in Python 3.
+Author: Cristiano Nunes
+E-mail: <cfgnunes@gmail.com>
+Repository: https://github.com/cfgnunes/numerical-methods-python
+"""
+
 import numpy as np
 import math
 import differentiation
 import interpolation
 import polynomials
 import solutions
-
-"""
-Numerical methods implementation in Python 3.
-Author: Cristiano Nunes
-E-mail: <cfgnunes@gmail.com>
-Repository: https://github.com/cfgnunes/numerical-methods
-"""
-
 
 def debug(variable):
     print(variable, "=", eval(variable))
