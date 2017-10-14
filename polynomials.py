@@ -1,10 +1,10 @@
 import numpy as np
 
 
-def briot_ruffini(a: np.array, raiz: float) -> [np.array, float]:
+def briot_ruffini(a: np.array, root: float) -> [np.array, float]:
     """
     Divides a polynomial by another polynomial in the format (x-root)
-    P(x) = Q(x) * (x-raiz) + rest
+    P(x) = Q(x) * (x-root) + rest
     Inputs:
             a: Vector that contains the coefficients of the input polynomial
          root: One of the polynomial roots
@@ -19,9 +19,9 @@ def briot_ruffini(a: np.array, raiz: float) -> [np.array, float]:
     b[0] = a[0]
 
     for i in range(1, n):
-        b[i] = b[i - 1] * raiz + a[i]
+        b[i] = b[i - 1] * root + a[i]
 
-    rest = b[n - 1] * raiz + a[n]
+    rest = b[n - 1] * root + a[n]
 
     return [b, rest]
 

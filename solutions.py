@@ -26,7 +26,6 @@ def bisection(f, a: float, b: float, tol: float, iter_max: int) -> [float, int, 
 
     x = 0
     converged = False
-    iter = 0
     for iter in range(0, iter_max + 1):
         x = (a + b) / 2
         fx = f(x)
@@ -71,8 +70,7 @@ def newton(f, df, x0, tol, iter_max) -> [float, int, bool]:
     dfx = df(x)
 
     converged = False
-    iter = 0
-    print("iter: %.3d\t x: %.4f\t dfx: %.4f\t Fx: %.4f\n" % (iter, x, dfx, fx), end="")
+    print("iter: 0 x: %.4f\t dfx: %.4f\t Fx: %.4f\n" % (x, dfx, fx), end="")
 
     for iter in range(1, iter_max + 1):
         deltaX = -fx / dfx
@@ -124,7 +122,6 @@ def secant(f, a: float, b: float, tol: float, iter_max: int) -> [float, int, boo
     fx = fb
 
     converged = False
-    iter = 0
     for iter in range(0, iter_max + 1):
         delta_x = -fx / (fb - fa) * (b - a)
         x += delta_x
