@@ -3,8 +3,8 @@ import numpy as np
 
 def derivative_backward_difference(x: np.array, y: np.array) -> [np.array]:
     """
-    Calculate the first derivative.
-    All values in 'x' must be equally spaced.
+    Calculate the first derivative
+    All values in 'x' must be equally spaced
     Inputs:
             x: Array containing x values
             y: Array containing y values
@@ -35,8 +35,8 @@ def derivative_backward_difference(x: np.array, y: np.array) -> [np.array]:
 
 def derivative_three_point(x: np.array, y: np.array) -> [np.array]:
     """
-    Calculate the first derivative.
-    All values in 'x' must be equally spaced.
+    Calculate the first derivative
+    All values in 'x' must be equally spaced
     Inputs:
             x: Array containing x values
             y: Array containing y values
@@ -69,8 +69,8 @@ def derivative_three_point(x: np.array, y: np.array) -> [np.array]:
 
 def derivative_five_point(x: np.array, y: np.array) -> [np.array]:
     """
-    Calculate the first derivative.
-    All values in 'x' must be equally spaced.
+    Calculate the first derivative
+    All values in 'x' must be equally spaced
     Inputs:
             x: Array containing x values
             y: Array containing y values
