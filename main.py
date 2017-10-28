@@ -8,9 +8,11 @@ Repository: https://github.com/cfgnunes/numerical-methods-python
 import numpy as np
 import math
 import differentiation
+import integration
 import interpolation
 import polynomials
 import solutions
+
 
 def debug(variable):
     print(variable, "=", eval(variable))
@@ -154,3 +156,43 @@ debug("x")
 debug("y")
 [dy] = differentiation.derivative_five_point(x, y)
 debug("dy")
+
+print_running("> Running Integration: Trapezoidal Rule")
+x = np.array([0, 6, 12, 18, 24, 30, 36, 42, 48, 54, 60, 66, 72, 78, 84])
+y = np.array([124, 134, 148, 156, 147, 133, 121, 109, 99, 85, 78, 89, 104, 116, 123])
+debug("x")
+debug("y")
+[xi] = integration.composite2_trapezoidal(x, y)
+debug("xi")
+
+print_running("> Running Integration: Trapezoidal Rule")
+f = lambda x: x ** 2 * math.log(x ** 2 + 1)
+a = 0.0
+b = 2.0
+h = 0.25
+n = int((b - a) / h)
+debug("a")
+debug("b")
+debug("n")
+[xi] = integration.composite_trapezoidal(f, b, a, n)
+debug("xi")
+
+print_running("> Running Integration: Composite 1/3 Simpsons Rule")
+x = np.array([0, 6, 12, 18, 24, 30, 36, 42, 48, 54, 60, 66, 72, 78, 84])
+y = np.array([124, 134, 148, 156, 147, 133, 121, 109, 99, 85, 78, 89, 104, 116, 123])
+debug("x")
+debug("y")
+[xi] = integration.composite2_simpson(x, y)
+debug("xi")
+
+print_running("> Running Integration: Composite 1/3 Simpsons Rule")
+f = lambda x: x ** 2 * math.log(x ** 2 + 1)
+a = 0.0
+b = 2.0
+h = 0.25
+n = int((b - a) / h)
+debug("a")
+debug("b")
+debug("n")
+[xi] = integration.composite_simpson(f, b, a, n)
+debug("xi")
