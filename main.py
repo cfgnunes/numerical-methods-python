@@ -10,6 +10,7 @@ import math
 import differentiation
 import integration
 import interpolation
+import ode
 import polynomials
 import solutions
 
@@ -25,12 +26,12 @@ def print_running(message):
 """
 Bisection method (find roots of an equation)
     Pros:
-        It is a reliable method with guaranteed convergence;
-        It is a simple method that does the search of the root by means of a binary search;
+        It is a reliable method with guaranteed convergence
+        It is a simple method that does the search of the root by means of a binary search
         There is no need to calculate the derivative of the function.
     Cons:
-        Slow convergence;
-        It is necessary to enter a search interval [a, b];
+        Slow convergence
+        It is necessary to enter a search interval [a, b]
         The interval reported must have a signal exchange, f (a) * f (b) <0.
 """
 print_running("Solutions: Bisection method")
@@ -53,8 +54,8 @@ Newton method (find roots of an equation)
     Pros:
         It is a fast method.
     Cons:
-        It may diverge;
-        It is necessary to calculate the derivative of the function;
+        It may diverge
+        It is necessary to calculate the derivative of the function
         It is necessary to give an initial x0 value where f'(x0) must be nonzero.
 """
 print_running("Solutions: Newton method")
@@ -74,10 +75,10 @@ debug("converged")
 """
 Secant method (find roots of an equation)
     Pros:
-        It is a fast method (slower than Newton's method);
+        It is a fast method (slower than Newton's method)
         It is based on the Newton method, but does not need the derivative of the function.
     Cons:
-        It may diverge if the function is not approximately linear in the range containing the root;
+        It may diverge if the function is not approximately linear in the range containing the root
         It is necessary to give two points 'a' and 'b' where f(a)-f(b) must be nonzero.
 """
 print_running("Solutions: Secant method")
@@ -196,3 +197,63 @@ debug("b")
 debug("n")
 [xi] = integration.composite_simpson(f, b, a, n)
 debug("xi")
+
+print_running("> Running ODE: Euler method")
+f = lambda x, y: y - x ** 2 + 1
+a = 0.0
+b = 2.0
+n = 10
+ya = 0.5
+debug("a")
+debug("b")
+debug("n")
+debug("ya")
+[vx, vy] = ode.euler(f, a, b, n, ya)
+debug("vx")
+debug("vy")
+
+print_running("> Running ODE: Taylor (Order Two) method")
+f = lambda x, y: y - x ** 2 + 1
+df1 = lambda x, y: y - x ** 2 + 1 - 2 * x
+a = 0.0
+b = 2.0
+n = 10
+ya = 0.5
+debug("a")
+debug("b")
+debug("n")
+debug("ya")
+[vx, vy] = ode.taylor2(f, df1, a, b, n, ya)
+debug("vx")
+debug("vy")
+
+print_running("> Running ODE: Taylor (Order Four) method")
+f = lambda x, y: y - x ** 2 + 1
+df1 = lambda x, y: y - x ** 2 + 1 - 2 * x
+df2 = lambda x, y: y - x ** 2 + 1 - 2 * x - 2
+df3 = lambda x, y: y - x ** 2 + 1 - 2 * x - 2
+a = 0.0
+b = 2.0
+n = 10
+ya = 0.5
+debug("a")
+debug("b")
+debug("n")
+debug("ya")
+[vx, vy] = ode.taylor4(f, df1, df2, df3, a, b, n, ya)
+debug("vx")
+debug("vy")
+
+print_running("> Running ODE: Runge-Kutta (Order Four) method")
+f = lambda x, y: y - x ** 2 + 1
+a = 0.0
+b = 2.0
+n = 10
+ya = 0.5
+debug("a")
+debug("b")
+debug("n")
+debug("ya")
+[vx, vy] = ode.rk4(f, a, b, n, ya)
+debug("vx")
+debug("vy")
