@@ -99,16 +99,3 @@ def derivative_five_point(x: np.array, y: np.array) -> [np.array]:
             dy[i] = dy_mid(h, y[i - 2], y[i - 1], y[i + 1], y[i + 2])
 
     return [dy]
-
-
-def derivative(x: np.array, y: np.array) -> [np.array]:
-    if x.size < 2:
-        raise ("Error: 'x' and 'y' arrays must have 2 values or more.")
-    elif x.size < 3:
-        [dy] = derivative_backward_difference(x, y)
-    elif x.size < 6:
-        [dy] = derivative_three_point(x, y)
-    else:
-        [dy] = derivative_five_point(x, y)
-
-    return [dy]

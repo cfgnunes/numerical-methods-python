@@ -44,7 +44,7 @@ def bisection(f, a: float, b: float, tol: float, iter_max: int) -> [float, int, 
 
         delta_x = delta_x / 2
     else:
-        print("Warning: The method not converged.")
+        print("Warning: The method did not converge.")
 
     root = x
     return [root, iter, converged]
@@ -84,7 +84,7 @@ def newton(f, df, x0, tol, iter_max) -> [float, int, bool]:
             converged = True
             break
     else:
-        print("Warning: The method not converged.")
+        print("Warning: The method did not converge.")
 
     root = x
     return [root, iter, converged]
@@ -136,7 +136,7 @@ def secant(f, a: float, b: float, tol: float, iter_max: int) -> [float, int, boo
         a, b = b, x
         fa, fb = fb, fx
     else:
-        print("Warning: The method not converged.")
+        print("Warning: The method did not converge.")
 
     root = x
     return [root, iter, converged]
