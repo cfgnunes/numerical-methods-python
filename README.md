@@ -19,10 +19,14 @@ Repository: https://github.com/cfgnunes/numerical-methods-python
 - Briot-Ruffini method
 - Newton's Divided-Difference method
 
-### Differentiation
+### Numerical differentiation
 - Backward-difference method
 - Three-Point method
 - Five-Point method
+
+### Numerical integration
+- Composite Trapezoidal method
+- Composite 1/3 Simpson's method
 
 ## Examples
 To run all algorithms, use:
