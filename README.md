@@ -28,6 +28,12 @@ Repository: https://github.com/cfgnunes/numerical-methods-python
 - Composite Trapezoidal method
 - Composite 1/3 Simpson's method
 
+### Initial-value problems for ordinary differential equations
+- Euler's method
+- Taylor's (Order Two) method
+- Taylor's (Order Four) method
+- Runge-Kutta (Order Four) method
+
 ## Examples
 To run all algorithms, use:
 
