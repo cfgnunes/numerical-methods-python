@@ -34,6 +34,9 @@ Repository: https://github.com/cfgnunes/numerical-methods-python
 - Taylor's (Order Four) method
 - Runge-Kutta (Order Four) method
 
+### Systems of differential equations
+- Runge-Kutta (Order Four) method
+
 ## Examples
 To run all algorithms, use:
 

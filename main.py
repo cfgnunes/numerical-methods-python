@@ -261,6 +261,24 @@ debug("vx")
 debug("vy")
 
 print_running("ODE: Runge-Kutta (Order Four) method for systems of differential equations")
+f = []
+f.append(lambda x, y: - 4 * y[0] + 3 * y[1] + 6)
+f.append(lambda x, y: - 2.4 * y[0] + 1.6 * y[1] + 3.6)
+a = 0.0
+b = 0.5
+h = 0.1
+n = int((b - a) / h)
+ya = np.zeros(len(f))
+ya[0] = 0.0
+ya[1] = 0.0
+debug("a")
+debug("b")
+debug("n")
+debug("ya")
+[vx, vy] = ode.rk4_system(f, a, b, n, ya)
+debug("vx")
+debug("vy")
+
 print_running("Linear Systems: Gaussian Elimination")
 
 print_running("Linear Systems: Backward Substitution")
