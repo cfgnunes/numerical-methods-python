@@ -7,9 +7,11 @@ Repository: https://github.com/cfgnunes/numerical-methods-python
 
 import numpy as np
 import math
+
 import differentiation
 import integration
 import interpolation
+import linear_systems
 import ode
 import polynomials
 import solutions
@@ -158,7 +160,7 @@ debug("y")
 [dy] = differentiation.derivative_five_point(x, y)
 debug("dy")
 
-print_running("> Running Integration: Trapezoidal Rule")
+print_running("Integration: Trapezoidal Rule")
 x = np.array([0, 6, 12, 18, 24, 30, 36, 42, 48, 54, 60, 66, 72, 78, 84])
 y = np.array([124, 134, 148, 156, 147, 133, 121, 109, 99, 85, 78, 89, 104, 116, 123])
 debug("x")
@@ -166,7 +168,7 @@ debug("y")
 [xi] = integration.composite2_trapezoidal(x, y)
 debug("xi")
 
-print_running("> Running Integration: Trapezoidal Rule")
+print_running("Integration: Trapezoidal Rule")
 f = lambda x: x ** 2 * math.log(x ** 2 + 1)
 a = 0.0
 b = 2.0
@@ -178,7 +180,7 @@ debug("n")
 [xi] = integration.composite_trapezoidal(f, b, a, n)
 debug("xi")
 
-print_running("> Running Integration: Composite 1/3 Simpsons Rule")
+print_running("Integration: Composite 1/3 Simpsons Rule")
 x = np.array([0, 6, 12, 18, 24, 30, 36, 42, 48, 54, 60, 66, 72, 78, 84])
 y = np.array([124, 134, 148, 156, 147, 133, 121, 109, 99, 85, 78, 89, 104, 116, 123])
 debug("x")
@@ -186,7 +188,7 @@ debug("y")
 [xi] = integration.composite2_simpson(x, y)
 debug("xi")
 
-print_running("> Running Integration: Composite 1/3 Simpsons Rule")
+print_running("Integration: Composite 1/3 Simpsons Rule")
 f = lambda x: x ** 2 * math.log(x ** 2 + 1)
 a = 0.0
 b = 2.0
@@ -198,7 +200,7 @@ debug("n")
 [xi] = integration.composite_simpson(f, b, a, n)
 debug("xi")
 
-print_running("> Running ODE: Euler method")
+print_running("ODE: Euler method")
 f = lambda x, y: y - x ** 2 + 1
 a = 0.0
 b = 2.0
@@ -212,7 +214,7 @@ debug("ya")
 debug("vx")
 debug("vy")
 
-print_running("> Running ODE: Taylor (Order Two) method")
+print_running("ODE: Taylor (Order Two) method")
 f = lambda x, y: y - x ** 2 + 1
 df1 = lambda x, y: y - x ** 2 + 1 - 2 * x
 a = 0.0
@@ -227,7 +229,7 @@ debug("ya")
 debug("vx")
 debug("vy")
 
-print_running("> Running ODE: Taylor (Order Four) method")
+print_running("ODE: Taylor (Order Four) method")
 f = lambda x, y: y - x ** 2 + 1
 df1 = lambda x, y: y - x ** 2 + 1 - 2 * x
 df2 = lambda x, y: y - x ** 2 + 1 - 2 * x - 2
@@ -244,7 +246,7 @@ debug("ya")
 debug("vx")
 debug("vy")
 
-print_running("> Running ODE: Runge-Kutta (Order Four) method")
+print_running("ODE: Runge-Kutta (Order Four) method")
 f = lambda x, y: y - x ** 2 + 1
 a = 0.0
 b = 2.0
@@ -257,3 +259,22 @@ debug("ya")
 [vx, vy] = ode.rk4(f, a, b, n, ya)
 debug("vx")
 debug("vy")
+
+print_running("ODE: Runge-Kutta (Order Four) method for systems of differential equations")
+print_running("Linear Systems: Gaussian Elimination")
+
+print_running("Linear Systems: Backward Substitution")
+u = np.array([[1, -1, 2, -1], [0, 2, -1, 1], [0, 0, -1, -1], [0, 0, 0, 2]])
+d = np.array([-8, 6, -4, 4])
+debug("u")
+debug("d")
+[x] = linear_systems.backward_substitution(u, d)
+debug("x")
+
+print_running("Linear Systems: Forward Substitution")
+l = np.array([[2, 0, 0, 0], [3, 5, 0, 0], [1, -6, 8, 0], [-1, 4, -3, 9]])
+c = np.array([4, 1, 48, 6])
+debug("l")
+debug("c")
+[x] = linear_systems.forward_substitution(l, c)
+debug("x")
