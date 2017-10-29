@@ -11,8 +11,7 @@ def backward_substitution(u: np.array, d: np.array) -> [np.array]:
             x: Solution of linear system
     '''
 
-    n = u.shape[0]
-    m = u.shape[1]
+    [n, m] = u.shape
 
     if n != m:
         raise ("Error: 'u' must be a square matrix.")
@@ -40,8 +39,7 @@ def forward_substitution(l: np.array, c: np.array) -> [np.array]:
             x: Solution of linear system
     '''
 
-    n = l.shape[0]
-    m = l.shape[1]
+    [n, m] = l.shape
 
     if n != m:
         raise ("Error: 'l' must be a square matrix.")
