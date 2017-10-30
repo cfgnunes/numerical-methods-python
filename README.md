@@ -40,7 +40,7 @@ Repository: https://github.com/cfgnunes/numerical-methods-python
 ### Methods for Linear Systems
 - Gaussian Elimination
 - Backward Substitution
-- Forward Elimination
+- Forward Substitution
 
 ## Examples
 To run all algorithms, use:
