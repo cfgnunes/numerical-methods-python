@@ -37,6 +37,11 @@ Repository: https://github.com/cfgnunes/numerical-methods-python
 ### Systems of differential equations
 - Runge-Kutta (Order Four) method
 
+### Methods for Linear Systems
+- Gaussian Elimination
+- Backward Substitution
+- Forward Elimination
+
 ## Examples
 To run all algorithms, use:
 
