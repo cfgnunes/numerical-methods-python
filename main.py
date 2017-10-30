@@ -280,18 +280,24 @@ debug("vx")
 debug("vy")
 
 print_running("Linear Systems: Gaussian Elimination")
+a = np.array([[1, -1, 2, -1], [2, -2, 3, -3], [1, 1, 1, 0], [1, -1, 4, 3]])
+b = np.array([-8, -20, -2, 4])
+debug("a")
+debug("b")
+[a] = linear_systems.gauss_elimination(a, b)
+debug("a")
 
 print_running("Linear Systems: Backward Substitution")
-u = np.array([[1, -1, 2, -1], [0, 2, -1, 1], [0, 0, -1, -1], [0, 0, 0, 2]])
-d = np.array([-8, 6, -4, 4])
+u = a[:, 0:-1]
+d = a[:, -1]
 debug("u")
 debug("d")
 [x] = linear_systems.backward_substitution(u, d)
 debug("x")
 
 print_running("Linear Systems: Forward Substitution")
-l = np.array([[2, 0, 0, 0], [3, 5, 0, 0], [1, -6, 8, 0], [-1, 4, -3, 9]])
-c = np.array([4, 1, 48, 6])
+l = np.array([[3, 0, 0, 0], [-1, 1, 0, 0], [3, -2, -1, 0], [1, -2, 6, 2]])
+c = np.array([5, 6, 4, 2])
 debug("l")
 debug("c")
 [x] = linear_systems.forward_substitution(l, c)

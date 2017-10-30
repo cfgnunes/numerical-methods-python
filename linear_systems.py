@@ -1,3 +1,4 @@
+import math
 import numpy as np
 
 
@@ -12,19 +13,19 @@ def backward_substitution(u: np.array, d: np.array) -> [np.array]:
     '''
 
     [n, m] = u.shape
+    b = d.astype(float)
 
     if n != m:
         raise ("Error: 'u' must be a square matrix.")
 
     x = np.zeros(n)
 
-    x[n - 1] = d[n - 1] / u[n - 1, n - 1]
-    for i in range(n - 2, -1, -1):
-        sum_x = 0
-        for j in range(i + 1, n):
-            sum_x += u[i, j] * x[j]
+    for i in range(n - 1, -1, -1):
+        if u[i, i] == 0:
+            raise ("Error: Matrix 'u' is singular.")
 
-        x[i] = (d[i] - sum_x) / u[i, i]
+        x[i] = b[i] / u[i, i]
+        b[0:i] = b[0:i] - u[0:i, i] * x[i]
 
     return [x]
 
@@ -40,18 +41,65 @@ def forward_substitution(l: np.array, c: np.array) -> [np.array]:
     '''
 
     [n, m] = l.shape
+    b = c.astype(float)
 
     if n != m:
         raise ("Error: 'l' must be a square matrix.")
 
     x = np.zeros(n)
 
-    x[0] = c[0] / l[0, 0]
-    for i in range(1, n):
-        sum_x = 0
-        for j in range(0, i):
-            sum_x += l[i, j] * x[j]
+    for i in range(0, n):
+        if l[i, i] == 0:
+            raise ("Error: Matrix 'l' is singular.")
 
-        x[i] = (c[i] - sum_x) / l[i, i]
+        x[i] = b[i] / l[i, i]
+        b[i + 1:n] = b[i + 1:n] - l[i + 1:n, i] * x[i]
 
     return [x]
+
+
+def gauss_elimination(a: np.array, b: np.array) -> [np.array]:
+    '''
+    Calculate the upper upper triangular matrix from linear system Ax=b (do a row reduction)
+    Inputs:
+            a: Matrix A from system Ax=b
+            b: Array containing b values
+    Outputs:
+            a: Augmented upper triangular matrix
+    '''
+
+    [n, m] = a.shape
+
+    if n != m:
+        raise ("Error: 'l' must be a square matrix.")
+
+    a = np.concatenate((a, b[:, None]), axis=1).astype(float)  # Produces the augmented matrix
+
+    # Elimination process starts
+    for i in range(0, n - 1):
+        p = i
+
+        # Comparison to select the pivot
+        for j in range(i + 1, n):
+            if math.fabs(a[j, i]) > math.fabs(a[i, i]):
+                a[[i, j]] = a[[j, i]]
+
+        # Cheking for nullity of the pivots
+        while p < n and a[p, i] == 0:
+            p += 1
+
+        if p == n:
+            print("Info: No unique solution.")
+            break
+        else:
+            if p != i:
+                a[[i, p]] = a[[p, i]]
+
+        for j in range(i + 1, n):
+            a[j, :] = a[j, :] - a[i, :] * (a[j, i] / a[i, i])
+
+    # Checking for nonzero of last entry
+    if a[n - 1, n - 1] == 0:
+        print("Info: No unique solution.")
+
+    return [a]
