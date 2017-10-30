@@ -82,6 +82,7 @@ def gauss_elimination(a: np.array, b: np.array) -> [np.array]:
         # Comparison to select the pivot
         for j in range(i + 1, n):
             if math.fabs(a[j, i]) > math.fabs(a[i, i]):
+                # Swap rows
                 a[[i, j]] = a[[j, i]]
 
         # Cheking for nullity of the pivots
@@ -93,6 +94,7 @@ def gauss_elimination(a: np.array, b: np.array) -> [np.array]:
             break
         else:
             if p != i:
+                # Swap rows
                 a[[i, p]] = a[[p, i]]
 
         for j in range(i + 1, n):
