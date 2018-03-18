@@ -22,8 +22,8 @@ def jacobi(a: np.array, b: np.array, x0: np.array, tol: float, iter_max: int) ->
     # Iterative process
     for iter in range(1, iter_max + 1):
         x = np.linalg.solve(d, (b - np.dot(m, x0)))
-        error = np.linalg.norm(x - x0, np.inf) / np.linalg.norm(x, np.inf)
-        if (error <= tol):
+
+        if np.linalg.norm(x - x0, np.inf) / np.linalg.norm(x, np.inf) <= tol:
             break
         x0 = x.copy()
 
@@ -41,6 +41,7 @@ def gauss_seidel(a: np.array, b: np.array, x0: np.array, tol: float, iter_max: i
      iter_max: Maximum number of iterations
     Outpus:
             x: Solution of linear system
+         iter: Used iterations
     '''
 
     # L and U matrices
@@ -50,8 +51,8 @@ def gauss_seidel(a: np.array, b: np.array, x0: np.array, tol: float, iter_max: i
     # Iterative process
     for iter in range(1, iter_max + 1):
         x = np.linalg.solve(l, (b - np.dot(u, x0)))
-        error = np.linalg.norm(x - x0, np.inf) / np.linalg.norm(x, np.inf)
-        if (error <= tol):
+
+        if np.linalg.norm(x - x0, np.inf) / np.linalg.norm(x, np.inf) <= tol:
             break
         x0 = x.copy()
 
