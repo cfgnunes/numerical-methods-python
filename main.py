@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 """
 Numerical methods implementation in Python 3.
 Author: Cristiano Nunes
@@ -12,6 +14,7 @@ import differentiation
 import integration
 import interpolation
 import linear_systems
+import linear_systems_iterative
 import ode
 import polynomials
 import solutions
@@ -302,3 +305,33 @@ debug("l")
 debug("c")
 [x] = linear_systems.forward_substitution(l, c)
 debug("x")
+
+print_running("Iteractive Linear Systems: Jacobi")
+a = np.array([[10, -1, 2, 0], [-1, 11, -1, 3], [2, -1, 10, -1], [0, 3, -1, 8]])
+b = np.array([6, 25, -11, 15])
+x0 = np.array([0, 0, 0, 0])
+tol = 10 ** -3
+iter_max = 10
+debug("a")
+debug("b")
+debug("x0")
+debug("tol")
+debug("iter_max")
+[x, iter] = linear_systems_iterative.jacobi(a, b, x0, tol, iter_max)
+debug("x")
+debug("iter")
+
+print_running("Iteractive Linear Systems: Gauss-Seidel")
+a = np.array([[10, -1, 2, 0], [-1, 11, -1, 3], [2, -1, 10, -1], [0, 3, -1, 8]])
+b = np.array([6, 25, -11, 15])
+x0 = np.array([0, 0, 0, 0])
+tol = 10 ** -3
+iter_max = 10
+debug("a")
+debug("b")
+debug("x0")
+debug("tol")
+debug("iter_max")
+[x, iter] = linear_systems_iterative.gauss_seidel(a, b, x0, tol, iter_max)
+debug("x")
+debug("iter")

@@ -42,6 +42,10 @@ Repository: https://github.com/cfgnunes/numerical-methods-python
 - Backward Substitution
 - Forward Substitution
 
+### Iterative Methods for Linear Systems
+- Jacobi
+- Gauss-Seidel
+
 ## Examples
 To run all algorithms, use:
 
