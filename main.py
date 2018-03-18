@@ -284,7 +284,7 @@ a = np.array([[1, -1, 2, -1], [2, -2, 3, -3], [1, 1, 1, 0], [1, -1, 4, 3]])
 b = np.array([-8, -20, -2, 4])
 debug("a")
 debug("b")
-[a] = linear_systems.gauss_elimination(a, b)
+[a] = linear_systems.gauss_elimination_pp(a, b)
 debug("a")
 
 print_running("Linear Systems: Backward Substitution")

@@ -58,9 +58,9 @@ def forward_substitution(l: np.array, c: np.array) -> [np.array]:
     return [x]
 
 
-def gauss_elimination(a: np.array, b: np.array) -> [np.array]:
+def gauss_elimination_pp(a: np.array, b: np.array) -> [np.array]:
     '''
-    Calculate the upper upper triangular matrix from linear system Ax=b (do a row reduction)
+    Gaussian Elimination with Partial Pivoting - Calculate the upper upper triangular matrix from linear system Ax=b (do a row reduction)
     Inputs:
             a: Matrix A from system Ax=b
             b: Array containing b values
