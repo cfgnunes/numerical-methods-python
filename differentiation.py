@@ -18,7 +18,7 @@ def derivative_backward_difference(x: np.array, y: np.array) -> [np.array]:
     if x.size != y.size:
         raise ("Error: 'x' and 'y' must have same size.")
 
-    dy_difference = lambda h, y0, y1: (y1 - y0) / h;
+    dy_difference = lambda h, y0, y1: (y1 - y0) / h
 
     n = x.size
     dy = np.zeros(n)
