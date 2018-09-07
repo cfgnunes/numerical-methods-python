@@ -1,7 +1,7 @@
 import numpy as np
 
 
-def lagrange(x: np.array, y: np.array, x_int: float) -> [float]:
+def lagrange(x, y, x_int):
     """
     Interpolates a value using Lagrange polynomial
     Inputs:
@@ -25,7 +25,7 @@ def lagrange(x: np.array, y: np.array, x_int: float) -> [float]:
     return [y_int]
 
 
-def neville(x: np.array, y: np.array, x_int: float) -> [float, np.array]:
+def neville(x, y, x_int):
     """
     Interpolates a value using Neville polynomial
     Inputs:
@@ -39,11 +39,13 @@ def neville(x: np.array, y: np.array, x_int: float) -> [float, np.array]:
 
     n = x.size
     q = np.zeros((n, n - 1))
-    q = np.concatenate((y[:, None], q), axis=1)  # Insert 'y' in the first column of the matrix 'q'
+    # Insert 'y' in the first column of the matrix 'q'
+    q = np.concatenate((y[:, None], q), axis=1)
 
     for i in range(1, n):
         for j in range(1, i + 1):
-            q[i, j] = ((x_int - x[i - j]) * q[i, j - 1] - (x_int - x[i]) * q[i - 1, j - 1]) / (x[i] - x[i - j])
+            q[i, j] = ((x_int - x[i - j]) * q[i, j - 1] -
+                       (x_int - x[i]) * q[i - 1, j - 1]) / (x[i] - x[i - j])
 
     y_int = q[n - 1, n - 1]
     return [y_int, q]

@@ -7,8 +7,8 @@ E-mail: <cfgnunes@gmail.com>
 Repository: https://github.com/cfgnunes/numerical-methods-python
 """
 
-import numpy as np
 import math
+import numpy as np
 
 import differentiation
 import integration
@@ -27,18 +27,17 @@ def debug(variable):
 def print_running(message):
     print("\n\n> Running", message)
 
+# Bisection method (find roots of an equation)
+#   Pros:
+#       It is a reliable method with guaranteed convergence;
+#       It is a simple method that does the search of the root by means of a
+#           binary search;
+#       There is no need to calculate the derivative of the function.
+#   Cons:
+#       Slow convergence;
+#       It is necessary to enter a search interval [a, b];
+#       The interval reported must have a signal exchange, f (a) * f (b) <0.
 
-"""
-Bisection method (find roots of an equation)
-    Pros:
-        It is a reliable method with guaranteed convergence
-        It is a simple method that does the search of the root by means of a binary search
-        There is no need to calculate the derivative of the function.
-    Cons:
-        Slow convergence
-        It is necessary to enter a search interval [a, b]
-        The interval reported must have a signal exchange, f (a) * f (b) <0.
-"""
 print_running("Solutions: Bisection method")
 f = lambda x: 4 * x ** 3 + x + math.cos(x) - 10
 tol = 10 ** -5
@@ -49,20 +48,20 @@ debug("tol")
 debug("iter_max")
 debug("a")
 debug("b")
-[root, iter, converged] = solutions.bisection(f, a, b, tol, iter_max)
+[root, i, converged] = solutions.bisection(f, a, b, tol, iter_max)
 debug("root")
-debug("iter")
+debug("i")
 debug("converged")
 
-"""
-Newton method (find roots of an equation)
-    Pros:
-        It is a fast method.
-    Cons:
-        It may diverge
-        It is necessary to calculate the derivative of the function
-        It is necessary to give an initial x0 value where f'(x0) must be nonzero.
-"""
+# Newton method (find roots of an equation)
+#   Pros:
+#       It is a fast method.
+#    Cons:
+#       It may diverge;
+#       It is necessary to calculate the derivative of the function;
+#       It is necessary to give an initial x0 value where
+#           f'(x0) must be nonzero.
+
 print_running("Solutions: Newton method")
 f = lambda x: 4 * x ** 3 + x + math.cos(x) - 10
 df = lambda x: 12 * x ** 2 + 1 - math.sin(x)
@@ -72,20 +71,22 @@ x0 = 1.0
 debug("tol")
 debug("iter_max")
 debug("x0")
-[root, iter, converged] = solutions.newton(f, df, x0, tol, iter_max)
+[root, i, converged] = solutions.newton(f, df, x0, tol, iter_max)
 debug("root")
-debug("iter")
+debug("i")
 debug("converged")
 
-"""
-Secant method (find roots of an equation)
-    Pros:
-        It is a fast method (slower than Newton's method)
-        It is based on the Newton method, but does not need the derivative of the function.
-    Cons:
-        It may diverge if the function is not approximately linear in the range containing the root
-        It is necessary to give two points 'a' and 'b' where f(a)-f(b) must be nonzero.
-"""
+# Secant method (find roots of an equation)
+#   Pros:
+#       It is a fast method (slower than Newton's method);
+#       It is based on the Newton method, but does not need the derivative
+#           of the function.
+#   Cons:
+#       It may diverge if the function is not approximately linear in the
+#           range containing the root;
+#       It is necessary to give two points 'a' and 'b' where
+#           f(a)-f(b) must be nonzero.
+
 print_running("Solutions: Secant method")
 f = lambda x: 4 * x ** 3 + x + math.cos(x) - 10
 tol = 10 ** -5
@@ -96,9 +97,9 @@ debug("tol")
 debug("iter_max")
 debug("a")
 debug("b")
-[root, iter, converged] = solutions.secant(f, a, b, tol, iter_max)
+[root, i, converged] = solutions.secant(f, a, b, tol, iter_max)
 debug("root")
-debug("iter")
+debug("i")
 debug("converged")
 
 print_running("Interpolation: Lagrange method")
@@ -157,7 +158,8 @@ debug("dy")
 
 print_running("Differentiation: Five-Point method")
 x = np.array([2.1, 2.2, 2.3, 2.4, 2.5, 2.6])
-y = np.array([-1.709847, -1.373823, -1.119214, -0.9160143, -0.7470223, -0.6015966])
+y = np.array([-1.709847, -1.373823, -1.119214,
+              -0.9160143, -0.7470223, -0.6015966])
 debug("x")
 debug("y")
 [dy] = differentiation.derivative_five_point(x, y)
@@ -165,7 +167,8 @@ debug("dy")
 
 print_running("Integration: Trapezoidal Rule")
 x = np.array([0, 6, 12, 18, 24, 30, 36, 42, 48, 54, 60, 66, 72, 78, 84])
-y = np.array([124, 134, 148, 156, 147, 133, 121, 109, 99, 85, 78, 89, 104, 116, 123])
+y = np.array([124, 134, 148, 156, 147, 133,
+              121, 109, 99, 85, 78, 89, 104, 116, 123])
 debug("x")
 debug("y")
 [xi] = integration.composite2_trapezoidal(x, y)
@@ -185,7 +188,8 @@ debug("xi")
 
 print_running("Integration: Composite 1/3 Simpsons Rule")
 x = np.array([0, 6, 12, 18, 24, 30, 36, 42, 48, 54, 60, 66, 72, 78, 84])
-y = np.array([124, 134, 148, 156, 147, 133, 121, 109, 99, 85, 78, 89, 104, 116, 123])
+y = np.array([124, 134, 148, 156, 147, 133,
+              121, 109, 99, 85, 78, 89, 104, 116, 123])
 debug("x")
 debug("y")
 [xi] = integration.composite2_simpson(x, y)
@@ -263,7 +267,8 @@ debug("ya")
 debug("vx")
 debug("vy")
 
-print_running("ODE: Runge-Kutta (Order Four) method for systems of differential equations")
+print_running("ODE: Runge-Kutta (Order Four) method \
+              for systems of differential equations")
 f = []
 f.append(lambda x, y: - 4 * y[0] + 3 * y[1] + 6)
 f.append(lambda x, y: - 2.4 * y[0] + 1.6 * y[1] + 3.6)
@@ -317,9 +322,9 @@ debug("b")
 debug("x0")
 debug("tol")
 debug("iter_max")
-[x, iter] = linear_systems_iterative.jacobi(a, b, x0, tol, iter_max)
+[x, i] = linear_systems_iterative.jacobi(a, b, x0, tol, iter_max)
 debug("x")
-debug("iter")
+debug("i")
 
 print_running("Iteractive Linear Systems: Gauss-Seidel")
 a = np.array([[10, -1, 2, 0], [-1, 11, -1, 3], [2, -1, 10, -1], [0, 3, -1, 8]])
@@ -332,6 +337,6 @@ debug("b")
 debug("x0")
 debug("tol")
 debug("iter_max")
-[x, iter] = linear_systems_iterative.gauss_seidel(a, b, x0, tol, iter_max)
+[x, i] = linear_systems_iterative.gauss_seidel(a, b, x0, tol, iter_max)
 debug("x")
-debug("iter")
+debug("i")

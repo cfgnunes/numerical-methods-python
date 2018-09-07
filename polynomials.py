@@ -1,7 +1,7 @@
 import numpy as np
 
 
-def briot_ruffini(a: np.array, root: float) -> [np.array, float]:
+def briot_ruffini(a, root):
     """
     Divides a polynomial by another polynomial in the format (x-root)
     P(x) = Q(x) * (x-root) + rest
@@ -26,9 +26,10 @@ def briot_ruffini(a: np.array, root: float) -> [np.array, float]:
     return [b, rest]
 
 
-def newton_divided_difference(x: np.array, y: np.array) -> [np.array]:
+def newton_divided_difference(x, y):
     """
-    Find the coefficients of Newton's divided difference and the Newton's polynomial
+    Find the coefficients of Newton's divided difference and
+    the Newton's polynomial.
     Inputs:
             x: Array containing x values
             y: Array containing y values
@@ -38,7 +39,8 @@ def newton_divided_difference(x: np.array, y: np.array) -> [np.array]:
 
     n = x.size
     q = np.zeros((n, n - 1))
-    q = np.concatenate((y[:, None], q), axis=1)  # Insert 'y' in the first column of the matrix 'q'
+    # Insert 'y' in the first column of the matrix 'q'
+    q = np.concatenate((y[:, None], q), axis=1)
 
     for i in range(1, n):
         for j in range(1, i + 1):

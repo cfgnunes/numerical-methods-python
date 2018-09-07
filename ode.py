@@ -1,7 +1,7 @@
 import numpy as np
 
 
-def euler(f, a: float, b: float, n: int, ya: float) -> [np.array, np.array]:
+def euler(f, a, b, n, ya):
     '''
     Calculate the solution of the initial-value problem from Euler method
     Inputs:
@@ -40,9 +40,10 @@ def euler(f, a: float, b: float, n: int, ya: float) -> [np.array, np.array]:
     return [vx, vy]
 
 
-def taylor2(f, df1, a: float, b: float, n: int, ya: float) -> [np.array, np.array]:
+def taylor2(f, df1, a, b, n, ya):
     '''
-    Calculate the solution of the initial-value problem from Taylor (Order Two) method
+    Calculate the solution of the initial-value problem from
+    Taylor (Order Two) method.
     Inputs:
             f: Function f(x)
           df1: 1's derivative of function f(x)
@@ -78,9 +79,10 @@ def taylor2(f, df1, a: float, b: float, n: int, ya: float) -> [np.array, np.arra
     return [vx, vy]
 
 
-def taylor4(f, df1, df2, df3, a: float, b: float, n: int, ya: float) -> [np.array, np.array]:
+def taylor4(f, df1, df2, df3, a, b, n, ya):
     '''
-    Calculate the solution of the initial-value problem from Taylor (Order Four) method
+    Calculate the solution of the initial-value problem from
+    Taylor (Order Four) method.
     Inputs:
             f: Function f(x)
           df1: 1's derivative of function f(x)
@@ -108,7 +110,8 @@ def taylor4(f, df1, df2, df3, a: float, b: float, n: int, ya: float) -> [np.arra
     print('i: %.3d\t x:%.4f\t y:%.4f\t\n' % (0, x, y), end="")
 
     for i in range(0, n):
-        y += h * (f(x, y) + 0.5 * h * df1(x, y) + (h ** 2 / 6) * df2(x, y) + (h ** 3 / 24) * df3(x, y))
+        y += h * (f(x, y) + 0.5 * h * df1(x, y) + (h ** 2 / 6) * df2(x, y) +
+                  (h ** 3 / 24) * df3(x, y))
         x = a + (i + 1) * h
 
         print('i: %.3d\t x:%.4f\t y:%.4f\t\n' % (i + 1, x, y), end="")
@@ -118,9 +121,10 @@ def taylor4(f, df1, df2, df3, a: float, b: float, n: int, ya: float) -> [np.arra
     return [vx, vy]
 
 
-def rk4(f, a: float, b: float, n: int, ya: float) -> [np.array, np.array]:
+def rk4(f, a, b, n, ya):
     '''
-    Calculate the solution of the initial-value problem from Runge-Kutta (Order Four) method
+    Calculate the solution of the initial-value problem from
+    Runge-Kutta (Order Four) method.
     Inputs:
             f: Function f(x)
             a: Initial point
@@ -160,9 +164,10 @@ def rk4(f, a: float, b: float, n: int, ya: float) -> [np.array, np.array]:
     return [vx, vy]
 
 
-def rk4_system(f, a: float, b: float, n: int, ya: np.array) -> [np.array, np.array]:
+def rk4_system(f, a, b, n, ya):
     '''
-    Calculate the solution of systems of differential equations from Runge-Kutta (Order Four) method
+    Calculate the solution of systems of differential equations from
+    Runge-Kutta (Order Four) method.
     Inputs:
             f: Array of functions f(x)
             a: Initial point

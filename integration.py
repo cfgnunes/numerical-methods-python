@@ -1,7 +1,4 @@
-import numpy as np
-
-
-def composite_simpson(f, b: float, a: float, n: int) -> [float]:
+def composite_simpson(f, b, a, n):
     '''
     Calculate the integral from 1/3 Simpson's Rule
     Inputs:
@@ -29,7 +26,7 @@ def composite_simpson(f, b: float, a: float, n: int) -> [float]:
     return [xi]
 
 
-def composite_trapezoidal(f, b: float, a: float, n: int) -> [float]:
+def composite_trapezoidal(f, b, a, n):
     '''
     Calculate the integral from Trapezoidal Rule
     Inputs:
@@ -53,7 +50,7 @@ def composite_trapezoidal(f, b: float, a: float, n: int) -> [float]:
     return [xi]
 
 
-def composite2_simpson(x: np.array, y: np.array) -> [float]:
+def composite2_simpson(x, y):
     '''
     Calculate the integral from 1/3 Simpson's Rule
     Inputs:
@@ -64,7 +61,7 @@ def composite2_simpson(x: np.array, y: np.array) -> [float]:
     '''
 
     if y.size != y.size:
-        raise ("Error: 'x' and 'y' must have same size.")
+        raise "Error: 'x' and 'y' must have same size."
 
     h = x[1] - x[0]
     n = x.size
@@ -82,7 +79,7 @@ def composite2_simpson(x: np.array, y: np.array) -> [float]:
     return [xi]
 
 
-def composite2_trapezoidal(x: np.array, y: np.array) -> [float]:
+def composite2_trapezoidal(x, y):
     '''
     Calculate the integral from Trapezoidal Rule
     Inputs:
@@ -93,7 +90,7 @@ def composite2_trapezoidal(x: np.array, y: np.array) -> [float]:
     '''
 
     if y.size != y.size:
-        raise ("Error: 'x' and 'y' must have same size.")
+        raise "Error: 'x' and 'y' must have same size."
 
     h = x[1] - x[0]
     n = x.size

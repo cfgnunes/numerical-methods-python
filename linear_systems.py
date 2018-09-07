@@ -2,7 +2,7 @@ import math
 import numpy as np
 
 
-def backward_substitution(u: np.array, d: np.array) -> [np.array]:
+def backward_substitution(u, d):
     '''
     Solve the upper linear system ux=d
     Inputs:
@@ -16,13 +16,13 @@ def backward_substitution(u: np.array, d: np.array) -> [np.array]:
     b = d.astype(float)
 
     if n != m:
-        raise ("Error: 'u' must be a square matrix.")
+        raise "Error: 'u' must be a square matrix."
 
     x = np.zeros(n)
 
     for i in range(n - 1, -1, -1):
         if u[i, i] == 0:
-            raise ("Error: Matrix 'u' is singular.")
+            raise "Error: Matrix 'u' is singular."
 
         x[i] = b[i] / u[i, i]
         b[0:i] = b[0:i] - u[0:i, i] * x[i]
@@ -30,7 +30,7 @@ def backward_substitution(u: np.array, d: np.array) -> [np.array]:
     return [x]
 
 
-def forward_substitution(l: np.array, c: np.array) -> [np.array]:
+def forward_substitution(l, c):
     '''
     Solve the lower linear system lx=c
     Inputs:
@@ -44,13 +44,13 @@ def forward_substitution(l: np.array, c: np.array) -> [np.array]:
     b = c.astype(float)
 
     if n != m:
-        raise ("Error: 'l' must be a square matrix.")
+        raise "Error: 'l' must be a square matrix."
 
     x = np.zeros(n)
 
     for i in range(0, n):
         if l[i, i] == 0:
-            raise ("Error: Matrix 'l' is singular.")
+            raise "Error: Matrix 'l' is singular."
 
         x[i] = b[i] / l[i, i]
         b[i + 1:n] = b[i + 1:n] - l[i + 1:n, i] * x[i]
@@ -58,9 +58,10 @@ def forward_substitution(l: np.array, c: np.array) -> [np.array]:
     return [x]
 
 
-def gauss_elimination_pp(a: np.array, b: np.array) -> [np.array]:
+def gauss_elimination_pp(a, b):
     '''
-    Gaussian Elimination with Partial Pivoting - Calculate the upper upper triangular matrix from linear system Ax=b (do a row reduction)
+    Gaussian Elimination with Partial Pivoting - Calculate the
+    upper triangular matrix from linear system Ax=b (do a row reduction)
     Inputs:
             a: Matrix A from system Ax=b
             b: Array containing b values
@@ -71,9 +72,10 @@ def gauss_elimination_pp(a: np.array, b: np.array) -> [np.array]:
     [n, m] = a.shape
 
     if n != m:
-        raise ("Error: 'l' must be a square matrix.")
+        raise "Error: 'l' must be a square matrix."
 
-    a = np.concatenate((a, b[:, None]), axis=1).astype(float)  # Produces the augmented matrix
+    # Produces the augmented matrixsss
+    a = np.concatenate((a, b[:, None]), axis=1).astype(float)
 
     # Elimination process starts
     for i in range(0, n - 1):
