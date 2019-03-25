@@ -46,13 +46,13 @@ def gauss_seidel(a, b, x0, tol, iter_max):
     '''
 
     # L and U matrices
-    l = np.tril(a)
-    u = a - l
+    L = np.tril(a)
+    u = a - L
 
     # Iterative process
     i = 1
     for i in range(1, iter_max + 1):
-        x = np.linalg.solve(l, (b - np.dot(u, x0)))
+        x = np.linalg.solve(L, (b - np.dot(u, x0)))
 
         if np.linalg.norm(x - x0, np.inf) / np.linalg.norm(x, np.inf) <= tol:
             break

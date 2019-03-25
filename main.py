@@ -1,10 +1,7 @@
-#!/usr/bin/env python3
-
 """
 Numerical methods implementation in Python 3.
-Author: Cristiano Nunes
-E-mail: <cfgnunes@gmail.com>
-Repository: https://github.com/cfgnunes/numerical-methods-python
+Author: Cristiano Fraga G. Nunes
+E-mail: cfgnunes@gmail.com
 """
 
 import math
@@ -26,6 +23,7 @@ def debug(variable):
 
 def print_running(message):
     print("\n\n> Running", message)
+
 
 # Bisection method (find roots of an equation)
 #   Pros:
@@ -304,11 +302,11 @@ debug("d")
 debug("x")
 
 print_running("Linear Systems: Forward Substitution")
-l = np.array([[3, 0, 0, 0], [-1, 1, 0, 0], [3, -2, -1, 0], [1, -2, 6, 2]])
+L = np.array([[3, 0, 0, 0], [-1, 1, 0, 0], [3, -2, -1, 0], [1, -2, 6, 2]])
 c = np.array([5, 6, 4, 2])
-debug("l")
+debug("L")
 debug("c")
-[x] = linear_systems.forward_substitution(l, c)
+[x] = linear_systems.forward_substitution(L, c)
 debug("x")
 
 print_running("Iteractive Linear Systems: Jacobi")

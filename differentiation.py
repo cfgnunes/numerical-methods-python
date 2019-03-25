@@ -71,7 +71,7 @@ def derivative_three_point(x, y):
     return [dy]
 
 
-def derivative_five_point(x: np.array, y: np.array) -> [np.array]:
+def derivative_five_point(x, y):
     """
     Calculate the first derivative
     All values in 'x' must be equally spaced

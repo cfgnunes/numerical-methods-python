@@ -32,7 +32,7 @@ def bisection(f, a, b, tol, iter_max):
         x = (a + b) / 2
         fx = f(x)
 
-        print('i: %.3d\t x: %+.4f\t fx: %+.4f\t delta_x: %+.4f\n' %
+        print("i: %.3d\t x: %+.4f\t fx: %+.4f\t delta_x: %+.4f\n" %
               (i, x, fx, delta_x), end="")
 
         if delta_x <= tol and math.fabs(fx) <= tol:

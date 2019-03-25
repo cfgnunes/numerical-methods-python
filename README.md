@@ -1,54 +1,68 @@
 # Numerical Methods
-Numerical methods implementation in Python 3.  
-Author: Cristiano Nunes  
-E-mail: <cfgnunes@gmail.com>  
-Repository: https://github.com/cfgnunes/numerical-methods-python
+
+Numerical methods implementation in Python 3.
+
+## Getting Started
+
+### Running the examples
+
+To run a example, use:
+
+```sh
+python3 main.py
+```
 
 ## Implementations
 
-### Solutions of equations
-- Bisection method
-- Newton method
-- Secant method
+*Solutions of equations*
 
-### Interpolation
-- Lagrange method
-- Neville method
+* Bisection method
+* Newton method
+* Secant method
 
-### Algorithms for polynomials
-- Briot-Ruffini method
-- Newton's Divided-Difference method
+*Interpolation*
 
-### Numerical differentiation
-- Backward-difference method
-- Three-Point method
-- Five-Point method
+* Lagrange method
+* Neville method
 
-### Numerical integration
-- Composite Trapezoidal method
-- Composite 1/3 Simpson's method
+*Algorithms for polynomials*
 
-### Initial-value problems for ordinary differential equations
-- Euler's method
-- Taylor's (Order Two) method
-- Taylor's (Order Four) method
-- Runge-Kutta (Order Four) method
+* Briot-Ruffini method
+* Newton's Divided-Difference method
 
-### Systems of differential equations
-- Runge-Kutta (Order Four) method
+*Numerical differentiation*
 
-### Methods for Linear Systems
-- Gaussian Elimination
-- Backward Substitution
-- Forward Substitution
+* Backward-difference method
+* Three-Point method
+* Five-Point method
 
-### Iterative Methods for Linear Systems
-- Jacobi method
-- Gauss-Seidel method
+*Numerical integration*
 
-## Examples
-To run all algorithms, use:
+* Composite Trapezoidal method
+* Composite 1/3 Simpson's method
 
-```
-$ python3 main.py
-```
+*Initial-value problems for ordinary differential equations*
+
+* Euler's method
+* Taylor's (Order Two) method
+* Taylor's (Order Four) method
+* Runge-Kutta (Order Four) method
+
+*Systems of differential equations*
+
+* Runge-Kutta (Order Four) method
+
+*Methods for Linear Systems*
+
+* Gaussian Elimination
+* Backward Substitution
+* Forward Substitution
+
+*Iterative Methods for Linear Systems*
+
+* Jacobi method
+* Gauss-Seidel method
+
+## Authors
+
+* **Cristiano Fraga G. Nunes** - *Developer - Project leader*
