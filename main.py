@@ -1,6 +1,6 @@
 """
 Numerical methods implementation in Python 3.
-Author: Cristiano Fraga G. Nunes
+Author: Cristiano Nunes
 E-mail: cfgnunes@gmail.com
 """
 

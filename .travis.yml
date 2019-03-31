@@ -1,0 +1,15 @@
+language: python
+
+dist: xenial
+
+python:
+  - "3.5"
+
+# Command to install dependencies
+install:
+  - pip3 install --user --upgrade pip
+  - pip3 install --user --upgrade --requirement "requirements.txt"
+
+# Command to run tests
+script:
+  - python3 main.py
