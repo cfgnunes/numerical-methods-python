@@ -7,8 +7,8 @@ python:
 
 # Command to install dependencies
 install:
-  - pip3 install --user --upgrade pip
-  - pip3 install --user --upgrade --requirement "requirements.txt"
+  - pip3 install --upgrade pip
+  - pip3 install --upgrade --requirement "requirements.txt"
 
 # Command to run tests
 script:
