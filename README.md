@@ -1,6 +1,10 @@
 # Numerical Methods
 
+[![Build Status](https://travis-ci.org/cfgnunes/numerical-methods-python.svg?branch=master)](https://travis-ci.org/cfgnunes/numerical-methods-python)
+
 Numerical methods implementation in Python 3.
+
+If you want these implementations in MATLAB, see [this repository](https://github.com/cfgnunes/numerical-methods-matlab).
 
 ## Getting Started
 
