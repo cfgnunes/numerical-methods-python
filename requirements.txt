@@ -1,1 +1,5 @@
-numpy==1.16.2
+# Main packages
+numpy
+
+# Linters
+flake8
