@@ -7,9 +7,11 @@ python:
 
 # Command to install dependencies
 install:
-  - pip3 install --upgrade pip
-  - pip3 install --upgrade --requirement "requirements.txt"
+  - apt -y install make python3
 
 # Command to run tests
 script:
-  - python3 main.py
+  - make help
+  - make clean
+  - make lint
+  - make run

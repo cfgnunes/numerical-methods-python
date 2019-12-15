@@ -69,4 +69,4 @@ python3 main.py
 
 ## Authors
 
-* Cristiano Nunes - *Developer - Project leader*
+* Cristiano Nunes - *Developer*
