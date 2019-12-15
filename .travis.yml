@@ -1,39 +1,13 @@
 language: python
 
-matrix:
-  include:
-    # Tests on Ubuntu 12.04
-    - os: linux
-      dist: precise
-      addons:
-       apt:
-         packages:
-           - make
-           - python3
-    # Tests on Ubuntu 14.04
-    - os: linux
-      dist: trusty
-      addons:
-       apt:
-         packages:
-           - make
-           - python3
-    # Tests on Ubuntu 16.04
-    - os: linux
-      dist: xenial
-      addons:
-       apt:
-         packages:
-           - make
-           - python3
-    # Tests on Ubuntu 18.04
-    - os: linux
-      dist: bionic
-      addons:
-       apt:
-         packages:
-           - make
-           - python3
+dist: xenial
+
+python:
+  - "3.5"
+
+before_install:
+  - sudo apt -y install make python3-pip
+
 script:
      - make help
      - make clean
