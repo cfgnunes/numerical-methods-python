@@ -1,17 +1,25 @@
 language: python
 
-dist: xenial
-
-python:
-  - "3.5"
-
-# Command to install dependencies
-install:
-  - apt -y install make python3
-
-# Command to run tests
+matrix:
+  include:
+    # Tests on Ubuntu 14.04
+    - os: linux
+      dist: trusty
+      addons:
+       apt:
+         packages:
+           - make
+           - python3
+    # Tests on Ubuntu 16.04
+    - os: linux
+      dist: xenial
+      addons:
+       apt:
+         packages:
+           - make
+           - python3
 script:
-  - make help
-  - make clean
-  - make lint
-  - make run
+     - make help
+     - make clean
+     - make lint
+     - make run
