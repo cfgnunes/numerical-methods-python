@@ -11,26 +11,32 @@ help:
 	@echo "'make clean': Cleans up generated files."
 	@echo
 
-venv:
-	@test -d "$(VENV_DIR)" || echo "Creating new virtualenv..."; python3 -m venv "$(VENV_DIR)"
+venv: $(VENV_ACTIVATE)
+$(VENV_ACTIVATE):
+	@test -d "$(VENV_DIR)" || echo "Creating a virtualenv..."; \
+		python3 -m venv "$(VENV_DIR)"
 	@echo "Installing packages in the virtualenv..."
-	@. "$(VENV_ACTIVATE)"; \
+	@. $(VENV_ACTIVATE); \
 		pip3 install --upgrade pip; \
 		pip3 install --upgrade --requirement "requirements.txt"
 	@echo "Done!"
 	@echo
 
-lint:
-	@test -d "$(VENV_DIR)" || make venv
-	@echo "Running linter..."
-	@$(PYTHON) -m flake8 *.py
+lint: venv
+	@echo "Running linters..."
+	@. $(VENV_ACTIVATE); $(PYTHON) -m flake8 *.py
+	@. $(VENV_ACTIVATE); $(PYTHON) -m pylint \
+		--disable=invalid-name \
+		--disable=missing-docstring \
+		--disable=too-many-arguments \
+		--disable=too-many-locals \
+		--disable=duplicate-code *.py
 	@echo "Done!"
 	@echo
 
-run:
-	@test -d "$(VENV_DIR)" || make venv
+run: venv
 	@echo "Running all examples..."
-	@$(PYTHON) main.py
+	@. $(VENV_ACTIVATE); $(PYTHON) main.py
 	@echo "Done!"
 	@echo
 

@@ -93,7 +93,6 @@ def gauss_elimination_pp(a, b):
 
         if p == n:
             print("Info: No unique solution.")
-            break
         else:
             if p != i:
                 # Swap rows
