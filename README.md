@@ -10,10 +10,16 @@ If you want these implementations in MATLAB, see [this repository](https://githu
 
 ### Prerequisites
 
-This section assumes Ubuntu 14.04 (also tested on Ubuntu 18.04), but the procedure is similar for other Linux distributions. The prerequisites is to install the following packages:
+This section assumes Ubuntu 16.04 and Ubuntu 18.04, but the procedure is similar for other Linux distributions. The prerequisites is to install the following packages:
 
 ```sh
-sudo apt -y install make python3-pip
+sudo apt -y install make python3-pip python3-venv
+```
+
+For Ubuntu 14.04:
+
+```sh
+sudo apt -y install make python3-pip python3.4-venv
 ```
 
 ### Running the examples
