@@ -13,8 +13,8 @@ help:
 
 venv: $(VENV_ACTIVATE)
 $(VENV_ACTIVATE):
-	@test -d "$(VENV_DIR)" || echo "Creating a virtualenv..."; \
-		python3 -m venv "$(VENV_DIR)"
+	@echo "Creating a virtualenv..."
+	@python3 -m venv "$(VENV_DIR)"
 	@echo "Installing packages in the virtualenv..."
 	@. $(VENV_ACTIVATE); \
 		pip3 install --upgrade pip; \
