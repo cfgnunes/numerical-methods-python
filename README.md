@@ -75,6 +75,14 @@ make run
 * Jacobi method
 * Gauss-Seidel method
 
+## Built With
+
+* [Python](https://www.python.org/) - Programming language used
+
+Other tools:
+
+* [GNU Make](https://www.gnu.org/software/make/) - A build automation tool
+
 ## Authors
 
 * Cristiano Nunes - *Developer*
