@@ -6,7 +6,7 @@ python:
   - "3.5"
 
 script:
-     - make help
-     - make clean
-     - make lint
-     - make run
+  - make help
+  - make clean
+  - make lint
+  - make run
