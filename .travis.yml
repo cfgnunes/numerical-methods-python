@@ -1,10 +1,10 @@
 language: python
-
 dist: xenial
-
-python:
-  - "3.5"
-
+addons:
+ apt:
+   packages:
+     - make
+     - python3-pip
 script:
   - make help
   - make clean
