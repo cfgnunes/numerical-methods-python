@@ -5,9 +5,6 @@ dist: xenial
 python:
   - "3.5"
 
-before_install:
-  - sudo apt -y install make python3-pip
-
 script:
      - make help
      - make clean
