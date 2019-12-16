@@ -19,7 +19,7 @@ venv:
 
 lint:
 	@test -d "$(VENV_DIR)" || make venv
-	@flake8 *.py
+	@$(PYTHON) -m flake8 *.py
 
 run:
 	@test -d "$(VENV_DIR)" || make venv
