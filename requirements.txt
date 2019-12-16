@@ -3,3 +3,4 @@ numpy
 
 # Linters
 flake8
+pylint
