@@ -18,6 +18,7 @@ $(VENV_ACTIVATE):
 	@echo "Installing packages in the virtualenv..."
 	@. $(VENV_ACTIVATE); \
 		pip3 install --upgrade pip; \
+		pip3 install --upgrade setuptools; \
 		pip3 install --upgrade --requirement "requirements.txt"
 	@echo "Done!"
 	@echo
