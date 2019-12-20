@@ -1,7 +1,8 @@
 """
 Numerical methods implementation in Python 3.
-Author: Cristiano Nunes
-E-mail: cfgnunes@gmail.com
+
+Author: Cristiano Nunes <cfgnunes@gmail.com>
+Date: 2017-10-29
 """
 
 import math
