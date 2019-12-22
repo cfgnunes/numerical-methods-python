@@ -1,14 +1,16 @@
+"""Methods for Interpolation"""
+
 import numpy as np
 
 
 def lagrange(x, y, x_int):
     """
     Interpolates a value using Lagrange polynomial
-    Inputs:
+    Parameters:
             x: Array containing x values
             y: Array containing y values
         x_int: Value to interpolate
-    Outputs:
+    Returns:
         y_int: Interpolated value
     """
 
@@ -28,11 +30,11 @@ def lagrange(x, y, x_int):
 def neville(x, y, x_int):
     """
     Interpolates a value using Neville polynomial
-    Inputs:
+    Parameters:
             x: Array containing x values
             y: Array containing y values
         x_int: Value to interpolate
-    Outputs:
+    Returns:
         y_int: Interpolated value
             q: Coefficients matrix
     """

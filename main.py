@@ -21,11 +21,8 @@ def print_var(var_name, value):
     print("{} = {}".format(var_name, value))
 
 
-def print_running(message):
-    print("\n\n> Running {}".format(message))
-
-
-def run_bisection():
+def run_example_bisection():
+    print("\n\n[Example] Solutions: Bisection")
     # Bisection method (find roots of an equation)
     #   Pros:
     #       It is a reliable method with guaranteed convergence;
@@ -40,7 +37,6 @@ def run_bisection():
     def f(x):
         return 4 * x ** 3 + x + math.cos(x) - 10
 
-    print_running("Solutions: Bisection method")
     tol = 10 ** -5
     iter_max = 100
     a = 1.0
@@ -55,7 +51,8 @@ def run_bisection():
     print_var("converged", converged)
 
 
-def run_newton():
+def run_example_newton():
+    print("\n\n[Example] Solutions: Newton")
     # Newton method (find roots of an equation)
     #   Pros:
     #       It is a fast method.
@@ -71,7 +68,6 @@ def run_newton():
     def df(x):
         return 12 * x ** 2 + 1 - math.sin(x)
 
-    print_running("Solutions: Newton method")
     tol = 10 ** -5
     iter_max = 100
     x0 = 1.0
@@ -84,7 +80,8 @@ def run_newton():
     print_var("converged", converged)
 
 
-def run_secant():
+def run_example_secant():
+    print("\n\n[Example] Solutions: Secant")
     # Secant method (find roots of an equation)
     #   Pros:
     #       It is a fast method (slower than Newton's method);
@@ -95,8 +92,6 @@ def run_secant():
     #           range containing the root;
     #       It is necessary to give two points 'a' and 'b' where
     #           f(a)-f(b) must be nonzero.
-
-    print_running("Solutions: Secant method")
 
     def f(x):
         return 4 * x ** 3 + x + math.cos(x) - 10
@@ -115,8 +110,8 @@ def run_secant():
     print_var("converged", converged)
 
 
-def run_lagrange():
-    print_running("Interpolation: Lagrange method")
+def run_example_lagrange():
+    print("\n\n[Example] Interpolation: Lagrange")
     x = np.array([2, 11 / 4, 4])
     y = np.array([1 / 2, 4 / 11, 1 / 4])
     x_int = 3
@@ -127,8 +122,8 @@ def run_lagrange():
     print_var("y_int", y_int)
 
 
-def run_neville():
-    print_running("Interpolation: Neville method")
+def run_example_neville():
+    print("\n\n[Example] Interpolation: Neville")
     x = np.array([1.0, 1.3, 1.6, 1.9, 2.2])
     y = np.array([0.7651977, 0.6200860, 0.4554022, 0.2818186, 0.1103623])
     x_int = 1.5
@@ -140,8 +135,8 @@ def run_neville():
     print_var("q", q)
 
 
-def run_briot_ruffini():
-    print_running("Polynomials: Briot-Ruffini method")
+def run_example_briot_ruffini():
+    print("\n\n[Example] Polynomials: Briot-Ruffini")
     a = np.array([2, 0, -3, 3, -4])
     root = -2
     print_var("a", a)
@@ -151,8 +146,8 @@ def run_briot_ruffini():
     print_var("rest", rest)
 
 
-def run_newton_divided_difference():
-    print_running("Polynomials: Newton's Divided-Difference method")
+def run_example_newton_divided_difference():
+    print("\n\n[Example] Polynomials: Newton's Divided-Difference")
     x = np.array([1.0, 1.3, 1.6, 1.9, 2.2])
     y = np.array([0.7651977, 0.6200860, 0.4554022, 0.2818186, 0.1103623])
     print_var("x", x)
@@ -161,8 +156,8 @@ def run_newton_divided_difference():
     print_var("f", f)
 
 
-def run_derivative_backward_difference():
-    print_running("Differentiation: Backward-difference method")
+def run_example_derivative_backward_difference():
+    print("\n\n[Example] Differentiation: Backward-difference")
     x = np.array([0.0, 0.2, 0.4])
     y = np.array([0.00000, 0.74140, 1.3718])
     print_var("x", x)
@@ -171,8 +166,8 @@ def run_derivative_backward_difference():
     print_var("dy", dy)
 
 
-def run_derivative_three_point():
-    print_running("Differentiation: Three-Point method")
+def run_example_derivative_three_point():
+    print("\n\n[Example] Differentiation: Three-Point")
     x = np.array([1.1, 1.2, 1.3, 1.4])
     y = np.array([9.025013, 11.02318, 13.46374, 16.44465])
     print_var("x", x)
@@ -181,8 +176,8 @@ def run_derivative_three_point():
     print_var("dy", dy)
 
 
-def run_derivative_five_point():
-    print_running("Differentiation: Five-Point method")
+def run_example_derivative_five_point():
+    print("\n\n[Example] Differentiation: Five-Point")
     x = np.array([2.1, 2.2, 2.3, 2.4, 2.5, 2.6])
     y = np.array([-1.709847, -1.373823, -1.119214,
                   -0.9160143, -0.7470223, -0.6015966])
@@ -192,8 +187,8 @@ def run_derivative_five_point():
     print_var("dy", dy)
 
 
-def run_composite2_trapezoidal():
-    print_running("Integration: Trapezoidal Rule")
+def run_example_composite2_trapezoidal():
+    print("\n\n[Example] Integration: Trapezoidal Rule")
     x = np.array([0, 6, 12, 18, 24, 30, 36, 42, 48, 54, 60, 66, 72, 78, 84])
     y = np.array([124, 134, 148, 156, 147, 133,
                   121, 109, 99, 85, 78, 89, 104, 116, 123])
@@ -203,8 +198,8 @@ def run_composite2_trapezoidal():
     print_var("xi", xi)
 
 
-def run_composite_trapezoidal():
-    print_running("Integration: Trapezoidal Rule")
+def run_example_composite_trapezoidal():
+    print("\n\n[Example] Integration: Trapezoidal Rule")
 
     def f(x):
         return x ** 2 * math.log(x ** 2 + 1)
@@ -220,8 +215,8 @@ def run_composite_trapezoidal():
     print_var("xi", xi)
 
 
-def run_composite2_simpson():
-    print_running("Integration: Composite 1/3 Simpsons Rule")
+def run_example_composite2_simpson():
+    print("\n\n[Example] Integration: Composite 1/3 Simpsons Rule")
     x = np.array([0, 6, 12, 18, 24, 30, 36, 42, 48, 54, 60, 66, 72, 78, 84])
     y = np.array([124, 134, 148, 156, 147, 133,
                   121, 109, 99, 85, 78, 89, 104, 116, 123])
@@ -231,8 +226,8 @@ def run_composite2_simpson():
     print_var("xi", xi)
 
 
-def run_ccomposite_simpson():
-    print_running("Integration: Composite 1/3 Simpsons Rule")
+def run_example_ccomposite_simpson():
+    print("\n\n[Example] Integration: Composite 1/3 Simpsons Rule")
 
     def f(x):
         return x ** 2 * math.log(x ** 2 + 1)
@@ -248,8 +243,8 @@ def run_ccomposite_simpson():
     print_var("xi", xi)
 
 
-def run_composite_simpson():
-    print_running("ODE: Euler method")
+def run_example_composite_simpson():
+    print("\n\n[Example] ODE: Euler")
 
     def f(x, y):
         return y - x ** 2 + 1
@@ -267,8 +262,8 @@ def run_composite_simpson():
     print_var("vy", vy)
 
 
-def run_taylor2():
-    print_running("ODE: Taylor (Order 2) method")
+def run_example_taylor2():
+    print("\n\n[Example] ODE: Taylor (Order 2)")
 
     def f(x, y):
         return y - x ** 2 + 1
@@ -289,8 +284,8 @@ def run_taylor2():
     print_var("vy", vy)
 
 
-def run_taylor4():
-    print_running("ODE: Taylor (Order 4) method")
+def run_example_taylor4():
+    print("\n\n[Example] ODE: Taylor (Order 4)")
 
     def f(x, y):
         return y - x ** 2 + 1
@@ -317,8 +312,8 @@ def run_taylor4():
     print_var("vy", vy)
 
 
-def run_rk4():
-    print_running("ODE: Runge-Kutta (Order 4) method")
+def run_example_rk4():
+    print("\n\n[Example] ODE: Runge-Kutta (Order 4)")
 
     def f(x, y):
         return y - x ** 2 + 1
@@ -336,8 +331,8 @@ def run_rk4():
     print_var("vy", vy)
 
 
-def run_rk4_system():
-    print_running("ODE: Runge-Kutta (Order 4) method for systems of diff. eq.")
+def run_example_rk4_system():
+    print("\n\n[Example] ODE: Runge-Kutta (Order 4) for systems of diff. eq.")
     f = []
     f.append(lambda x, y: - 4 * y[0] + 3 * y[1] + 6)
     f.append(lambda x, y: - 2.4 * y[0] + 1.6 * y[1] + 3.6)
@@ -357,8 +352,8 @@ def run_rk4_system():
     print_var("vy", vy)
 
 
-def run_gauss_elimination_pp():
-    print_running("Linear Systems: Gaussian Elimination")
+def run_example_gauss_elimination_pp():
+    print("\n\n[Example] Linear Systems: Gaussian Elimination")
     a = np.array([[1, -1, 2, -1], [2, -2, 3, -3], [1, 1, 1, 0], [1, -1, 4, 3]])
     b = np.array([-8, -20, -2, 4])
     print_var("a", a)
@@ -368,8 +363,8 @@ def run_gauss_elimination_pp():
     return a
 
 
-def run_backward_substitution(a):
-    print_running("Linear Systems: Backward Substitution")
+def run_example_backward_substitution(a):
+    print("\n\n[Example] Linear Systems: Backward Substitution")
     u = a[:, 0:-1]
     d = a[:, -1]
     print_var("u", u)
@@ -378,8 +373,8 @@ def run_backward_substitution(a):
     print_var("x", x)
 
 
-def run_forward_substitution():
-    print_running("Linear Systems: Forward Substitution")
+def run_example_forward_substitution():
+    print("\n\n[Example] Linear Systems: Forward Substitution")
     L = np.array([[3, 0, 0, 0], [-1, 1, 0, 0], [3, -2, -1, 0], [1, -2, 6, 2]])
     c = np.array([5, 6, 4, 2])
     print_var("L", L)
@@ -388,8 +383,8 @@ def run_forward_substitution():
     print_var("x", x)
 
 
-def run_jacobi():
-    print_running("Iteractive Linear Systems: Jacobi")
+def run_example_jacobi():
+    print("\n\n[Example] Iteractive Linear Systems: Jacobi")
     a = np.array([[10, -1, 2, 0], [-1, 11, -1, 3],
                   [2, -1, 10, -1], [0, 3, -1, 8]])
     b = np.array([6, 25, -11, 15])
@@ -406,8 +401,8 @@ def run_jacobi():
     print_var("i", i)
 
 
-def run_gauss_seidel():
-    print_running("Iteractive Linear Systems: Gauss-Seidel")
+def run_example_gauss_seidel():
+    print("\n\n[Example] Iteractive Linear Systems: Gauss-Seidel")
     a = np.array([[10, -1, 2, 0], [-1, 11, -1, 3],
                   [2, -1, 10, -1], [0, 3, -1, 8]])
     b = np.array([6, 25, -11, 15])
@@ -425,31 +420,31 @@ def run_gauss_seidel():
 
 
 def main():
-    # Run all examples
-    run_bisection()
-    run_newton()
-    run_secant()
-    run_lagrange()
-    run_neville()
-    run_briot_ruffini()
-    run_newton_divided_difference()
-    run_derivative_backward_difference()
-    run_derivative_three_point()
-    run_derivative_five_point()
-    run_composite2_trapezoidal()
-    run_composite_trapezoidal()
-    run_composite2_simpson()
-    run_ccomposite_simpson()
-    run_composite_simpson()
-    run_taylor2()
-    run_taylor4()
-    run_rk4()
-    run_rk4_system()
-    a = run_gauss_elimination_pp()
-    run_backward_substitution(a)
-    run_forward_substitution()
-    run_jacobi()
-    run_gauss_seidel()
+    """Run all examples"""
+    run_example_bisection()
+    run_example_newton()
+    run_example_secant()
+    run_example_lagrange()
+    run_example_neville()
+    run_example_briot_ruffini()
+    run_example_newton_divided_difference()
+    run_example_derivative_backward_difference()
+    run_example_derivative_three_point()
+    run_example_derivative_five_point()
+    run_example_composite2_trapezoidal()
+    run_example_composite_trapezoidal()
+    run_example_composite2_simpson()
+    run_example_ccomposite_simpson()
+    run_example_composite_simpson()
+    run_example_taylor2()
+    run_example_taylor4()
+    run_example_rk4()
+    run_example_rk4_system()
+    a = run_example_gauss_elimination_pp()
+    run_example_backward_substitution(a)
+    run_example_forward_substitution()
+    run_example_jacobi()
+    run_example_gauss_seidel()
 
 
 if __name__ == '__main__':

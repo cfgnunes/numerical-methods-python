@@ -1,3 +1,5 @@
+"""Iterative Methods for Linear Systems"""
+
 import math
 import numpy as np
 
@@ -5,10 +7,10 @@ import numpy as np
 def backward_substitution(u, d):
     '''
     Solve the upper linear system ux=d
-    Inputs:
+    Parameters:
             u: Upper triangular matrix
             d: Array containing d values
-    Outputs:
+    Returns:
             x: Solution of linear system
     '''
 
@@ -33,10 +35,10 @@ def backward_substitution(u, d):
 def forward_substitution(l, c):
     '''
     Solve the lower linear system lx=c
-    Inputs:
+    Parameters:
             l: Lower triangular matrix
             c: Array containing c values
-    Outputs:
+    Returns:
             x: Solution of linear system
     '''
 
@@ -62,10 +64,10 @@ def gauss_elimination_pp(a, b):
     '''
     Gaussian Elimination with Partial Pivoting - Calculate the
     upper triangular matrix from linear system Ax=b (do a row reduction)
-    Inputs:
+    Parameters:
             a: Matrix A from system Ax=b
             b: Array containing b values
-    Outputs:
+    Returns:
             a: Augmented upper triangular matrix
     '''
 

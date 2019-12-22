@@ -27,9 +27,8 @@ lint: venv
 	@. $(VENV_ACTIVATE); $(PYTHON) -m flake8 *.py
 	@. $(VENV_ACTIVATE); $(PYTHON) -m pylint \
 		--disable=invalid-name \
-		--disable=missing-docstring \
+		--disable=missing-function-docstring \
 		--disable=too-many-arguments \
-		--disable=too-many-locals \
 		--disable=duplicate-code *.py
 	@echo "Done!"
 	@echo
