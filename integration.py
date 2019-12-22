@@ -1,4 +1,4 @@
-"""Numerical integration"""
+"""Methods for numerical integration"""
 
 
 def composite_simpson(f, b, a, n):
