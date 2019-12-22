@@ -1,6 +1,6 @@
 # Main packages
-numpy
+numpy==1.18.0
 
 # Linters
-flake8
-pylint
+flake8==3.7.9
+pylint==2.4.4
