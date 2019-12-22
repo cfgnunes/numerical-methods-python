@@ -33,7 +33,8 @@ def euler(f, a, b, n, ya):
         y += h * fxy
 
         fxy = f(x, y)
-        print("i: {:03d}\t x: {:.4f}\t y: {:.4f}\n".format(i + 1, x, y), end="")
+        print("i: {:03d}\t x: {:.4f}\t y: {:.4f}\n"
+              .format(i + 1, x, y), end="")
         vx[i] = x
         vy[i] = y
 
@@ -72,7 +73,9 @@ def taylor2(f, df1, a, b, n, ya):
         y += h * (f(x, y) + 0.5 * h * df1(x, y))
         x = a + (i + 1) * h
 
-        print("i: {:03d}\t x: {:.4f}\t y: {:.4f}\n".format(i + 1, x, y), end="")
+        print(
+            "i: {:03d}\t x: {:.4f}\t y: {:.4f}\n".format(
+                i + 1, x, y), end="")
         vx[i] = x
         vy[i] = y
 
@@ -114,7 +117,9 @@ def taylor4(f, df1, df2, df3, a, b, n, ya):
                   (h ** 3 / 24) * df3(x, y))
         x = a + (i + 1) * h
 
-        print("i: {:03d}\t x: {:.4f}\t y: {:.4f}\n".format(i + 1, x, y), end="")
+        print(
+            "i: {:03d}\t x: {:.4f}\t y: {:.4f}\n".format(
+                i + 1, x, y), end="")
         vx[i] = x
         vy[i] = y
 
@@ -157,7 +162,9 @@ def rk4(f, a, b, n, ya):
         x = a + (i + 1) * h
         y += (k1 + 2 * k2 + 2 * k3 + k4) / 6
 
-        print("i: {:03d}\t x: {:.4f}\t y: {:.4f}\n".format(i + 1, x, y), end="")
+        print(
+            "i: {:03d}\t x: {:.4f}\t y: {:.4f}\n".format(
+                i + 1, x, y), end="")
         vx[i] = x
         vy[i] = y
 
