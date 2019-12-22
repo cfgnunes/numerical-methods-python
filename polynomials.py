@@ -1,3 +1,6 @@
+"""Methods for polynomials"""
+
+
 import numpy as np
 
 
@@ -5,7 +8,7 @@ def briot_ruffini(a, root):
     """
     Divides a polynomial by another polynomial in the format (x-root)
     P(x) = Q(x) * (x-root) + rest
-    Inputs:
+    Parameters:
             a: Array containing the coefficients of the input polynomial
          root: One of the polynomial roots
     Outpus:
@@ -30,7 +33,7 @@ def newton_divided_difference(x, y):
     """
     Find the coefficients of Newton's divided difference and
     the Newton's polynomial.
-    Inputs:
+    Parameters:
             x: Array containing x values
             y: Array containing y values
     Outpus:

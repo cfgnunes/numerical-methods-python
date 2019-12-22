@@ -1,3 +1,5 @@
+"""Numerical differentiation"""
+
 import numpy as np
 
 
@@ -5,10 +7,10 @@ def derivative_backward_difference(x, y):
     """
     Calculate the first derivative
     All values in 'x' must be equally spaced
-    Inputs:
+    Parameters:
             x: Array containing x values
             y: Array containing y values
-    Outputs:
+    Returns:
            dy: Array containing the first derivative values
     """
 
@@ -38,10 +40,10 @@ def derivative_three_point(x, y):
     """
     Calculate the first derivative
     All values in 'x' must be equally spaced
-    Inputs:
+    Parameters:
             x: Array containing x values
             y: Array containing y values
-    Outputs:
+    Returns:
            dy: Array containing the first derivative values
     """
 
@@ -75,10 +77,10 @@ def derivative_five_point(x, y):
     """
     Calculate the first derivative
     All values in 'x' must be equally spaced
-    Inputs:
+    Parameters:
             x: Array containing x values
             y: Array containing y values
-    Outputs:
+    Returns:
            dy: Array containing the first derivative values
     """
 

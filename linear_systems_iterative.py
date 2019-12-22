@@ -1,10 +1,12 @@
+"""Methods for Linear Systems"""
+
 import numpy as np
 
 
 def jacobi(a, b, x0, tol, iter_max):
     '''
     Jacobi method: solve Ax = b given an initial approximation x0
-    Inputs:
+    Parameters:
             a: Matrix A from system Ax=b
             b: Array containing b values
            x0: Initial approximation of solution
@@ -34,7 +36,7 @@ def jacobi(a, b, x0, tol, iter_max):
 def gauss_seidel(a, b, x0, tol, iter_max):
     '''
     Gauss-Seidel method: solve Ax = b given an initial approximation x0
-    Inputs:
+    Parameters:
             a: Matrix A from system Ax=b
             b: Array containing b values
            x0: Initial approximation of solution
