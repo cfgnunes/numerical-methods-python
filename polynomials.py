@@ -53,11 +53,11 @@ def newton_divided_difference(x, y):
 
     # Prints the polynomial
     print("The polynomial is:")
-    print("p(x)=%+.4f" % f[0], end="")
+    print("p(x)={:+.4f}".format(f[0]), end="")
     for i in range(1, n):
-        print("%+.4f" % f[i], end="")
+        print("{:+.4f}".format(f[i]), end="")
         for j in range(1, i + 1):
-            print("(x%+.4f)" % (x[j] * -1), end="")
+            print("(x{:+.4f})".format(x[j] * -1), end="")
     print("")
 
     return [f]
