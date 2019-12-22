@@ -18,11 +18,11 @@ import solutions
 
 
 def print_var(var_name, value):
-    print(var_name, "=", value)
+    print("{} = {}".format(var_name, value))
 
 
 def print_running(message):
-    print("\n\n> Running", message)
+    print("\n\n> Running {}".format(message))
 
 
 def run_bisection():
