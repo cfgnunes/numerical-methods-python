@@ -1,6 +1,7 @@
 VENV_DIR=.venv
 VENV_ACTIVATE=$(VENV_DIR)/bin/activate
 PYTHON=$(VENV_DIR)/bin/python
+REQUIRIMENTS_FILE=requirements.txt
 
 .PHONY: help venv lint run clean
 
@@ -12,13 +13,14 @@ help:
 	@echo
 
 venv: $(VENV_ACTIVATE)
-$(VENV_ACTIVATE):
+$(VENV_ACTIVATE): $(REQUIRIMENTS_FILE)
 	@echo "Creating a virtualenv..."
 	@python3 -m venv "$(VENV_DIR)"
 	@echo "Installing packages in the virtualenv..."
 	@. $(VENV_ACTIVATE); \
 		pip3 install --upgrade pip setuptools; \
-		pip3 install --upgrade --requirement "requirements.txt"
+		pip3 install --upgrade --requirement $(REQUIRIMENTS_FILE)
+	@touch $(VENV_ACTIVATE)
 	@echo "Done!"
 	@echo
 
