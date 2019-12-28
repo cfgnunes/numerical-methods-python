@@ -8,10 +8,10 @@ REQUIRIMENTS_FILE=requirements.txt
 default: run
 
 help:
-	@echo "'make run': Run all examples."
-	@echo "'make lint': Run a linter in all code."
-	@echo "'make venv': Prepare development environment, use only once."
 	@echo "'make clean': Cleans up generated files."
+	@echo "'make lint': Run a linter in all code."
+	@echo "'make run': Run the project."
+	@echo "'make venv': Prepare development environment."
 	@echo
 
 venv: $(VENV_ACTIVATE)
@@ -38,7 +38,7 @@ lint: venv
 	@echo
 
 run: venv
-	@echo "Running all examples..."
+	@echo "Running the project..."
 	@. $(VENV_ACTIVATE); $(PYTHON) main.py
 	@echo "Done!"
 	@echo
