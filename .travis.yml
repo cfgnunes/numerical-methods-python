@@ -5,8 +5,6 @@ addons:
     packages:
       - make
       - python3-pip
+      - python3-numpy
 script:
-  - make help
-  - make clean
-  - make lint
-  - make run
+  - python3 main.py
