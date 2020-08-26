@@ -10,7 +10,7 @@ For the "MATLAB version", see [this repository](https://github.com/cfgnunes/nume
 
 ### Prerequisites
 
-This section assumes Ubuntu 16.04 (also tested on Ubuntu 18.04), but the procedure is similar for other Linux distributions. The prerequisites is to install the following packages:
+This section assumes Ubuntu 16.04 (also tested on Ubuntu 20.04), but the procedure is similar for other Linux distributions. The prerequisites is to install the following packages:
 
 ```sh
 sudo apt -y install python3-numpy
