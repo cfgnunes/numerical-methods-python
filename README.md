@@ -1,4 +1,4 @@
-# Numerical Methods [![Build Status](https://travis-ci.org/cfgnunes/numerical-methods-python.svg?branch=master)](https://travis-ci.org/cfgnunes/numerical-methods-python)
+# Numerical Methods [![Actions Status](https://github.com/cfgnunes/numerical-methods-python/workflows/build/badge.svg)](https://github.com/cfgnunes/numerical-methods-python/actions)
 
 If you like this project, please consider making a donation to support the developer. [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2EDNU6LPSCH6S)
 

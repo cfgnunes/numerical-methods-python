@@ -1,8 +1,0 @@
-language: python
-dist: xenial
-addons:
-  apt:
-    packages:
-      - python3-numpy
-script:
-  - python3 main.py
