@@ -17,7 +17,9 @@ jobs:
       - name: Set up Miniconda
         uses: conda-incubator/setup-miniconda@v2
         with:
+          activate-environment: numerical-methods-env
           environment-file: environment.yml
+          channels: defaults
 
       - name: Run the project
         run: python3 main.py
