@@ -1,4 +1,4 @@
-name: numerical-methods
+name: numerical-methods-env
 
 dependencies:
   - python

@@ -14,7 +14,7 @@ For the "MATLAB version", see [this repository](https://github.com/cfgnunes/nume
 
 ```sh
 conda env create
-conda activate numerical-methods
+conda activate numerical-methods-env
 ```
 
 #### Using Pip
