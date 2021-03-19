@@ -1,3 +1,5 @@
+# File used by GitHub Actions
+
 name: build
 
 on:
