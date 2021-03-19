@@ -1,3 +1,6 @@
+# File used by Conda (if you use it)
+# to install the necessary dependencies for the project.
+
 name: numerical-methods-env
 
 dependencies:
