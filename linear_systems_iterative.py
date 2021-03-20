@@ -4,18 +4,18 @@ import numpy as np
 
 
 def jacobi(a, b, x0, tol, iter_max):
-    '''
+    """
     Jacobi method: solve Ax = b given an initial approximation x0
     Parameters:
-            a: Matrix A from system Ax=b
-            b: Array containing b values
-           x0: Initial approximation of solution
-          tol: Tolerance
-     iter_max: Maximum number of iterations
-    Outpus:
-            x: Solution of linear system
-         iter: Used iterations
-    '''
+        a: Matrix A from system Ax=b
+        b: Array containing b values
+        x0: Initial approximation of solution
+        tol: Tolerance
+        iter_max: Maximum number of iterations
+    Returns:
+        x: Solution of linear system
+        iter: Used iterations
+    """
 
     # D and M matrices
     d = np.diag(np.diag(a))
@@ -23,6 +23,7 @@ def jacobi(a, b, x0, tol, iter_max):
 
     # Iterative process
     i = 1
+    x = None
     for i in range(1, iter_max + 1):
         x = np.linalg.solve(d, (b - np.dot(m, x0)))
 
@@ -34,27 +35,28 @@ def jacobi(a, b, x0, tol, iter_max):
 
 
 def gauss_seidel(a, b, x0, tol, iter_max):
-    '''
+    """
     Gauss-Seidel method: solve Ax = b given an initial approximation x0
     Parameters:
-            a: Matrix A from system Ax=b
-            b: Array containing b values
-           x0: Initial approximation of solution
-          tol: Tolerance
-     iter_max: Maximum number of iterations
-    Outpus:
-            x: Solution of linear system
-         iter: Used iterations
-    '''
+        a: Matrix A from system Ax=b
+        b: Array containing b values
+        x0: Initial approximation of solution
+        tol: Tolerance
+        iter_max: Maximum number of iterations
+    Returns:
+        x: Solution of linear system
+        iter: Used iterations
+    """
 
     # L and U matrices
-    L = np.tril(a)
-    u = a - L
+    lower = np.tril(a)
+    upper = a - lower
 
     # Iterative process
     i = 1
+    x = None
     for i in range(1, iter_max + 1):
-        x = np.linalg.solve(L, (b - np.dot(u, x0)))
+        x = np.linalg.solve(lower, (b - np.dot(upper, x0)))
 
         if np.linalg.norm(x - x0, np.inf) / np.linalg.norm(x, np.inf) <= tol:
             break

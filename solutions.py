@@ -7,23 +7,23 @@ def bisection(f, a, b, tol, iter_max):
     """
     Calculates the root of an equation by Bisection method
     Parameters:
-            f: Function f(x)
-            a: Lower limit
-            b: Upper limit
-          tol: Tolerance
-     iter_max: Maximum number of iterations
-    Outpus:
-         root: Root value
-         iter: Used iterations
-    converged: Found the root
+        f: Function f(x)
+        a: Lower limit
+        b: Upper limit
+        tol: Tolerance
+        iter_max: Maximum number of iterations
+    Returns:
+        root: Root value
+        iter: Used iterations
+        converged: Found the root
     """
 
     fa = f(a)
     fb = f(b)
 
     if fa * fb > 0:
-        raise "Error: The function does not change signal at \
-              the ends of the given interval."
+        raise Exception("The function does not change signal at \
+              the ends of the given interval.")
 
     delta_x = math.fabs(b - a) / 2
 
@@ -59,15 +59,15 @@ def newton(f, df, x0, tol, iter_max):
     """
     Calculates the root of an equation by Newton method
     Parameters:
-            f: Function f(x)
-           df: Derivative of function f(x)
-           x0: Initial guess
-          tol: Tolerance
-     iter_max: Maximum number of iterations
-    Outpus:
-         root: Root value
-         iter: Used iterations
-    converged: Found the root
+        f: Function f(x)
+        df: Derivative of function f(x)
+        x0: Initial guess
+        tol: Tolerance
+        iter_max: Maximum number of iterations
+    Returns:
+        root: Root value
+        iter: Used iterations
+        converged: Found the root
     """
 
     x = x0
@@ -102,25 +102,25 @@ def secant(f, a, b, tol, iter_max):
     """
     Calculates the root of an equation by Secant method
     Parameters:
-            f: Function f(x)
-            a: Lower limit
-            b: Upper limit
-          tol: Tolerance
-     iter_max: Maximum number of iterations
-    Outpus:
-         root: Root value
-         iter: Used iterations
-    converged: Found the root
+        f: Function f(x)
+        a: Lower limit
+        b: Upper limit
+        tol: Tolerance
+        iter_max: Maximum number of iterations
+    Returns:
+        root: Root value
+        iter: Used iterations
+        converged: Found the root
     """
 
     fa = f(a)
     fb = f(b)
 
     if fb - fa == 0:
-        raise "Error: f(b)-f(a) must be nonzero."
+        raise Exception("f(b)-f(a) must be nonzero.")
 
     if b - a == 0:
-        raise "Error: b-a must be nonzero."
+        raise Exception("b-a must be nonzero.")
 
     if math.fabs(fa) < math.fabs(fb):
         a, b = b, a

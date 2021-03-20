@@ -365,21 +365,22 @@ def run_example_gauss_elimination_pp():
 
 def run_example_backward_substitution(a):
     print("\n\n[Example] Linear Systems: Backward Substitution")
-    u = a[:, 0:-1]
+    upper = a[:, 0:-1]
     d = a[:, -1]
-    print_var("u", u)
+    print_var("upper", upper)
     print_var("d", d)
-    [x] = linear_systems.backward_substitution(u, d)
+    [x] = linear_systems.backward_substitution(upper, d)
     print_var("x", x)
 
 
 def run_example_forward_substitution():
     print("\n\n[Example] Linear Systems: Forward Substitution")
-    L = np.array([[3, 0, 0, 0], [-1, 1, 0, 0], [3, -2, -1, 0], [1, -2, 6, 2]])
+    lower = np.array([[3, 0, 0, 0], [-1, 1, 0, 0],
+                     [3, -2, -1, 0], [1, -2, 6, 2]])
     c = np.array([5, 6, 4, 2])
-    print_var("L", L)
+    print_var("lower", lower)
     print_var("c", c)
-    [x] = linear_systems.forward_substitution(L, c)
+    [x] = linear_systems.forward_substitution(lower, c)
     print_var("x", x)
 
 
