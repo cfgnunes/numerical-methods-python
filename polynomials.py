@@ -9,11 +9,11 @@ def briot_ruffini(a, root):
     Divides a polynomial by another polynomial in the format (x-root)
     P(x) = Q(x) * (x-root) + rest
     Parameters:
-            a: Array containing the coefficients of the input polynomial
-         root: One of the polynomial roots
-    Outpus:
-            b: Array containing the coefficients of the output polynomial
-         rest: Polynomial division Rest
+        a: Array containing the coefficients of the input polynomial
+        root: One of the polynomial roots
+    Returns:
+        b: Array containing the coefficients of the output polynomial
+        rest: Polynomial division Rest
     """
 
     n = a.size - 1
@@ -34,10 +34,10 @@ def newton_divided_difference(x, y):
     Find the coefficients of Newton's divided difference and
     the Newton's polynomial.
     Parameters:
-            x: Array containing x values
-            y: Array containing y values
-    Outpus:
-            f: Array containing Newton's divided difference coefficients
+        x: Array containing x values
+        y: Array containing y values
+    Returns:
+        f: Array containing Newton's divided difference coefficients
     """
 
     n = x.size

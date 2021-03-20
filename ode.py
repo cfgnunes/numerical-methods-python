@@ -4,18 +4,18 @@ import numpy as np
 
 
 def euler(f, a, b, n, ya):
-    '''
+    """
     Calculate the solution of the initial-value problem from Euler method
     Parameters:
-            f: Function f(x)
-            a: Initial point
-            b: End point
-            n: Number of intervals
-           ya: Initial value
+        f: Function f(x)
+        a: Initial point
+        b: End point
+        n: Number of intervals
+        ya: Initial value
     Returns:
-          vx: Array containing x values
-          vy: Array containing y values (solution of IVP)
-    '''
+        vx: Array containing x values
+        vy: Array containing y values (solution of IVP)
+    """
 
     vx = np.zeros(n)
     vy = np.zeros(n)
@@ -44,20 +44,20 @@ def euler(f, a, b, n, ya):
 
 
 def taylor2(f, df1, a, b, n, ya):
-    '''
+    """
     Calculate the solution of the initial-value problem from
     Taylor (Order Two) method.
     Parameters:
-            f: Function f(x)
-          df1: 1's derivative of function f(x)
-            a: Initial point
-            b: End point
-            n: Number of intervals
-           ya: Initial value
+        f: Function f(x)
+        df1: 1's derivative of function f(x)
+        a: Initial point
+        b: End point
+        n: Number of intervals
+        ya: Initial value
     Returns:
-          vx: Array containing x values
-          vy: Array containing y values (solution of IVP)
-    '''
+        vx: Array containing x values
+        vy: Array containing y values (solution of IVP)
+    """
 
     vx = np.zeros(n)
     vy = np.zeros(n)
@@ -85,22 +85,22 @@ def taylor2(f, df1, a, b, n, ya):
 
 
 def taylor4(f, df1, df2, df3, a, b, n, ya):
-    '''
+    """
     Calculate the solution of the initial-value problem from
     Taylor (Order Four) method.
     Parameters:
-            f: Function f(x)
-          df1: 1's derivative of function f(x)
-          df2: 2's derivative of function f(x)
-          df3: 3's derivative of function f(x)
-            a: Initial point
-            b: End point
-            n: Number of intervals
-           ya: Initial value
+        f: Function f(x)
+        df1: 1's derivative of function f(x)
+        df2: 2's derivative of function f(x)
+        df3: 3's derivative of function f(x)
+        a: Initial point
+        b: End point
+        n: Number of intervals
+        ya: Initial value
     Returns:
-          vx: Array containing x values
-          vy: Array containing y values (solution of IVP)
-    '''
+        vx: Array containing x values
+        vy: Array containing y values (solution of IVP)
+    """
 
     vx = np.zeros(n)
     vy = np.zeros(n)
@@ -129,19 +129,19 @@ def taylor4(f, df1, df2, df3, a, b, n, ya):
 
 
 def rk4(f, a, b, n, ya):
-    '''
+    """
     Calculate the solution of the initial-value problem from
     Runge-Kutta (Order Four) method.
     Parameters:
-            f: Function f(x)
-            a: Initial point
-            b: End point
-            n: Number of intervals
-           ya: Initial value
+        f: Function f(x)
+        a: Initial point
+        b: End point
+        n: Number of intervals
+        ya: Initial value
     Returns:
-          vx: Array containing x values
-          vy: Array containing y values (solution of IVP)
-    '''
+        vx: Array containing x values
+        vy: Array containing y values (solution of IVP)
+    """
 
     vx = np.zeros(n)
     vy = np.zeros(n)
@@ -176,19 +176,19 @@ def rk4(f, a, b, n, ya):
 
 
 def rk4_system(f, a, b, n, ya):
-    '''
+    """
     Calculate the solution of systems of differential equations from
     Runge-Kutta (Order Four) method.
     Parameters:
-            f: Array of functions f(x)
-            a: Initial point
-            b: End point
-            n: Number of intervals
-           ya: Array of initial values
+        f: Array of functions f(x)
+        a: Initial point
+        b: End point
+        n: Number of intervals
+        ya: Array of initial values
     Returns:
-          vx: Array containing x values
-          vy: Array containing y values (solution of IVP)
-    '''
+        vx: Array containing x values
+        vy: Array containing y values (solution of IVP)
+    """
 
     m = len(f)
 

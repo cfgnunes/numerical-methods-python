@@ -7,8 +7,8 @@ def lagrange(x, y, x_int):
     """
     Interpolates a value using Lagrange polynomial
     Parameters:
-            x: Array containing x values
-            y: Array containing y values
+        x: Array containing x values
+        y: Array containing y values
         x_int: Value to interpolate
     Returns:
         y_int: Interpolated value
@@ -31,12 +31,12 @@ def neville(x, y, x_int):
     """
     Interpolates a value using Neville polynomial
     Parameters:
-            x: Array containing x values
-            y: Array containing y values
+        x: Array containing x values
+        y: Array containing y values
         x_int: Value to interpolate
     Returns:
         y_int: Interpolated value
-            q: Coefficients matrix
+        q: Coefficients matrix
     """
 
     n = x.size

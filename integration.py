@@ -2,16 +2,16 @@
 
 
 def composite_simpson(f, b, a, n):
-    '''
+    """
     Calculate the integral from 1/3 Simpson's Rule
     Parameters:
-            f: Function f(x)
-            a: Initial point
-            b: End point
-            n: Number of intervals
+        f: Function f(x)
+        a: Initial point
+        b: End point
+        n: Number of intervals
     Returns:
-           xi: Integral value
-    '''
+        xi: Integral value
+    """
 
     h = (b - a) / n
 
@@ -30,16 +30,16 @@ def composite_simpson(f, b, a, n):
 
 
 def composite_trapezoidal(f, b, a, n):
-    '''
+    """
     Calculate the integral from Trapezoidal Rule
     Parameters:
-            f: Function f(x)
-            a: Initial point
-            b: End point
-            n: Number of intervals
+        f: Function f(x)
+        a: Initial point
+        b: End point
+        n: Number of intervals
     Returns:
-           xi: Integral value
-    '''
+        xi: Integral value
+    """
 
     h = (b - a) / n
 
@@ -54,17 +54,17 @@ def composite_trapezoidal(f, b, a, n):
 
 
 def composite2_simpson(x, y):
-    '''
+    """
     Calculate the integral from 1/3 Simpson's Rule
     Parameters:
-            x: Array containing x values
-            y: Array containing y values
+        x: Array containing x values
+        y: Array containing y values
     Returns:
-           xi: Integral value
-    '''
+        xi: Integral value
+    """
 
     if y.size != y.size:
-        raise "Error: 'x' and 'y' must have same size."
+        raise Exception("'x' and 'y' must have same size.")
 
     h = x[1] - x[0]
     n = x.size
@@ -83,17 +83,17 @@ def composite2_simpson(x, y):
 
 
 def composite2_trapezoidal(x, y):
-    '''
+    """
     Calculate the integral from Trapezoidal Rule
     Parameters:
-            x: Array containing x values
-            y: Array containing y values
+        x: Array containing x values
+        y: Array containing y values
     Returns:
-           xi: Integral value
-    '''
+        xi: Integral value
+    """
 
     if y.size != y.size:
-        raise "Error: 'x' and 'y' must have same size."
+        raise Exception("'x' and 'y' must have same size.")
 
     h = x[1] - x[0]
     n = x.size

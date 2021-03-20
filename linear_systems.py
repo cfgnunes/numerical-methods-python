@@ -4,77 +4,77 @@ import math
 import numpy as np
 
 
-def backward_substitution(u, d):
-    '''
+def backward_substitution(upper, d):
+    """
     Solve the upper linear system ux=d
     Parameters:
-            u: Upper triangular matrix
-            d: Array containing d values
+        upper: Upper triangular matrix
+        d: Array containing d values
     Returns:
-            x: Solution of linear system
-    '''
+        x: Solution of linear system
+    """
 
-    [n, m] = u.shape
+    [n, m] = upper.shape
     b = d.astype(float)
 
     if n != m:
-        raise "Error: 'u' must be a square matrix."
+        raise Exception("'upper' must be a square matrix.")
 
     x = np.zeros(n)
 
     for i in range(n - 1, -1, -1):
-        if u[i, i] == 0:
-            raise "Error: Matrix 'u' is singular."
+        if upper[i, i] == 0:
+            raise Exception("Matrix 'upper' is singular.")
 
-        x[i] = b[i] / u[i, i]
-        b[0:i] = b[0:i] - u[0:i, i] * x[i]
+        x[i] = b[i] / upper[i, i]
+        b[0:i] = b[0:i] - upper[0:i, i] * x[i]
 
     return [x]
 
 
-def forward_substitution(l, c):
-    '''
+def forward_substitution(lower, c):
+    """
     Solve the lower linear system lx=c
     Parameters:
-            l: Lower triangular matrix
-            c: Array containing c values
+        lower: Lower triangular matrix
+        c: Array containing c values
     Returns:
-            x: Solution of linear system
-    '''
+        x: Solution of linear system
+    """
 
-    [n, m] = l.shape
+    [n, m] = lower.shape
     b = c.astype(float)
 
     if n != m:
-        raise "Error: 'l' must be a square matrix."
+        raise Exception("'lower' must be a square matrix.")
 
     x = np.zeros(n)
 
     for i in range(0, n):
-        if l[i, i] == 0:
-            raise "Error: Matrix 'l' is singular."
+        if lower[i, i] == 0:
+            raise Exception("Matrix 'lower' is singular.")
 
-        x[i] = b[i] / l[i, i]
-        b[i + 1:n] = b[i + 1:n] - l[i + 1:n, i] * x[i]
+        x[i] = b[i] / lower[i, i]
+        b[i + 1:n] = b[i + 1:n] - lower[i + 1:n, i] * x[i]
 
     return [x]
 
 
 def gauss_elimination_pp(a, b):
-    '''
+    """
     Gaussian Elimination with Partial Pivoting - Calculate the
     upper triangular matrix from linear system Ax=b (do a row reduction)
     Parameters:
-            a: Matrix A from system Ax=b
-            b: Array containing b values
+        a: Matrix A from system Ax=b
+        b: Array containing b values
     Returns:
-            a: Augmented upper triangular matrix
-    '''
+        a: Augmented upper triangular matrix
+    """
 
     [n, m] = a.shape
 
     if n != m:
-        raise "Error: 'l' must be a square matrix."
+        raise Exception("'a' must be a square matrix.")
 
     # Produces the augmented matrixsss
     a = np.concatenate((a, b[:, None]), axis=1).astype(float)
