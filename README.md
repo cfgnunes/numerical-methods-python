@@ -91,7 +91,3 @@ python3 main.py
 ## Built With
 
 - [Python](https://www.python.org/) - Programming language used
-
-## Authors
-
-- Cristiano Nunes
