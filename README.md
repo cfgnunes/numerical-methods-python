@@ -2,7 +2,7 @@
 
 Numerical methods implementation in Python.
 
-For the "MATLAB version", see [this repository](https://github.com/cfgnunes/numerical-methods-matlab).
+For the implementation in MATLAB, see [this repository](https://github.com/cfgnunes/numerical-methods-matlab).
 
 ## Getting Started
 
