@@ -9,7 +9,7 @@ def derivative_backward_difference(x, y):
 
     All values in 'x' must be equally spaced.
 
-    Parameters:
+    Args:
         x: array containing x values.
         y: array containing y values.
 
@@ -44,7 +44,7 @@ def derivative_three_point(x, y):
 
     All values in 'x' must be equally spaced.
 
-    Parameters:
+    Args:
         x: array containing x values.
         y: array containing y values.
 
@@ -83,7 +83,7 @@ def derivative_five_point(x, y):
 
     All values in 'x' must be equally spaced.
 
-    Parameters:
+    Args:
         x: array containing x values.
         y: array containing y values.
 

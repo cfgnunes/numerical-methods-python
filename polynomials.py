@@ -10,7 +10,7 @@ def briot_ruffini(a, root):
 
     The format is: P(x) = Q(x) * (x-root) + rest.
 
-    Parameters:
+    Args:
         a: array containing the coefficients of the input polynomial
         root: one of the polynomial roots
 
@@ -37,7 +37,7 @@ def newton_divided_difference(x, y):
 
     Also findthe Newton's polynomial.
 
-    Parameters:
+    Args:
         x: array containing x values.
         y: array containing y values.
 

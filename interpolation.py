@@ -7,7 +7,7 @@ def lagrange(x, y, x_int):
     """
     Interpolates a value using Lagrange polynomial.
 
-    Parameters:
+    Args:
         x: array containing x values.
         y: array containing y values.
         x_int: value to interpolate.
@@ -32,7 +32,7 @@ def neville(x, y, x_int):
     """
     Interpolates a value using Neville polynomial.
 
-    Parameters:
+    Args:
         x: array containing x values.
         y: array containing y values.
         x_int: value to interpolate.
