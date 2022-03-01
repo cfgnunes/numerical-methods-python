@@ -4,23 +4,43 @@ name: build
 
 on:
   push:
-    branches: [master]
+    branches:
+      - master
   pull_request:
-    branches: [master]
+    branches:
+      - master
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  test:
+    name: Test on ${{ matrix.cfg.os }}, Python ${{ matrix.python-version }}
+    runs-on: ${{ matrix.cfg.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version:
+          - 3.6
+          - 3.7
+          - 3.8
+          - 3.9
+        cfg:
+          - os: ubuntu-latest
+          - os: macOS-latest
 
     steps:
       - name: Set up git repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2.4.0
 
       - name: Set up Miniconda
-        uses: conda-incubator/setup-miniconda@v2
+        uses: conda-incubator/setup-miniconda@v2.1.1
         with:
+          # More info on options: https://github.com/conda-incubator/setup-miniconda
+          python-version: ${{ matrix.python-version }}
           environment-file: environment.yml
+          channels: conda-forge,defaults
           activate-environment: numerical-methods-env
+          auto-update-conda: true
+          auto-activate-base: false
+          show-channel-urls: true
 
       - name: Run the project
         shell: bash -l {0}
