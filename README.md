@@ -1,6 +1,6 @@
 # Numerical Methods [![Actions Status](https://github.com/cfgnunes/numerical-methods-python/workflows/build/badge.svg)](https://github.com/cfgnunes/numerical-methods-python/actions)
 
-Numerical methods implementation in Python 3.
+Numerical methods implementation in Python.
 
 For the "MATLAB version", see [this repository](https://github.com/cfgnunes/numerical-methods-matlab).
 
