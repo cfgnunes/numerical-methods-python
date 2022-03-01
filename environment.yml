@@ -1,8 +1,7 @@
-# File used by Conda (if you use it)
-# to install the necessary dependencies for the project.
+# File used by Conda (if you use it) to install the necessary dependencies.
 
 name: numerical-methods-env
 
 dependencies:
-  - python==3.8.5
+  - python=>3.0
   - numpy
