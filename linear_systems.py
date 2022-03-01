@@ -9,10 +9,10 @@ def backward_substitution(upper, d):
 
     Args:
         upper: upper triangular matrix.
-        d: array containing d values.
+        d: an array containing d values.
 
     Returns:
-        x: solution of linear system.
+        x: solution of linear the system.
     """
     [n, m] = upper.shape
     b = d.astype(float)
@@ -37,10 +37,10 @@ def forward_substitution(lower, c):
 
     Args:
         lower: lower triangular matrix.
-        c: array containing c values.
+        c: an array containing c values.
 
     Returns:
-        x: solution of linear system.
+        x: solution of linear the system.
     """
     [n, m] = lower.shape
     b = c.astype(float)
@@ -63,12 +63,12 @@ def forward_substitution(lower, c):
 def gauss_elimination_pp(a, b):
     """Gaussian Elimination with Partial Pivoting.
 
-    Calculate the upper triangular matrix from linear system Ax=b (do a row
+    Calculate the upper triangular matrix from linear system Ax=b (make a row
     reduction).
 
     Args:
         a: matrix A from system Ax=b.
-        b: array containing b values.
+        b: an array containing b values.
 
     Returns:
         a: augmented upper triangular matrix.

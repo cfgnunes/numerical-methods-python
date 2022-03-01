@@ -4,11 +4,11 @@ import numpy as np
 
 
 def lagrange(x, y, x_int):
-    """Interpolates a value using Lagrange polynomial.
+    """Interpolates a value using the 'Lagrange polynomial'.
 
     Args:
-        x: array containing x values.
-        y: array containing y values.
+        x: an array containing x values.
+        y: an array containing y values.
         x_int: value to interpolate.
 
     Returns:
@@ -28,11 +28,11 @@ def lagrange(x, y, x_int):
 
 
 def neville(x, y, x_int):
-    """Interpolates a value using Neville polynomial.
+    """Interpolates a value using the 'Neville polynomial'.
 
     Args:
-        x: array containing x values.
-        y: array containing y values.
+        x: an array containing x values.
+        y: an array containing y values.
         x_int: value to interpolate.
 
     Returns:
