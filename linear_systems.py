@@ -1,4 +1,4 @@
-"""Iterative Methods for Linear Systems"""
+"""Iterative Methods for Linear Systems."""
 
 import math
 import numpy as np
@@ -6,14 +6,15 @@ import numpy as np
 
 def backward_substitution(upper, d):
     """
-    Solve the upper linear system ux=d
-    Parameters:
-        upper: Upper triangular matrix
-        d: Array containing d values
-    Returns:
-        x: Solution of linear system
-    """
+    Solve the upper linear system ux=d.
 
+    Parameters:
+        upper: upper triangular matrix.
+        d: array containing d values.
+
+    Returns:
+        x: solution of linear system.
+    """
     [n, m] = upper.shape
     b = d.astype(float)
 
@@ -34,14 +35,15 @@ def backward_substitution(upper, d):
 
 def forward_substitution(lower, c):
     """
-    Solve the lower linear system lx=c
-    Parameters:
-        lower: Lower triangular matrix
-        c: Array containing c values
-    Returns:
-        x: Solution of linear system
-    """
+    Solve the lower linear system lx=c.
 
+    Parameters:
+        lower: lower triangular matrix.
+        c: array containing c values.
+
+    Returns:
+        x: solution of linear system.
+    """
     [n, m] = lower.shape
     b = c.astype(float)
 
@@ -62,15 +64,18 @@ def forward_substitution(lower, c):
 
 def gauss_elimination_pp(a, b):
     """
-    Gaussian Elimination with Partial Pivoting - Calculate the
-    upper triangular matrix from linear system Ax=b (do a row reduction)
-    Parameters:
-        a: Matrix A from system Ax=b
-        b: Array containing b values
-    Returns:
-        a: Augmented upper triangular matrix
-    """
+    Gaussian Elimination with Partial Pivoting.
 
+    Calculate the upper triangular matrix from linear system Ax=b (do a row
+    reduction).
+
+    Parameters:
+        a: matrix A from system Ax=b.
+        b: array containing b values.
+
+    Returns:
+        a: augmented upper triangular matrix.
+    """
     [n, m] = a.shape
 
     if n != m:

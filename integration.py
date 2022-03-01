@@ -1,18 +1,19 @@
-"""Methods for numerical integration"""
+"""Methods for numerical integration."""
 
 
 def composite_simpson(f, b, a, n):
     """
-    Calculate the integral from 1/3 Simpson's Rule
-    Parameters:
-        f: Function f(x)
-        a: Initial point
-        b: End point
-        n: Number of intervals
-    Returns:
-        xi: Integral value
-    """
+    Calculate the integral from 1/3 Simpson's Rule.
 
+    Parameters:
+        f: function f(x).
+        a: initial point.
+        b: end point.
+        n: number of intervals.
+
+    Returns:
+        xi: integral value.
+    """
     h = (b - a) / n
 
     sum_odd = 0
@@ -31,16 +32,17 @@ def composite_simpson(f, b, a, n):
 
 def composite_trapezoidal(f, b, a, n):
     """
-    Calculate the integral from Trapezoidal Rule
-    Parameters:
-        f: Function f(x)
-        a: Initial point
-        b: End point
-        n: Number of intervals
-    Returns:
-        xi: Integral value
-    """
+    Calculate the integral from Trapezoidal Rule.
 
+    Parameters:
+        f: function f(x).
+        a: initial point.
+        b: end point.
+        n: number of intervals.
+
+    Returns:
+        xi: integral value.
+    """
     h = (b - a) / n
 
     sum_x = 0
@@ -55,14 +57,15 @@ def composite_trapezoidal(f, b, a, n):
 
 def composite2_simpson(x, y):
     """
-    Calculate the integral from 1/3 Simpson's Rule
-    Parameters:
-        x: Array containing x values
-        y: Array containing y values
-    Returns:
-        xi: Integral value
-    """
+    Calculate the integral from 1/3 Simpson's Rule.
 
+    Parameters:
+        x: array containing x values.
+        y: array containing y values.
+
+    Returns:
+        xi: integral value.
+    """
     if y.size != y.size:
         raise Exception("'x' and 'y' must have same size.")
 
@@ -84,14 +87,15 @@ def composite2_simpson(x, y):
 
 def composite2_trapezoidal(x, y):
     """
-    Calculate the integral from Trapezoidal Rule
-    Parameters:
-        x: Array containing x values
-        y: Array containing y values
-    Returns:
-        xi: Integral value
-    """
+    Calculate the integral from Trapezoidal Rule.
 
+    Parameters:
+        x: array containing x values.
+        y: array containing y values.
+
+    Returns:
+        xi: integral value.
+    """
     if y.size != y.size:
         raise Exception("'x' and 'y' must have same size.")
 

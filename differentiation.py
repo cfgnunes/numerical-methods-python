@@ -1,19 +1,21 @@
-"""Numerical differentiation"""
+"""Numerical differentiation."""
 
 import numpy as np
 
 
 def derivative_backward_difference(x, y):
     """
-    Calculate the first derivative
-    All values in 'x' must be equally spaced
-    Parameters:
-        x: Array containing x values
-        y: Array containing y values
-    Returns:
-        dy: Array containing the first derivative values
-    """
+    Calculate the first derivative.
 
+    All values in 'x' must be equally spaced.
+
+    Parameters:
+        x: array containing x values.
+        y: array containing y values.
+
+    Returns:
+        dy: array containing the first derivative values.
+    """
     if x.size < 2 or y.size < 2:
         raise Exception("'x' and 'y' arrays must have 2 values or more.")
 
@@ -38,15 +40,17 @@ def derivative_backward_difference(x, y):
 
 def derivative_three_point(x, y):
     """
-    Calculate the first derivative
-    All values in 'x' must be equally spaced
-    Parameters:
-        x: Array containing x values
-        y: Array containing y values
-    Returns:
-        dy: Array containing the first derivative values
-    """
+    Calculate the first derivative.
 
+    All values in 'x' must be equally spaced.
+
+    Parameters:
+        x: array containing x values.
+        y: array containing y values.
+
+    Returns:
+        dy: array containing the first derivative values.
+    """
     if x.size < 3 or y.size < 3:
         raise Exception("'x' and 'y' arrays must have 3 values or more.")
 
@@ -75,15 +79,17 @@ def derivative_three_point(x, y):
 
 def derivative_five_point(x, y):
     """
-    Calculate the first derivative
-    All values in 'x' must be equally spaced
-    Parameters:
-        x: Array containing x values
-        y: Array containing y values
-    Returns:
-        dy: Array containing the first derivative values
-    """
+    Calculate the first derivative.
 
+    All values in 'x' must be equally spaced.
+
+    Parameters:
+        x: array containing x values.
+        y: array containing y values.
+
+    Returns:
+        dy: array containing the first derivative values.
+    """
     if x.size < 6 or y.size < 6:
         raise Exception("'x' and 'y' arrays must have 6 values or more.")
 
