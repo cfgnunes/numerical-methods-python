@@ -4,8 +4,7 @@ import numpy as np
 
 
 def lagrange(x, y, x_int):
-    """
-    Interpolates a value using Lagrange polynomial.
+    """Interpolates a value using Lagrange polynomial.
 
     Args:
         x: array containing x values.
@@ -29,8 +28,7 @@ def lagrange(x, y, x_int):
 
 
 def neville(x, y, x_int):
-    """
-    Interpolates a value using Neville polynomial.
+    """Interpolates a value using Neville polynomial.
 
     Args:
         x: array containing x values.
@@ -43,6 +41,7 @@ def neville(x, y, x_int):
     """
     n = x.size
     q = np.zeros((n, n - 1))
+
     # Insert 'y' in the first column of the matrix 'q'
     q = np.concatenate((y[:, None], q), axis=1)
 

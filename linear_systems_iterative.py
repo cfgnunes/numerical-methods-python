@@ -4,8 +4,7 @@ import numpy as np
 
 
 def jacobi(a, b, x0, tol, iter_max):
-    """
-    Jacobi method: solve Ax = b given an initial approximation x0.
+    """Jacobi method: solve Ax = b given an initial approximation x0.
 
     Args:
         a: matrix A from system Ax=b.
@@ -36,8 +35,7 @@ def jacobi(a, b, x0, tol, iter_max):
 
 
 def gauss_seidel(a, b, x0, tol, iter_max):
-    """
-    Gauss-Seidel method: solve Ax = b given an initial approximation x0.
+    """Gauss-Seidel method: solve Ax = b given an initial approximation x0.
 
     Args:
         a: matrix A from system Ax=b.

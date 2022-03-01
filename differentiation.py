@@ -4,8 +4,7 @@ import numpy as np
 
 
 def derivative_backward_difference(x, y):
-    """
-    Calculate the first derivative.
+    """Calculate the first derivative.
 
     All values in 'x' must be equally spaced.
 
@@ -39,8 +38,7 @@ def derivative_backward_difference(x, y):
 
 
 def derivative_three_point(x, y):
-    """
-    Calculate the first derivative.
+    """Calculate the first derivative.
 
     All values in 'x' must be equally spaced.
 
@@ -78,8 +76,7 @@ def derivative_three_point(x, y):
 
 
 def derivative_five_point(x, y):
-    """
-    Calculate the first derivative.
+    """Calculate the first derivative.
 
     All values in 'x' must be equally spaced.
 

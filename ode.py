@@ -4,8 +4,7 @@ import numpy as np
 
 
 def euler(f, a, b, n, ya):
-    """
-    Calculate the solution of the initial-value problem (IVP).
+    """Calculate the solution of the initial-value problem (IVP).
 
     Solve the IVP from Euler method.
 
@@ -47,8 +46,7 @@ def euler(f, a, b, n, ya):
 
 
 def taylor2(f, df1, a, b, n, ya):
-    """
-    Calculate the solution of the initial-value problem (IVP).
+    """Calculate the solution of the initial-value problem (IVP).
 
     Solve the IVP from Taylor (Order Two) method.
 
@@ -90,8 +88,7 @@ def taylor2(f, df1, a, b, n, ya):
 
 
 def taylor4(f, df1, df2, df3, a, b, n, ya):
-    """
-    Calculate the solution of the initial-value problem (IVP).
+    """Calculate the solution of the initial-value problem (IVP).
 
     Solve the IVP from Taylor (Order Four) method.
 
@@ -136,8 +133,7 @@ def taylor4(f, df1, df2, df3, a, b, n, ya):
 
 
 def rk4(f, a, b, n, ya):
-    """
-    Calculate the solution of the initial-value problem (IVP).
+    """Calculate the solution of the initial-value problem (IVP).
 
     Solve the IVP from Runge-Kutta (Order Four) method.
 
@@ -185,8 +181,7 @@ def rk4(f, a, b, n, ya):
 
 
 def rk4_system(f, a, b, n, ya):
-    """
-    Calculate the solution of systems of differential equations.
+    """Calculate the solution of systems of differential equations.
 
     Solve from Runge-Kutta (Order Four) method.
 
