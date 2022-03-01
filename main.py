@@ -3,7 +3,7 @@ Numerical methods implementation in Python.
 
 Author: Cristiano Nunes <cfgnunes@gmail.com>
 
-Minimum required versions of the Python: 2.6, 3.0.
+Minimum required version of the Python: 3.0.
 """
 
 import math
