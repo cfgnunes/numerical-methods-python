@@ -2,6 +2,12 @@
 
 name: numerical-methods-env
 
+channels:
+  - defaults
+  - conda-forge
+
 dependencies:
   - python=>3.0
-  - numpy
+  - pip
+  - pip:
+    - numpy
