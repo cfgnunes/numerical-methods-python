@@ -39,8 +39,8 @@ def run_example_bisection():
     # Bisection method (find roots of an equation)
     #   Pros:
     #       It is a reliable method with guaranteed convergence;
-    #       It is a simple method that does the search of the root by means of
-    #           a binary search;
+    #       It is a simple method that searches for the root employing a
+    #           binary search;
     #       There is no need to calculate the derivative of the function.
     #   Cons:
     #       Slow convergence;
@@ -102,7 +102,7 @@ def run_example_secant():
     # Secant method (find roots of an equation)
     #   Pros:
     #       It is a fast method (slower than Newton's method);
-    #       It is based on the Newton method, but does not need the derivative
+    #       It is based on the Newton method but does not need the derivative
     #           of the function.
     #   Cons:
     #       It may diverge if the function is not approximately linear in the
