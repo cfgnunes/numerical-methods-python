@@ -21,7 +21,7 @@ import solutions
 
 def print_var(var_name, value):
     """Print the name and the variable value."""
-    print("%s = %s" % (var_name, value))
+    print("{} = {}".format(var_name, value))
 
 
 def print_func_docstring():
