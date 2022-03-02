@@ -8,7 +8,7 @@ For the "MATLAB version", see [this repository](https://github.com/cfgnunes/nume
 
 ### Prerequisites
 
-#### Using Conda (Recommended)
+#### Using Conda (recommended)
 
 ```sh
 conda env create
