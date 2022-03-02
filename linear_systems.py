@@ -78,7 +78,7 @@ def gauss_elimination_pp(a, b):
     if n != m:
         raise Exception("'a' must be a square matrix.")
 
-    # Produces the augmented matrixsss
+    # Produces the augmented matrix
     a = np.concatenate((a, b[:, None]), axis=1).astype(float)
 
     # Elimination process starts
@@ -91,7 +91,7 @@ def gauss_elimination_pp(a, b):
                 # Swap rows
                 a[[i, j]] = a[[j, i]]
 
-        # Cheking for nullity of the pivots
+        # Checking for nullity of the pivots
         while p < n and a[p, i] == 0:
             p += 1
 
