@@ -87,7 +87,3 @@ python3 main.py
 
 - Jacobi method
 - Gauss-Seidel method
-
-## Built With
-
-- [Python](https://www.python.org/) - Programming language used
