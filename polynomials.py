@@ -1,4 +1,4 @@
-"""Methods for polynomials"""
+"""Methods for polynomials."""
 
 
 import numpy as np
@@ -6,16 +6,18 @@ import numpy as np
 
 def briot_ruffini(a, root):
     """
-    Divides a polynomial by another polynomial in the format (x-root)
-    P(x) = Q(x) * (x-root) + rest
-    Parameters:
-        a: Array containing the coefficients of the input polynomial
-        root: One of the polynomial roots
-    Returns:
-        b: Array containing the coefficients of the output polynomial
-        rest: Polynomial division Rest
-    """
+    Divides a polynomial by another polynomial.
 
+    The format is: P(x) = Q(x) * (x-root) + rest.
+
+    Parameters:
+        a: array containing the coefficients of the input polynomial
+        root: one of the polynomial roots
+
+    Returns:
+        b: array containing the coefficients of the output polynomial
+        rest: polynomial division Rest
+    """
     n = a.size - 1
     b = np.zeros(n)
 
@@ -31,15 +33,17 @@ def briot_ruffini(a, root):
 
 def newton_divided_difference(x, y):
     """
-    Find the coefficients of Newton's divided difference and
-    the Newton's polynomial.
-    Parameters:
-        x: Array containing x values
-        y: Array containing y values
-    Returns:
-        f: Array containing Newton's divided difference coefficients
-    """
+    Find the coefficients of Newton's divided difference.
 
+    Also findthe Newton's polynomial.
+
+    Parameters:
+        x: array containing x values.
+        y: array containing y values.
+
+    Returns:
+        f: array containing Newton's divided difference coefficients.
+    """
     n = x.size
     q = np.zeros((n, n - 1))
     # Insert 'y' in the first column of the matrix 'q'

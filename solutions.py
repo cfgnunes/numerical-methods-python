@@ -1,23 +1,24 @@
-"""Methods for solutions of equations"""
+"""Methods for solutions of equations."""
 
 import math
 
 
 def bisection(f, a, b, tol, iter_max):
     """
-    Calculates the root of an equation by Bisection method
-    Parameters:
-        f: Function f(x)
-        a: Lower limit
-        b: Upper limit
-        tol: Tolerance
-        iter_max: Maximum number of iterations
-    Returns:
-        root: Root value
-        iter: Used iterations
-        converged: Found the root
-    """
+    Calculate the root of an equation by Bisection method.
 
+    Parameters:
+        f: function f(x).
+        a: lower limit.
+        b: upper limit.
+        tol: tolerance.
+        iter_max: maximum number of iterations.
+
+    Returns:
+        root: root value.
+        iter: used iterations.
+        converged: found the root.
+    """
     fa = f(a)
     fb = f(b)
 
@@ -57,19 +58,20 @@ def bisection(f, a, b, tol, iter_max):
 
 def newton(f, df, x0, tol, iter_max):
     """
-    Calculates the root of an equation by Newton method
-    Parameters:
-        f: Function f(x)
-        df: Derivative of function f(x)
-        x0: Initial guess
-        tol: Tolerance
-        iter_max: Maximum number of iterations
-    Returns:
-        root: Root value
-        iter: Used iterations
-        converged: Found the root
-    """
+    Calculate the root of an equation by Newton method.
 
+    Parameters:
+        f: function f(x).
+        df: derivative of function f(x).
+        x0: initial guess.
+        tol: tolerance.
+        iter_max: maximum number of iterations.
+
+    Returns:
+        root: root value.
+        iter: used iterations.
+        converged: found the root.
+    """
     x = x0
     fx = f(x)
     dfx = df(x)
@@ -100,19 +102,20 @@ def newton(f, df, x0, tol, iter_max):
 
 def secant(f, a, b, tol, iter_max):
     """
-    Calculates the root of an equation by Secant method
-    Parameters:
-        f: Function f(x)
-        a: Lower limit
-        b: Upper limit
-        tol: Tolerance
-        iter_max: Maximum number of iterations
-    Returns:
-        root: Root value
-        iter: Used iterations
-        converged: Found the root
-    """
+    Calculate the root of an equation by Secant method.
 
+    Parameters:
+        f: function f(x).
+        a: lower limit.
+        b: upper limit.
+        tol: tolerance.
+        iter_max: maximum number of iterations.
+
+    Returns:
+        root: root value.
+        iter: used iterations.
+        converged: found the root.
+    """
     fa = f(a)
     fb = f(b)
 

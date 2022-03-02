@@ -1,22 +1,23 @@
-"""Methods for Linear Systems"""
+"""Methods for Linear Systems."""
 
 import numpy as np
 
 
 def jacobi(a, b, x0, tol, iter_max):
     """
-    Jacobi method: solve Ax = b given an initial approximation x0
-    Parameters:
-        a: Matrix A from system Ax=b
-        b: Array containing b values
-        x0: Initial approximation of solution
-        tol: Tolerance
-        iter_max: Maximum number of iterations
-    Returns:
-        x: Solution of linear system
-        iter: Used iterations
-    """
+    Jacobi method: solve Ax = b given an initial approximation x0.
 
+    Parameters:
+        a: matrix A from system Ax=b.
+        b: array containing b values.
+        x0: initial approximation of solution.
+        tol: tolerance.
+        iter_max: maximum number of iterations.
+
+    Returns:
+        x: solution of linear system.
+        iter: used iterations.
+    """
     # D and M matrices
     d = np.diag(np.diag(a))
     m = a - d
@@ -36,18 +37,19 @@ def jacobi(a, b, x0, tol, iter_max):
 
 def gauss_seidel(a, b, x0, tol, iter_max):
     """
-    Gauss-Seidel method: solve Ax = b given an initial approximation x0
-    Parameters:
-        a: Matrix A from system Ax=b
-        b: Array containing b values
-        x0: Initial approximation of solution
-        tol: Tolerance
-        iter_max: Maximum number of iterations
-    Returns:
-        x: Solution of linear system
-        iter: Used iterations
-    """
+    Gauss-Seidel method: solve Ax = b given an initial approximation x0.
 
+    Parameters:
+        a: matrix A from system Ax=b.
+        b: array containing b values.
+        x0: initial approximation of solution.
+        tol: tolerance.
+        iter_max: maximum number of iterations.
+
+    Returns:
+        x: solution of linear system.
+        iter: used iterations.
+    """
     # L and U matrices
     lower = np.tril(a)
     upper = a - lower
