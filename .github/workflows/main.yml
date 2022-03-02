@@ -25,7 +25,6 @@ jobs:
         cfg:
           - os: ubuntu-latest
           - os: macOS-latest
-          - os: windows-latest
 
     steps:
       - name: Set up git repository
