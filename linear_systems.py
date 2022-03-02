@@ -5,8 +5,7 @@ import numpy as np
 
 
 def backward_substitution(upper, d):
-    """
-    Solve the upper linear system ux=d.
+    """Solve the upper linear system ux=d.
 
     Args:
         upper: upper triangular matrix.
@@ -34,8 +33,7 @@ def backward_substitution(upper, d):
 
 
 def forward_substitution(lower, c):
-    """
-    Solve the lower linear system lx=c.
+    """Solve the lower linear system lx=c.
 
     Args:
         lower: lower triangular matrix.
@@ -63,8 +61,7 @@ def forward_substitution(lower, c):
 
 
 def gauss_elimination_pp(a, b):
-    """
-    Gaussian Elimination with Partial Pivoting.
+    """Gaussian Elimination with Partial Pivoting.
 
     Calculate the upper triangular matrix from linear system Ax=b (do a row
     reduction).
