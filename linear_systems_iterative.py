@@ -7,7 +7,7 @@ def jacobi(a, b, x0, tol, iter_max):
     """
     Jacobi method: solve Ax = b given an initial approximation x0.
 
-    Parameters:
+    Args:
         a: matrix A from system Ax=b.
         b: array containing b values.
         x0: initial approximation of solution.
@@ -39,7 +39,7 @@ def gauss_seidel(a, b, x0, tol, iter_max):
     """
     Gauss-Seidel method: solve Ax = b given an initial approximation x0.
 
-    Parameters:
+    Args:
         a: matrix A from system Ax=b.
         b: array containing b values.
         x0: initial approximation of solution.

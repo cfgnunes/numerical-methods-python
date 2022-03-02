@@ -9,7 +9,7 @@ def euler(f, a, b, n, ya):
 
     Solve the IVP from Euler method.
 
-    Parameters:
+    Args:
         f: function f(x).
         a: initial point.
         b: end point.
@@ -52,7 +52,7 @@ def taylor2(f, df1, a, b, n, ya):
 
     Solve the IVP from Taylor (Order Two) method.
 
-    Parameters:
+    Args:
         f: function f(x).
         df1: 1's derivative of function f(x).
         a: initial point.
@@ -95,7 +95,7 @@ def taylor4(f, df1, df2, df3, a, b, n, ya):
 
     Solve the IVP from Taylor (Order Four) method.
 
-    Parameters:
+    Args:
         f: function f(x).
         df1: 1's derivative of function f(x).
         df2: 2's derivative of function f(x).
@@ -141,7 +141,7 @@ def rk4(f, a, b, n, ya):
 
     Solve the IVP from Runge-Kutta (Order Four) method.
 
-    Parameters:
+    Args:
         f: function f(x).
         a: initial point.
         b: end point.
@@ -190,7 +190,7 @@ def rk4_system(f, a, b, n, ya):
 
     Solve from Runge-Kutta (Order Four) method.
 
-    Parameters:
+    Args:
         f: array of functions f(x).
         a: initial point.
         b: end point.

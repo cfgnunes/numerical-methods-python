@@ -7,7 +7,7 @@ def bisection(f, a, b, tol, iter_max):
     """
     Calculate the root of an equation by Bisection method.
 
-    Parameters:
+    Args:
         f: function f(x).
         a: lower limit.
         b: upper limit.
@@ -60,7 +60,7 @@ def newton(f, df, x0, tol, iter_max):
     """
     Calculate the root of an equation by Newton method.
 
-    Parameters:
+    Args:
         f: function f(x).
         df: derivative of function f(x).
         x0: initial guess.
@@ -104,7 +104,7 @@ def secant(f, a, b, tol, iter_max):
     """
     Calculate the root of an equation by Secant method.
 
-    Parameters:
+    Args:
         f: function f(x).
         a: lower limit.
         b: upper limit.

@@ -5,7 +5,7 @@ def composite_simpson(f, b, a, n):
     """
     Calculate the integral from 1/3 Simpson's Rule.
 
-    Parameters:
+    Args:
         f: function f(x).
         a: initial point.
         b: end point.
@@ -34,7 +34,7 @@ def composite_trapezoidal(f, b, a, n):
     """
     Calculate the integral from Trapezoidal Rule.
 
-    Parameters:
+    Args:
         f: function f(x).
         a: initial point.
         b: end point.
@@ -59,7 +59,7 @@ def composite2_simpson(x, y):
     """
     Calculate the integral from 1/3 Simpson's Rule.
 
-    Parameters:
+    Args:
         x: array containing x values.
         y: array containing y values.
 
@@ -89,7 +89,7 @@ def composite2_trapezoidal(x, y):
     """
     Calculate the integral from Trapezoidal Rule.
 
-    Parameters:
+    Args:
         x: array containing x values.
         y: array containing y values.
 

@@ -8,7 +8,7 @@ def backward_substitution(upper, d):
     """
     Solve the upper linear system ux=d.
 
-    Parameters:
+    Args:
         upper: upper triangular matrix.
         d: array containing d values.
 
@@ -37,7 +37,7 @@ def forward_substitution(lower, c):
     """
     Solve the lower linear system lx=c.
 
-    Parameters:
+    Args:
         lower: lower triangular matrix.
         c: array containing c values.
 
@@ -69,7 +69,7 @@ def gauss_elimination_pp(a, b):
     Calculate the upper triangular matrix from linear system Ax=b (do a row
     reduction).
 
-    Parameters:
+    Args:
         a: matrix A from system Ax=b.
         b: array containing b values.
 
