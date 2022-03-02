@@ -6,18 +6,18 @@ import numpy as np
 def euler(f, a, b, n, ya):
     """Calculate the solution of the initial-value problem (IVP).
 
-    Solve the IVP from Euler method.
+    Solve the IVP from the Euler method.
 
     Args:
         f: function f(x).
-        a: initial point.
-        b: end point.
+        a: the initial point.
+        b: the final point.
         n: number of intervals.
         ya: initial value.
 
     Returns:
-        vx: array containing x values.
-        vy: array containing y values (solution of IVP).
+        vx: an array containing x values.
+        vy: an array containing y values (solution of IVP).
     """
     vx = np.zeros(n)
     vy = np.zeros(n)
@@ -48,19 +48,19 @@ def euler(f, a, b, n, ya):
 def taylor2(f, df1, a, b, n, ya):
     """Calculate the solution of the initial-value problem (IVP).
 
-    Solve the IVP from Taylor (Order Two) method.
+    Solve the IVP from the Taylor (Order Two) method.
 
     Args:
         f: function f(x).
         df1: 1's derivative of function f(x).
-        a: initial point.
-        b: end point.
+        a: the initial point.
+        b: the final point.
         n: number of intervals.
         ya: initial value.
 
     Returns:
-        vx: array containing x values.
-        vy: array containing y values (solution of IVP).
+        vx: an array containing x values.
+        vy: an array containing y values (solution of IVP).
     """
     vx = np.zeros(n)
     vy = np.zeros(n)
@@ -90,21 +90,21 @@ def taylor2(f, df1, a, b, n, ya):
 def taylor4(f, df1, df2, df3, a, b, n, ya):
     """Calculate the solution of the initial-value problem (IVP).
 
-    Solve the IVP from Taylor (Order Four) method.
+    Solve the IVP from the Taylor (Order Four) method.
 
     Args:
         f: function f(x).
         df1: 1's derivative of function f(x).
         df2: 2's derivative of function f(x).
         df3: 3's derivative of function f(x).
-        a: initial point.
-        b: end point.
+        a: the initial point.
+        b: the final point.
         n: number of intervals.
         ya: initial value.
 
     Returns:
-        vx: array containing x values.
-        vy: array containing y values (solution of IVP).
+        vx: an array containing x values.
+        vy: an array containing y values (solution of IVP).
     """
     vx = np.zeros(n)
     vy = np.zeros(n)
@@ -135,18 +135,18 @@ def taylor4(f, df1, df2, df3, a, b, n, ya):
 def rk4(f, a, b, n, ya):
     """Calculate the solution of the initial-value problem (IVP).
 
-    Solve the IVP from Runge-Kutta (Order Four) method.
+    Solve the IVP from the Runge-Kutta (Order Four) method.
 
     Args:
         f: function f(x).
-        a: initial point.
-        b: end point.
+        a: the initial point.
+        b: the final point.
         n: number of intervals.
         ya: initial value.
 
     Returns:
-        vx: array containing x values.
-        vy: array containing y values (solution of IVP).
+        vx: an array containing x values.
+        vy: an array containing y values (solution of IVP).
     """
     vx = np.zeros(n)
     vy = np.zeros(n)
@@ -186,15 +186,15 @@ def rk4_system(f, a, b, n, ya):
     Solve from Runge-Kutta (Order Four) method.
 
     Args:
-        f: array of functions f(x).
-        a: initial point.
-        b: end point.
+        f: an array of functions f(x).
+        a: the initial point.
+        b: the final point.
         n: number of intervals.
-        ya: array of initial values.
+        ya: an array of initial values.
 
     Returns:
-        vx: array containing x values.
-        vy: array containing y values (solution of IVP).
+        vx: an array containing x values.
+        vy: an array containing y values (solution of IVP).
     """
     m = len(f)
 

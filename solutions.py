@@ -4,7 +4,7 @@ import math
 
 
 def bisection(f, a, b, tol, iter_max):
-    """Calculate the root of an equation by Bisection method.
+    """Calculate the root of an equation by the Bisection method.
 
     Args:
         f: function f(x).
@@ -56,7 +56,7 @@ def bisection(f, a, b, tol, iter_max):
 
 
 def newton(f, df, x0, tol, iter_max):
-    """Calculate the root of an equation by Newton method.
+    """Calculate the root of an equation by the Newton method.
 
     Args:
         f: function f(x).
@@ -99,7 +99,7 @@ def newton(f, df, x0, tol, iter_max):
 
 
 def secant(f, a, b, tol, iter_max):
-    """Calculate the root of an equation by Secant method.
+    """Calculate the root of an equation by the Secant method.
 
     Args:
         f: function f(x).

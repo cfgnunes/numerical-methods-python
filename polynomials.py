@@ -5,16 +5,16 @@ import numpy as np
 
 
 def briot_ruffini(a, root):
-    """Divides a polynomial by another polynomial.
+    """Divide a polynomial by another polynomial.
 
     The format is: P(x) = Q(x) * (x-root) + rest.
 
     Args:
-        a: array containing the coefficients of the input polynomial.
+        a: an array containing the coefficients of the input polynomial.
         root: one of the polynomial roots.
 
     Returns:
-        b: array containing the coefficients of the output polynomial.
+        b: an array containing the coefficients of the output polynomial.
         rest: polynomial division Rest.
     """
     n = a.size - 1
@@ -33,14 +33,14 @@ def briot_ruffini(a, root):
 def newton_divided_difference(x, y):
     """Find the coefficients of Newton's divided difference.
 
-    Also findthe Newton's polynomial.
+    Also, find Newton's polynomial.
 
     Args:
-        x: array containing x values.
-        y: array containing y values.
+        x: an array containing x values.
+        y: an array containing y values.
 
     Returns:
-        f: array containing Newton's divided difference coefficients.
+        f: an array containing Newton's divided difference coefficients.
     """
     n = x.size
     q = np.zeros((n, n - 1))
