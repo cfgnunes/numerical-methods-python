@@ -10,12 +10,12 @@ def briot_ruffini(a, root):
     The format is: P(x) = Q(x) * (x-root) + rest.
 
     Args:
-        a: array containing the coefficients of the input polynomial
-        root: one of the polynomial roots
+        a: array containing the coefficients of the input polynomial.
+        root: one of the polynomial roots.
 
     Returns:
-        b: array containing the coefficients of the output polynomial
-        rest: polynomial division Rest
+        b: array containing the coefficients of the output polynomial.
+        rest: polynomial division Rest.
     """
     n = a.size - 1
     b = np.zeros(n)
