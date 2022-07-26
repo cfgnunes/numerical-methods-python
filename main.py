@@ -1,7 +1,7 @@
 """
 Numerical methods implementation in Python.
 
-Author: Cristiano Nunes <cfgnunes@gmail.com>
+Author: Cristiano Fraga G. Nunes <cfgnunes@gmail.com>
 
 Minimum required version of the Python: 3.0.
 """
