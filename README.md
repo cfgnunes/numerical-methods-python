@@ -23,7 +23,7 @@ pip install -r requirements.txt
 
 #### Using Ubuntu
 
-This section assumes Ubuntu 16.04 (also tested on Ubuntu 20.04), but the procedure is similar for other Linux distributions.
+This section assumes Ubuntu 16.04 (also tested on Ubuntu 22.04), but the procedure is similar for other Linux distributions.
 
 ```sh
 sudo apt -y install python3-numpy
