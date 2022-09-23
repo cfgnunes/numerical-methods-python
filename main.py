@@ -435,7 +435,7 @@ def run_example_forward_substitution():
 
 
 def run_example_jacobi():
-    """Run an example 'Iteractive Linear Systems: Jacobi'."""
+    """Run an example 'Iterative Linear Systems: Jacobi'."""
     print_func_docstring()
 
     a = np.array([[10, -1, 2, 0], [-1, 11, -1, 3],
@@ -455,7 +455,7 @@ def run_example_jacobi():
 
 
 def run_example_gauss_seidel():
-    """Run an example 'Iteractive Linear Systems: Gauss-Seidel'."""
+    """Run an example 'Iterative Linear Systems: Gauss-Seidel'."""
     print_func_docstring()
 
     a = np.array([[10, -1, 2, 0], [-1, 11, -1, 3],
