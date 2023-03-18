@@ -64,7 +64,7 @@ def composite2_simpson(x, y):
         xi: integral value.
     """
     if y.size != y.size:
-        raise Exception("'x' and 'y' must have same size.")
+        raise ValueError("'x' and 'y' must have same size.")
 
     h = x[1] - x[0]
     n = x.size
@@ -93,7 +93,7 @@ def composite2_trapezoidal(x, y):
         xi: integral value.
     """
     if y.size != y.size:
-        raise Exception("'x' and 'y' must have same size.")
+        raise ValueError("'x' and 'y' must have same size.")
 
     h = x[1] - x[0]
     n = x.size

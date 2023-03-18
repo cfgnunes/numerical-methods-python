@@ -6,9 +6,11 @@ Author: Cristiano Fraga G. Nunes <cfgnunes@gmail.com>
 Minimum required version of the Python: 3.0.
 """
 
-import math
 import inspect
+import math
+
 import numpy as np
+
 import differentiation
 import integration
 import interpolation
@@ -426,7 +428,7 @@ def run_example_forward_substitution():
     print_func_docstring()
 
     lower = np.array([[3, 0, 0, 0], [-1, 1, 0, 0],
-                     [3, -2, -1, 0], [1, -2, 6, 2]])
+                      [3, -2, -1, 0], [1, -2, 6, 2]])
     c = np.array([5, 6, 4, 2])
     print_var("lower", lower)
     print_var("c", c)

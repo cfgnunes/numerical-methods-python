@@ -22,7 +22,7 @@ def bisection(f, a, b, tol, iter_max):
     fb = f(b)
 
     if fa * fb > 0:
-        raise Exception("The function does not change signal at \
+        raise ValueError("The function does not change signal at \
               the ends of the given interval.")
 
     delta_x = math.fabs(b - a) / 2
@@ -117,10 +117,10 @@ def secant(f, a, b, tol, iter_max):
     fb = f(b)
 
     if fb - fa == 0:
-        raise Exception("f(b)-f(a) must be nonzero.")
+        raise ValueError("f(b)-f(a) must be nonzero.")
 
     if b - a == 0:
-        raise Exception("b-a must be nonzero.")
+        raise ValueError("b-a must be nonzero.")
 
     if math.fabs(fa) < math.fabs(fb):
         a, b = b, a

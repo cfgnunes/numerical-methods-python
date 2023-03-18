@@ -16,10 +16,10 @@ def derivative_backward_difference(x, y):
         dy: an array containing the first derivative values.
     """
     if x.size < 2 or y.size < 2:
-        raise Exception("'x' and 'y' arrays must have 2 values or more.")
+        raise ValueError("'x' and 'y' arrays must have 2 values or more.")
 
     if x.size != y.size:
-        raise Exception("'x' and 'y' must have same size.")
+        raise ValueError("'x' and 'y' must have same size.")
 
     def dy_difference(h, y0, y1):
         return (y1 - y0) / h
@@ -50,10 +50,10 @@ def derivative_three_point(x, y):
         dy: an array containing the first derivative values.
     """
     if x.size < 3 or y.size < 3:
-        raise Exception("'x' and 'y' arrays must have 3 values or more.")
+        raise ValueError("'x' and 'y' arrays must have 3 values or more.")
 
     if x.size != y.size:
-        raise Exception("'x' and 'y' must have same size.")
+        raise ValueError("'x' and 'y' must have same size.")
 
     def dy_mid(h, y0, y2):
         return (1 / (2 * h)) * (y2 - y0)
@@ -88,17 +88,17 @@ def derivative_five_point(x, y):
         dy: an array containing the first derivative values.
     """
     if x.size < 6 or y.size < 6:
-        raise Exception("'x' and 'y' arrays must have 6 values or more.")
+        raise ValueError("'x' and 'y' arrays must have 6 values or more.")
 
     if x.size != y.size:
-        raise Exception("'x' and 'y' must have same size.")
+        raise ValueError("'x' and 'y' must have same size.")
 
     def dy_mid(h, y0, y1, y3, y4):
         return (1 / (12 * h)) * (y0 - 8 * y1 + 8 * y3 - y4)
 
     def dy_end(h, y0, y1, y2, y3, y4):
         return (1 / (12 * h)) * \
-               (-25 * y0 + 48 * y1 - 36 * y2 + 16 * y3 - 3 * y4)
+            (-25 * y0 + 48 * y1 - 36 * y2 + 16 * y3 - 3 * y4)
 
     hx = x[1] - x[0]
     n = x.size

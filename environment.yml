@@ -1,13 +1,12 @@
 # File used by Conda (if you use it) to install the necessary dependencies.
 
-name: numerical-methods-env
+name: numerical-methods
 
 channels:
   - defaults
-  - conda-forge
 
 dependencies:
   - python=>3.0
   - pip
   - pip:
-    - numpy
+      - numpy
