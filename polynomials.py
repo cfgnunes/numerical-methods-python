@@ -1,6 +1,5 @@
 """Methods for polynomials."""
 
-
 import numpy as np
 
 
