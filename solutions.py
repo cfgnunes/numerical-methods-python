@@ -3,14 +3,14 @@
 import math
 
 
-def bisection(f, a, b, tol, iter_max):
+def bisection(f, a, b, toler, iter_max):
     """Calculate the root of an equation by the Bisection method.
 
     Args:
         f: function f(x).
         a: lower limit.
         b: upper limit.
-        tol: tolerance.
+        toler: tolerance.
         iter_max: maximum number of iterations.
 
     Returns:
@@ -36,7 +36,7 @@ def bisection(f, a, b, tol, iter_max):
         print(f"i = {i:03d},\tx = {x:+.4f},\t", end="")
         print(f"fx = {fx:+.4f},\tdx = {delta_x:+.4f}")
 
-        if delta_x <= tol and math.fabs(fx) <= tol:
+        if delta_x <= toler and math.fabs(fx) <= toler:
             converged = True
             break
 
@@ -52,14 +52,14 @@ def bisection(f, a, b, tol, iter_max):
     return [root, i, converged]
 
 
-def newton(f, df, x0, tol, iter_max):
+def newton(f, df, x0, toler, iter_max):
     """Calculate the root of an equation by the Newton method.
 
     Args:
         f: function f(x).
         df: derivative of function f(x).
         x0: initial guess.
-        tol: tolerance.
+        toler: tolerance.
         iter_max: maximum number of iterations.
 
     Returns:
@@ -83,7 +83,7 @@ def newton(f, df, x0, tol, iter_max):
         print(f"i = {i:03d},\tx = {x:.4f},\tdfx = {dfx:.4f},\t", end="")
         print(f"fx = {fx:.4f},\tdx = {delta_x:.4f}")
 
-        if math.fabs(delta_x) <= tol and math.fabs(fx) <= tol or dfx == 0:
+        if math.fabs(delta_x) <= toler and math.fabs(fx) <= toler or dfx == 0:
             converged = True
             break
 
@@ -91,14 +91,14 @@ def newton(f, df, x0, tol, iter_max):
     return [root, i, converged]
 
 
-def regula_falsi(f, a, b, tol, iter_max):
+def regula_falsi(f, a, b, toler, iter_max):
     """Calculate the root of an equation by the Regula Falsi method.
 
     Args:
         f: function f(x).
         a: lower limit.
         b: upper limit.
-        tol: tolerance.
+        toler: tolerance.
         iter_max: maximum number of iterations.
 
     Returns:
@@ -130,7 +130,7 @@ def regula_falsi(f, a, b, tol, iter_max):
         print(f"\tb = {b:+.4f},\tfb = {fb:+.4f},", end="")
         print(f"\tdx = {delta_x:+.4f}")
 
-        if math.fabs(delta_x) <= tol and math.fabs(fx) <= tol:
+        if math.fabs(delta_x) <= toler and math.fabs(fx) <= toler:
             converged = True
             break
 
@@ -145,14 +145,14 @@ def regula_falsi(f, a, b, tol, iter_max):
     return [root, i, converged]
 
 
-def secant(f, a, b, tol, iter_max):
+def secant(f, a, b, toler, iter_max):
     """Calculate the root of an equation by the Secant method.
 
     Args:
         f: function f(x).
         a: lower limit.
         b: upper limit.
-        tol: tolerance.
+        toler: tolerance.
         iter_max: maximum number of iterations.
 
     Returns:
@@ -185,7 +185,7 @@ def secant(f, a, b, tol, iter_max):
         print(f"i = {i:03d},\tx = {x:+.4f},\t", end="")
         print(f"fx = {fx:+.4f},\tdx = {delta_x:+.4f}")
 
-        if math.fabs(delta_x) <= tol and math.fabs(fx) <= tol:
+        if math.fabs(delta_x) <= toler and math.fabs(fx) <= toler:
             converged = True
             break
 

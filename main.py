@@ -49,16 +49,16 @@ def run_example_bisection():
 
     a = 1.0
     b = 2.0
-    tol = 10 ** -5
+    toler = 10 ** -5
     iter_max = 100
 
     print("Input:")
     print(f"\ta = {a}")
     print(f"\tb = {b}")
-    print(f"\ttol = {tol}")
+    print(f"\ttoler = {toler}")
     print(f"\titer_max = {iter_max}")
 
-    [root, i, converged] = solutions.bisection(f, a, b, tol, iter_max)
+    [root, i, converged] = solutions.bisection(f, a, b, toler, iter_max)
 
     print("Output:")
     print(f"\troot = {root:.4f}")
@@ -86,15 +86,15 @@ def run_example_newton():
         return 12 * x ** 2 + 1 - math.sin(x)
 
     x0 = 1.0
-    tol = 10 ** -5
+    toler = 10 ** -5
     iter_max = 100
 
     print("Input:")
     print(f"\tx0 = {x0}")
-    print(f"\ttol = {tol}")
+    print(f"\ttoler = {toler}")
     print(f"\titer_max = {iter_max}")
 
-    [root, i, converged] = solutions.newton(f, df, x0, tol, iter_max)
+    [root, i, converged] = solutions.newton(f, df, x0, toler, iter_max)
 
     print("Output:")
     print(f"\troot = {root:.4f}")
@@ -111,16 +111,16 @@ def run_example_regula_falsi():
 
     a = 1.0
     b = 2.0
-    tol = 10 ** -5
+    toler = 10 ** -5
     iter_max = 100
 
     print("Input:")
     print(f"\ta = {a}")
     print(f"\tb = {b}")
-    print(f"\ttol = {tol}")
+    print(f"\ttoler = {toler}")
     print(f"\titer_max = {iter_max}")
 
-    [root, i, converged] = solutions.regula_falsi(f, a, b, tol, iter_max)
+    [root, i, converged] = solutions.regula_falsi(f, a, b, toler, iter_max)
 
     print("Output:")
     print(f"\troot = {root:.4f}")
@@ -148,16 +148,16 @@ def run_example_secant():
 
     a = 1.0
     b = 2.0
-    tol = 10 ** -5
+    toler = 10 ** -5
     iter_max = 100
 
     print("Input:")
     print(f"\ta = {a}")
     print(f"\tb = {b}")
-    print(f"\ttol = {tol}")
+    print(f"\ttoler = {toler}")
     print(f"\titer_max = {iter_max}")
 
-    [root, i, converged] = solutions.secant(f, a, b, tol, iter_max)
+    [root, i, converged] = solutions.secant(f, a, b, toler, iter_max)
 
     print("Output:")
     print(f"\troot = {root:.4f}")
@@ -575,17 +575,17 @@ def run_example_jacobi():
                   [2, -1, 10, -1], [0, 3, -1, 8]])
     b = np.array([6, 25, -11, 15])
     x0 = np.array([0, 0, 0, 0])
-    tol = 10 ** -3
+    toler = 10 ** -3
     iter_max = 10
 
     print("Input:")
     print(f"\ta = {a}")
     print(f"\tb = {b}")
     print(f"\tx0 = {x0}")
-    print(f"\ttol = {tol}")
+    print(f"\ttoler = {toler}")
     print(f"\titer_max = {iter_max}")
 
-    [x, i] = linear_systems_iterative.jacobi(a, b, x0, tol, iter_max)
+    [x, i] = linear_systems_iterative.jacobi(a, b, x0, toler, iter_max)
 
     print("Output:")
     print(f"\tx = {x}")
@@ -600,17 +600,17 @@ def run_example_gauss_seidel():
                   [2, -1, 10, -1], [0, 3, -1, 8]])
     b = np.array([6, 25, -11, 15])
     x0 = np.array([0, 0, 0, 0])
-    tol = 10 ** -3
+    toler = 10 ** -3
     iter_max = 10
 
     print("Input:")
     print(f"\ta = {a}")
     print(f"\tb = {b}")
     print(f"\tx0 = {x0}")
-    print(f"\ttol = {tol}")
+    print(f"\ttoler = {toler}")
     print(f"\titer_max = {iter_max}")
 
-    [x, i] = linear_systems_iterative.gauss_seidel(a, b, x0, tol, iter_max)
+    [x, i] = linear_systems_iterative.gauss_seidel(a, b, x0, toler, iter_max)
 
     print("Output:")
     print(f"\tx = {x}")
