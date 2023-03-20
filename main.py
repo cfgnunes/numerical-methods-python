@@ -3,7 +3,7 @@ Numerical methods implementation in Python.
 
 Author: Cristiano Fraga G. Nunes <cfgnunes@gmail.com>
 
-Minimum required version of the Python: 3.0.
+The minimum required Python version is 3.6.
 """
 
 import inspect
