@@ -128,7 +128,7 @@ def regula_falsi(f, a, b, tol, iter_max):
 
         print(f"i = {i:03d},\ta = {a:+.4f},\tfa = {fa:+.4f},", end="")
         print(f"\tb = {b:+.4f},\tfb = {fb:+.4f},", end="")
-        print(f"dx = {delta_x:+.4f}")
+        print(f"\tdx = {delta_x:+.4f}")
 
         if math.fabs(delta_x) <= tol and math.fabs(fx) <= tol:
             converged = True
