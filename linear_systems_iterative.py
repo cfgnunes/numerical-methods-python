@@ -22,7 +22,6 @@ def jacobi(a, b, x0, toler, iter_max):
     m = a - d
 
     # Iterative process
-    i = 1
     x = None
     for i in range(1, iter_max + 1):
         x = np.linalg.solve(d, (b - np.dot(m, x0)))
@@ -53,7 +52,6 @@ def gauss_seidel(a, b, x0, toler, iter_max):
     upper = a - lower
 
     # Iterative process
-    i = 1
     x = None
     for i in range(1, iter_max + 1):
         x = np.linalg.solve(lower, (b - np.dot(upper, x0)))

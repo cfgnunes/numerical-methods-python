@@ -71,9 +71,9 @@ def newton(f, df, x0, toler, iter_max):
     fx = f(x)
     dfx = df(x)
 
-    converged = False
     print(f"i = 000,\tx = {x:.4f},\tdfx = {dfx:.4f},\tfx = {fx:.4f}")
 
+    converged = False
     for i in range(1, iter_max + 1):
         delta_x = -fx / dfx
         x += delta_x
