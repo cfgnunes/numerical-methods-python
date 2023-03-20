@@ -30,15 +30,14 @@ def euler(f, a, b, n, ya):
     vy[0] = y
 
     fxy = f(x, y)
-    print("i: {:03d}\t x: {:.4f}\t y: {:.4f}\n".format(0, x, y), end="")
+    print(f"i = 000,\tx = {x:.4f},\ty = {y:.4f}")
 
     for i in range(0, n):
         x = a + (i + 1) * h
         y += h * fxy
 
         fxy = f(x, y)
-        print("i: {:03d}\t x: {:.4f}\t y: {:.4f}\n"
-              .format(i + 1, x, y), end="")
+        print(f"i = {(i+1):03d},\tx = {x:.4f},\ty = {y:.4f}")
         vx[i] = x
         vy[i] = y
 
@@ -72,15 +71,13 @@ def taylor2(f, df1, a, b, n, ya):
     vx[0] = x
     vy[0] = y
 
-    print("i: {:03d}\t x: {:.4f}\t y: {:.4f}\n".format(0, x, y), end="")
+    print(f"i = 000,\tx = {x:.4f},\ty = {y:.4f}")
 
     for i in range(0, n):
         y += h * (f(x, y) + 0.5 * h * df1(x, y))
         x = a + (i + 1) * h
 
-        print(
-            "i: {:03d}\t x: {:.4f}\t y: {:.4f}\n".format(
-                i + 1, x, y), end="")
+        print(f"i = {(i + 1):03d},\tx = {x:.4f},\ty = {y:.4f}")
         vx[i] = x
         vy[i] = y
 
@@ -116,16 +113,14 @@ def taylor4(f, df1, df2, df3, a, b, n, ya):
     vx[0] = x
     vy[0] = y
 
-    print("i: {:03d}\t x: {:.4f}\t y: {:.4f}\n".format(0, x, y), end="")
+    print(f"i = 000,\tx = {x:.4f},\ty = {y:.4f}")
 
     for i in range(0, n):
         y += h * (f(x, y) + 0.5 * h * df1(x, y) + (h ** 2 / 6) * df2(x, y) +
                   (h ** 3 / 24) * df3(x, y))
         x = a + (i + 1) * h
 
-        print(
-            "i: {:03d}\t x: {:.4f}\t y: {:.4f}\n".format(
-                i + 1, x, y), end="")
+        print(f"i = {(i + 1):03d},\tx = {x:.4f},\ty = {y:.4f}")
         vx[i] = x
         vy[i] = y
 
@@ -160,7 +155,7 @@ def rk4(f, a, b, n, ya):
     vx[0] = x
     vy[0] = y
 
-    print("i: {:03d}\t x: {:.4f}\t y: {:.4f}\n".format(0, x, y), end="")
+    print(f"i = 000,\tx = {x:.4f},\ty = {y:.4f}")
 
     for i in range(0, n):
         k[0] = h * f(x, y)
@@ -171,9 +166,7 @@ def rk4(f, a, b, n, ya):
         x = a + (i + 1) * h
         y += (k[0] + 2 * k[1] + 2 * k[2] + k[3]) / 6
 
-        print(
-            "i: {:03d}\t x: {:.4f}\t y: {:.4f}\n".format(
-                i + 1, x, y), end="")
+        print(f"i = {(i+1):03d},\tx = {x:.4f},\ty = {y:.4f}")
         vx[i] = x
         vy[i] = y
 
