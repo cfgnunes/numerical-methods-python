@@ -12,7 +12,7 @@ For the implementation in MATLAB, see [this repository](https://github.com/cfgnu
 
 ```sh
 conda env create
-conda activate numerical-methods-env
+conda activate numerical-methods
 ```
 
 #### Using Pip
