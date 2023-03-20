@@ -102,6 +102,32 @@ def run_example_newton():
     print(f"\tconverged = {converged}")
 
 
+def run_example_regula_falsi():
+    """Run an example 'Solutions: Regula Falsi'."""
+    print_function_docstring()
+
+    def f(x):
+        return 4 * x ** 3 + x + math.cos(x) - 10
+
+    tol = 10 ** -5
+    iter_max = 100
+    a = 1.0
+    b = 2.0
+
+    print("Input:")
+    print(f"\ttol = {tol}")
+    print(f"\titer_max = {iter_max}")
+    print(f"\ta = {a}")
+    print(f"\tb = {b}")
+
+    [root, i, converged] = solutions.regula_falsi(f, a, b, tol, iter_max)
+
+    print("Output:")
+    print(f"\troot = {root}")
+    print(f"\ti = {i}")
+    print(f"\tconverged = {converged}")
+
+
 def run_example_secant():
     """Run an example 'Solutions: Secant'."""
     print_function_docstring()
@@ -595,6 +621,7 @@ def main():
     """Run all examples."""
     run_example_bisection()
     run_example_newton()
+    run_example_regula_falsi()
     run_example_secant()
     run_example_lagrange()
     run_example_neville()
