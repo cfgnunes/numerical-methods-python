@@ -47,21 +47,21 @@ def run_example_bisection():
     def f(x):
         return 4 * x ** 3 + x + math.cos(x) - 10
 
-    tol = 10 ** -5
-    iter_max = 100
     a = 1.0
     b = 2.0
+    tol = 10 ** -5
+    iter_max = 100
 
     print("Input:")
-    print(f"\ttol = {tol}")
-    print(f"\titer_max = {iter_max}")
     print(f"\ta = {a}")
     print(f"\tb = {b}")
+    print(f"\ttol = {tol}")
+    print(f"\titer_max = {iter_max}")
 
     [root, i, converged] = solutions.bisection(f, a, b, tol, iter_max)
 
     print("Output:")
-    print(f"\troot = {root}")
+    print(f"\troot = {root:.4f}")
     print(f"\ti = {i}")
     print(f"\tconverged = {converged}")
 
@@ -85,19 +85,19 @@ def run_example_newton():
     def df(x):
         return 12 * x ** 2 + 1 - math.sin(x)
 
+    x0 = 1.0
     tol = 10 ** -5
     iter_max = 100
-    x0 = 1.0
 
     print("Input:")
+    print(f"\tx0 = {x0}")
     print(f"\ttol = {tol}")
     print(f"\titer_max = {iter_max}")
-    print(f"\tx0 = {x0}")
 
     [root, i, converged] = solutions.newton(f, df, x0, tol, iter_max)
 
     print("Output:")
-    print(f"\troot = {root}")
+    print(f"\troot = {root:.4f}")
     print(f"\ti = {i}")
     print(f"\tconverged = {converged}")
 
@@ -109,21 +109,21 @@ def run_example_regula_falsi():
     def f(x):
         return 4 * x ** 3 + x + math.cos(x) - 10
 
-    tol = 10 ** -5
-    iter_max = 100
     a = 1.0
     b = 2.0
+    tol = 10 ** -5
+    iter_max = 100
 
     print("Input:")
-    print(f"\ttol = {tol}")
-    print(f"\titer_max = {iter_max}")
     print(f"\ta = {a}")
     print(f"\tb = {b}")
+    print(f"\ttol = {tol}")
+    print(f"\titer_max = {iter_max}")
 
     [root, i, converged] = solutions.regula_falsi(f, a, b, tol, iter_max)
 
     print("Output:")
-    print(f"\troot = {root}")
+    print(f"\troot = {root:.4f}")
     print(f"\ti = {i}")
     print(f"\tconverged = {converged}")
 
@@ -146,21 +146,21 @@ def run_example_secant():
     def f(x):
         return 4 * x ** 3 + x + math.cos(x) - 10
 
-    tol = 10 ** -5
-    iter_max = 100
     a = 1.0
     b = 2.0
+    tol = 10 ** -5
+    iter_max = 100
 
     print("Input:")
-    print(f"\ttol = {tol}")
-    print(f"\titer_max = {iter_max}")
     print(f"\ta = {a}")
     print(f"\tb = {b}")
+    print(f"\ttol = {tol}")
+    print(f"\titer_max = {iter_max}")
 
     [root, i, converged] = solutions.secant(f, a, b, tol, iter_max)
 
     print("Output:")
-    print(f"\troot = {root}")
+    print(f"\troot = {root:.4f}")
     print(f"\ti = {i}")
     print(f"\tconverged = {converged}")
 
@@ -213,7 +213,7 @@ def run_example_briot_ruffini():
 
     print("Input:")
     print(f"\ta = {a}")
-    print(f"\troot = {root}")
+    print(f"\troot = {root:.4f}")
 
     [b, rest] = polynomials.briot_ruffini(a, root)
 
