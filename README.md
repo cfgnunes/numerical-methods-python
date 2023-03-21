@@ -43,6 +43,7 @@ python3 main.py
 
 - Bisection method
 - Newton method
+- Regula Falsi (False Position)
 - Secant method
 
 ### Interpolation
