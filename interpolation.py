@@ -14,12 +14,12 @@ def lagrange(x, y, x_int):
     Returns:
         y_int: interpolated value.
     """
-    n = x.size
+    m = x.size
     y_int = 0
 
-    for i in range(0, n):
+    for i in range(0, m):
         p = y[i]
-        for j in range(0, n):
+        for j in range(0, m):
             if i != j:
                 p = p * (x_int - x[j]) / (x[i] - x[j])
         y_int = y_int + p
