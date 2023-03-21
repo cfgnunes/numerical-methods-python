@@ -10,13 +10,13 @@ def bisection(f, a, b, toler, iter_max):
         f: function f(x).
         a: lower limit.
         b: upper limit.
-        toler: tolerance.
-        iter_max: maximum number of iterations.
+        toler: tolerance (stopping criterion).
+        iter_max: maximum number of iterations (stopping criterion).
 
     Returns:
         root: root value.
-        iter: used iterations.
-        converged: found the root.
+        iter: number of iterations used by the method.
+        converged: flag to indicate if the root was found.
     """
     fa = f(a)
     fb = f(b)
@@ -59,13 +59,13 @@ def newton(f, df, x0, toler, iter_max):
         f: function f(x).
         df: derivative of function f(x).
         x0: initial guess.
-        toler: tolerance.
-        iter_max: maximum number of iterations.
+        toler: tolerance (stopping criterion).
+        iter_max: maximum number of iterations (stopping criterion).
 
     Returns:
         root: root value.
-        iter: used iterations.
-        converged: found the root.
+        iter: number of iterations used by the method.
+        converged: flag to indicate if the root was found.
     """
     x = x0
     fx = f(x)
@@ -98,13 +98,13 @@ def regula_falsi(f, a, b, toler, iter_max):
         f: function f(x).
         a: lower limit.
         b: upper limit.
-        toler: tolerance.
-        iter_max: maximum number of iterations.
+        toler: tolerance (stopping criterion).
+        iter_max: maximum number of iterations (stopping criterion).
 
     Returns:
         root: root value.
-        iter: used iterations.
-        converged: found the root.
+        iter: number of iterations used by the method.
+        converged: flag to indicate if the root was found.
     """
     fa = f(a)
     fb = f(b)
@@ -152,13 +152,13 @@ def secant(f, a, b, toler, iter_max):
         f: function f(x).
         a: lower limit.
         b: upper limit.
-        toler: tolerance.
-        iter_max: maximum number of iterations.
+        toler: tolerance (stopping criterion).
+        iter_max: maximum number of iterations (stopping criterion).
 
     Returns:
         root: root value.
-        iter: used iterations.
-        converged: found the root.
+        iter: number of iterations used by the method.
+        converged: flag to indicate if the root was found.
     """
     fa = f(a)
     fb = f(b)
