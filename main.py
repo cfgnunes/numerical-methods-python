@@ -181,7 +181,7 @@ def run_example_lagrange():
     [y_int] = interpolation.lagrange(x, y, x_int)
 
     print("Output:")
-    print(f"\ty_int = {y_int}")
+    print(f"\ty_int = {y_int:.4f}")
 
 
 def run_example_neville():
@@ -200,8 +200,8 @@ def run_example_neville():
     [y_int, q] = interpolation.neville(x, y, x_int)
 
     print("Output:")
-    print(f"\ty_int = {y_int}")
-    print(f"\tq = {q}")
+    print(f"\ty_int = {y_int:.4f}")
+    print(f"\tq =\n{q}")
 
 
 def run_example_briot_ruffini():
@@ -291,7 +291,7 @@ def run_example_derivative_five_point():
     print(f"\tdy = {dy}")
 
 
-def run_example_composite2_trapezoidal():
+def run_example_composite_trapezoidal_array():
     """Run an example 'Integration: Trapezoidal Rule'."""
     print_function_docstring()
 
@@ -303,10 +303,10 @@ def run_example_composite2_trapezoidal():
     print(f"\tx = {x}")
     print(f"\ty = {y}")
 
-    [xi] = integration.composite2_trapezoidal(x, y)
+    [xi] = integration.composite_trapezoidal_array(x, y)
 
     print("Output:")
-    print(f"\txi = {xi}")
+    print(f"\txi = {xi:.4f}")
 
 
 def run_example_composite_trapezoidal():
@@ -329,10 +329,10 @@ def run_example_composite_trapezoidal():
     [xi] = integration.composite_trapezoidal(f, b, a, n)
 
     print("Output:")
-    print(f"\txi = {xi}")
+    print(f"\txi = {xi:.4f}")
 
 
-def run_example_composite2_simpson():
+def run_example_composite_simpson_array():
     """Run an example 'Integration: Composite 1/3 Simpsons Rule'."""
     print_function_docstring()
 
@@ -344,13 +344,13 @@ def run_example_composite2_simpson():
     print(f"\tx = {x}")
     print(f"\ty = {y}")
 
-    [xi] = integration.composite2_simpson(x, y)
+    [xi] = integration.composite_simpson_array(x, y)
 
     print("Output:")
-    print(f"\txi = {xi}")
+    print(f"\txi = {xi:.4f}")
 
 
-def run_example_ccomposite_simpson():
+def run_example_composite_simpson():
     """Run an example 'Integration: Composite 1/3 Simpsons Rule'."""
     print_function_docstring()
 
@@ -370,10 +370,10 @@ def run_example_ccomposite_simpson():
     [xi] = integration.composite_simpson(f, b, a, n)
 
     print("Output:")
-    print(f"\txi = {xi}")
+    print(f"\txi = {xi:.4f}")
 
 
-def run_example_composite_simpson():
+def run_example_euler():
     """Run an example 'ODE: Euler'."""
     print_function_docstring()
 
@@ -521,13 +521,13 @@ def run_example_gauss_elimination_pp():
     b = np.array([-8, -20, -2, 4])
 
     print("Input:")
-    print(f"\ta = {a}")
+    print(f"\ta =\n{a}")
     print(f"\tb = {b}")
 
     [a] = linear_systems.gauss_elimination_pp(a, b)
 
     print("Output:")
-    print(f"\ta = {a}")
+    print(f"\ta =\n{a}")
 
     return a
 
@@ -540,7 +540,7 @@ def run_example_backward_substitution(a):
     d = a[:, -1]
 
     print("Input:")
-    print(f"\tupper = {upper}")
+    print(f"\tupper =\n{upper}")
     print(f"\td = {d}")
 
     [x] = linear_systems.backward_substitution(upper, d)
@@ -558,7 +558,7 @@ def run_example_forward_substitution():
     c = np.array([5, 6, 4, 2])
 
     print("Input:")
-    print(f"\tlower = {lower}")
+    print(f"\tlower =\n{lower}")
     print(f"\tc = {c}")
 
     [x] = linear_systems.forward_substitution(lower, c)
@@ -579,7 +579,7 @@ def run_example_jacobi():
     iter_max = 10
 
     print("Input:")
-    print(f"\ta = {a}")
+    print(f"\ta =\n{a}")
     print(f"\tb = {b}")
     print(f"\tx0 = {x0}")
     print(f"\ttoler = {toler}")
@@ -604,7 +604,7 @@ def run_example_gauss_seidel():
     iter_max = 10
 
     print("Input:")
-    print(f"\ta = {a}")
+    print(f"\ta =\n{a}")
     print(f"\tb = {b}")
     print(f"\tx0 = {x0}")
     print(f"\ttoler = {toler}")
@@ -630,11 +630,11 @@ def main():
     run_example_derivative_backward_difference()
     run_example_derivative_three_point()
     run_example_derivative_five_point()
-    run_example_composite2_trapezoidal()
+    run_example_composite_trapezoidal_array()
     run_example_composite_trapezoidal()
-    run_example_composite2_simpson()
-    run_example_ccomposite_simpson()
+    run_example_composite_simpson_array()
     run_example_composite_simpson()
+    run_example_euler()
     run_example_taylor2()
     run_example_taylor4()
     run_example_rk4()

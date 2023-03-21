@@ -67,9 +67,9 @@ def newton(f, df, x0, toler, iter_max):
         iter: number of iterations used by the method.
         converged: flag to indicate if the root was found.
     """
+    fx = f(x0)
+    dfx = df(x0)
     x = x0
-    fx = f(x)
-    dfx = df(x)
 
     print(f"i = 000,\tx = {x:.4f},\tdfx = {dfx:.4f},\tfx = {fx:.4f}")
 
@@ -126,9 +126,8 @@ def regula_falsi(f, a, b, toler, iter_max):
         x += delta_x
         fx = f(x)
 
-        print(f"i = {i:03d},\ta = {a:+.4f},\tfa = {fa:+.4f},", end="")
-        print(f"\tb = {b:+.4f},\tfb = {fb:+.4f},", end="")
-        print(f"\tdx = {delta_x:+.4f}")
+        print(f"i = {i:03d},\tx = {x:+.4f},\t", end="")
+        print(f"fx = {fx:+.4f},\tdx = {delta_x:+.4f}")
 
         if math.fabs(delta_x) <= toler and math.fabs(fx) <= toler:
             converged = True

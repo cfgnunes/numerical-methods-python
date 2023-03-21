@@ -53,7 +53,7 @@ def composite_trapezoidal(f, b, a, n):
     return [xi]
 
 
-def composite2_simpson(x, y):
+def composite_simpson_array(x, y):
     """Calculate the integral from 1/3 Simpson's Rule.
 
     Args:
@@ -82,7 +82,7 @@ def composite2_simpson(x, y):
     return [xi]
 
 
-def composite2_trapezoidal(x, y):
+def composite_trapezoidal_array(x, y):
     """Calculate the integral from the Trapezoidal Rule.
 
     Args:
