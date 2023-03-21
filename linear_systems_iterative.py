@@ -3,14 +3,14 @@
 import numpy as np
 
 
-def jacobi(a, b, x0, tol, iter_max):
+def jacobi(a, b, x0, toler, iter_max):
     """Jacobi method: solve Ax = b given an initial approximation x0.
 
     Args:
         a: matrix A from system Ax=b.
         b: an array containing b values.
         x0: initial approximation of the solution.
-        tol: tolerance.
+        toler: tolerance.
         iter_max: maximum number of iterations.
 
     Returns:
@@ -27,21 +27,21 @@ def jacobi(a, b, x0, tol, iter_max):
     for i in range(1, iter_max + 1):
         x = np.linalg.solve(d, (b - np.dot(m, x0)))
 
-        if np.linalg.norm(x - x0, np.inf) / np.linalg.norm(x, np.inf) <= tol:
+        if np.linalg.norm(x - x0, np.inf) / np.linalg.norm(x, np.inf) <= toler:
             break
         x0 = x.copy()
 
     return [x, i]
 
 
-def gauss_seidel(a, b, x0, tol, iter_max):
+def gauss_seidel(a, b, x0, toler, iter_max):
     """Gauss-Seidel method: solve Ax = b given an initial approximation x0.
 
     Args:
         a: matrix A from system Ax=b.
         b: an array containing b values.
         x0: initial approximation of the solution.
-        tol: tolerance.
+        toler: tolerance.
         iter_max: maximum number of iterations.
 
     Returns:
@@ -58,7 +58,7 @@ def gauss_seidel(a, b, x0, tol, iter_max):
     for i in range(1, iter_max + 1):
         x = np.linalg.solve(lower, (b - np.dot(upper, x0)))
 
-        if np.linalg.norm(x - x0, np.inf) / np.linalg.norm(x, np.inf) <= tol:
+        if np.linalg.norm(x - x0, np.inf) / np.linalg.norm(x, np.inf) <= toler:
             break
         x0 = x.copy()
 
