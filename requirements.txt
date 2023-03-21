@@ -1,3 +1,1 @@
-# File used by Pip (if you use it) to install the necessary dependencies.
-
 numpy
