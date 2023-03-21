@@ -34,8 +34,8 @@ def bisection(f, a, b, tol, iter_max):
         x = (a + b) / 2
         fx = f(x)
 
-        print("i: {:03d}\t x: {:+.4f}\t fx: {:+.4f}\t dx: {:+.4f}\n"
-              .format(i, x, fx, delta_x), end="")
+        print(f"i = {i:03d},\tx = {x:+.4f},\t", end="")
+        print(f"fx = {fx:+.4f},\tdx = {delta_x:+.4f}")
 
         if delta_x <= tol and math.fabs(fx) <= tol:
             converged = True
@@ -75,8 +75,7 @@ def newton(f, df, x0, tol, iter_max):
     dfx = df(x)
 
     converged = False
-    print("iter: 0 x: {:.4f}\t dfx: {:.4f}\t fx: {:.4f}\n"
-          .format(x, dfx, fx), end="")
+    print(f"i = 000,\tx = {x:.4f},\tdfx = {dfx:.4f},\tfx = {fx:.4f}")
 
     i = 0
     for i in range(1, iter_max + 1):
@@ -85,8 +84,8 @@ def newton(f, df, x0, tol, iter_max):
         fx = f(x)
         dfx = df(x)
 
-        print("i:{:03d}\t x: {:.4f}\t dfx: {:.4f}\t fx: {:.4f}\t dx: {:.4f}\n"
-              .format(i, x, dfx, fx, delta_x), end="")
+        print(f"i = {i:03d},\tx = {x:.4f},\tdfx = {dfx:.4f},\t", end="")
+        print(f"fx = {fx:.4f},\tdx = {delta_x:.4f}")
 
         if math.fabs(delta_x) <= tol and math.fabs(fx) <= tol or dfx == 0:
             converged = True
@@ -136,8 +135,8 @@ def secant(f, a, b, tol, iter_max):
         x += delta_x
         fx = f(x)
 
-        print("i: {:03d}\t x: {:+.4f}\t fx: {:+.4f}\t dx: {:+.4f}\n"
-              .format(i, x, fx, delta_x), end="")
+        print(f"i = {i:03d},\tx = {x:+.4f},\t", end="")
+        print(f"fx = {fx:+.4f},\tdx = {delta_x:+.4f}")
 
         if math.fabs(delta_x) <= tol and math.fabs(fx) <= tol:
             converged = True
