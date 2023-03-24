@@ -42,9 +42,10 @@ python3 main.py
 ### Solutions of equations
 
 - Bisection method
-- Newton method
-- Regula Falsi (False Position)
 - Secant method
+- Regula Falsi (False Position)
+- Pegasus
+- Newton method
 
 ### Interpolation
 

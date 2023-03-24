@@ -52,13 +52,13 @@ def bisection(f, a, b, toler, iter_max):
     return [root, i, converged]
 
 
-def newton(f, df, x0, toler, iter_max):
-    """Calculate the root of an equation by the Newton method.
+def secant(f, a, b, toler, iter_max):
+    """Calculate the root of an equation by the Secant method.
 
     Args:
         f: function f(x).
-        df: derivative of function f(x).
-        x0: initial guess.
+        a: lower limit.
+        b: upper limit.
         toler: tolerance (stopping criterion).
         iter_max: maximum number of iterations (stopping criterion).
 
@@ -67,25 +67,37 @@ def newton(f, df, x0, toler, iter_max):
         iter: number of iterations used by the method.
         converged: flag to indicate if the root was found.
     """
-    fx = f(x0)
-    dfx = df(x0)
-    x = x0
+    fa = f(a)
+    fb = f(b)
 
-    print(f"i = 000,\tx = {x:.4f},\tdfx = {dfx:.4f},\tfx = {fx:.4f}")
+    if fb - fa == 0:
+        raise ValueError("f(b)-f(a) must be nonzero.")
+
+    if b - a == 0:
+        raise ValueError("b-a must be nonzero.")
+
+    if math.fabs(fa) < math.fabs(fb):
+        a, b = b, a
+        fa, fb = fb, fa
+
+    x = b
+    fx = fb
 
     converged = False
-    for i in range(1, iter_max + 1):
-        delta_x = -fx / dfx
+    for i in range(0, iter_max + 1):
+        delta_x = -fx / (fb - fa) * (b - a)
         x += delta_x
         fx = f(x)
-        dfx = df(x)
 
-        print(f"i = {i:03d},\tx = {x:.4f},\tdfx = {dfx:.4f},\t", end="")
-        print(f"fx = {fx:.4f},\tdx = {delta_x:.4f}")
+        print(f"i = {i:03d},\tx = {x:+.4f},\t", end="")
+        print(f"fx = {fx:+.4f},\tdx = {delta_x:+.4f}")
 
-        if math.fabs(delta_x) <= toler and math.fabs(fx) <= toler or dfx == 0:
+        if math.fabs(delta_x) <= toler and math.fabs(fx) <= toler:
             converged = True
             break
+
+        a, b = b, x
+        fa, fb = fb, fx
 
     root = x
     return [root, i, converged]
@@ -144,8 +156,8 @@ def regula_falsi(f, a, b, toler, iter_max):
     return [root, i, converged]
 
 
-def secant(f, a, b, toler, iter_max):
-    """Calculate the root of an equation by the Secant method.
+def pegasus(f, a, b, toler, iter_max):
+    """Calculate the root of an equation by the Pegasus method.
 
     Args:
         f: function f(x).
@@ -161,17 +173,6 @@ def secant(f, a, b, toler, iter_max):
     """
     fa = f(a)
     fb = f(b)
-
-    if fb - fa == 0:
-        raise ValueError("f(b)-f(a) must be nonzero.")
-
-    if b - a == 0:
-        raise ValueError("b-a must be nonzero.")
-
-    if math.fabs(fa) < math.fabs(fb):
-        a, b = b, a
-        fa, fb = fb, fa
-
     x = b
     fx = fb
 
@@ -188,8 +189,53 @@ def secant(f, a, b, toler, iter_max):
             converged = True
             break
 
-        a, b = b, x
-        fa, fb = fb, fx
+        if fx * fb < 0:
+            a = b
+            fa = fb
+        else:
+            fa = fa * fb / (fb + fx)
+
+        b = x
+        fb = fx
+
+    root = x
+    return [root, i, converged]
+
+
+def newton(f, df, x0, toler, iter_max):
+    """Calculate the root of an equation by the Newton method.
+
+    Args:
+        f: function f(x).
+        df: derivative of function f(x).
+        x0: initial guess.
+        toler: tolerance (stopping criterion).
+        iter_max: maximum number of iterations (stopping criterion).
+
+    Returns:
+        root: root value.
+        iter: number of iterations used by the method.
+        converged: flag to indicate if the root was found.
+    """
+    fx = f(x0)
+    dfx = df(x0)
+    x = x0
+
+    print(f"i = 000,\tx = {x:.4f},\tdfx = {dfx:.4f},\tfx = {fx:.4f}")
+
+    converged = False
+    for i in range(1, iter_max + 1):
+        delta_x = -fx / dfx
+        x += delta_x
+        fx = f(x)
+        dfx = df(x)
+
+        print(f"i = {i:03d},\tx = {x:.4f},\tdfx = {dfx:.4f},\t", end="")
+        print(f"fx = {fx:.4f},\tdx = {delta_x:.4f}")
+
+        if math.fabs(delta_x) <= toler and math.fabs(fx) <= toler or dfx == 0:
+            converged = True
+            break
 
     root = x
     return [root, i, converged]
