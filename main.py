@@ -45,11 +45,11 @@ def run_example_bisection():
     #       The interval reported must have a signal exchange, f (a) * f (b)<0.
 
     def f(x):
-        return 4 * x ** 3 + x + math.cos(x) - 10
+        return 2 * x ** 3 - math.cos(x + 1) - 3
 
-    a = 1.0
+    a = -1.0
     b = 2.0
-    toler = 10 ** -5
+    toler = 0.01
     iter_max = 100
 
     print("Input:")
@@ -61,68 +61,7 @@ def run_example_bisection():
     [root, i, converged] = solutions.bisection(f, a, b, toler, iter_max)
 
     print("Output:")
-    print(f"\troot = {root:.4f}")
-    print(f"\ti = {i}")
-    print(f"\tconverged = {converged}")
-
-
-@print_docstring
-def run_example_newton():
-    """Run an example 'Solutions: Newton'."""
-    # Newton method (find roots of an equation)
-    #   Pros:
-    #       It is a fast method.
-    #    Cons:
-    #       It may diverge;
-    #       It is necessary to calculate the derivative of the function;
-    #       It is necessary to give an initial x0 value where
-    #           f'(x0) must be nonzero.
-
-    def f(x):
-        return 4 * x ** 3 + x + math.cos(x) - 10
-
-    def df(x):
-        return 12 * x ** 2 + 1 - math.sin(x)
-
-    x0 = 1.0
-    toler = 10 ** -5
-    iter_max = 100
-
-    print("Input:")
-    print(f"\tx0 = {x0}")
-    print(f"\ttoler = {toler}")
-    print(f"\titer_max = {iter_max}")
-
-    [root, i, converged] = solutions.newton(f, df, x0, toler, iter_max)
-
-    print("Output:")
-    print(f"\troot = {root:.4f}")
-    print(f"\ti = {i}")
-    print(f"\tconverged = {converged}")
-
-
-@print_docstring
-def run_example_regula_falsi():
-    """Run an example 'Solutions: Regula Falsi'."""
-
-    def f(x):
-        return 4 * x ** 3 + x + math.cos(x) - 10
-
-    a = 1.0
-    b = 2.0
-    toler = 10 ** -5
-    iter_max = 100
-
-    print("Input:")
-    print(f"\ta = {a}")
-    print(f"\tb = {b}")
-    print(f"\ttoler = {toler}")
-    print(f"\titer_max = {iter_max}")
-
-    [root, i, converged] = solutions.regula_falsi(f, a, b, toler, iter_max)
-
-    print("Output:")
-    print(f"\troot = {root:.4f}")
+    print(f"\troot = {root:.5f}")
     print(f"\ti = {i}")
     print(f"\tconverged = {converged}")
 
@@ -142,11 +81,11 @@ def run_example_secant():
     #           f(a)-f(b) must be nonzero.
 
     def f(x):
-        return 4 * x ** 3 + x + math.cos(x) - 10
+        return 2 * x ** 3 - math.cos(x + 1) - 3
 
-    a = 1.0
+    a = -1.0
     b = 2.0
-    toler = 10 ** -5
+    toler = 0.01
     iter_max = 100
 
     print("Input:")
@@ -158,7 +97,94 @@ def run_example_secant():
     [root, i, converged] = solutions.secant(f, a, b, toler, iter_max)
 
     print("Output:")
-    print(f"\troot = {root:.4f}")
+    print(f"\troot = {root:.5f}")
+    print(f"\ti = {i}")
+    print(f"\tconverged = {converged}")
+
+
+@print_docstring
+def run_example_regula_falsi():
+    """Run an example 'Solutions: Regula Falsi'."""
+
+    def f(x):
+        return 2 * x ** 3 - math.cos(x + 1) - 3
+
+    a = -1.0
+    b = 2.0
+    toler = 0.01
+    iter_max = 100
+
+    print("Input:")
+    print(f"\ta = {a}")
+    print(f"\tb = {b}")
+    print(f"\ttoler = {toler}")
+    print(f"\titer_max = {iter_max}")
+
+    [root, i, converged] = solutions.regula_falsi(f, a, b, toler, iter_max)
+
+    print("Output:")
+    print(f"\troot = {root:.5f}")
+    print(f"\ti = {i}")
+    print(f"\tconverged = {converged}")
+
+
+@print_docstring
+def run_example_pegasus():
+    """Run an example 'Solutions: Pegasus'."""
+
+    def f(x):
+        return 2 * x ** 3 - math.cos(x + 1) - 3
+
+    a = -1.0
+    b = 2.0
+    toler = 0.01
+    iter_max = 100
+
+    print("Input:")
+    print(f"\ta = {a}")
+    print(f"\tb = {b}")
+    print(f"\ttoler = {toler}")
+    print(f"\titer_max = {iter_max}")
+
+    [root, i, converged] = solutions.pegasus(f, a, b, toler, iter_max)
+
+    print("Output:")
+    print(f"\troot = {root:.5f}")
+    print(f"\ti = {i}")
+    print(f"\tconverged = {converged}")
+
+
+@print_docstring
+def run_example_newton():
+    """Run an example 'Solutions: Newton'."""
+    # Newton method (find roots of an equation)
+    #   Pros:
+    #       It is a fast method.
+    #    Cons:
+    #       It may diverge;
+    #       It is necessary to calculate the derivative of the function;
+    #       It is necessary to give an initial x0 value where
+    #           f'(x0) must be nonzero.
+
+    def f(x):
+        return 2 * x ** 3 - math.cos(x + 1) - 3
+
+    def df(x):
+        return 12 * x ** 2 + 1 - math.sin(x)
+
+    x0 = 1.0
+    toler = 10 ** -5
+    iter_max = 100
+
+    print("Input:")
+    print(f"\tx0 = {x0}")
+    print(f"\ttoler = {toler}")
+    print(f"\titer_max = {iter_max}")
+
+    [root, i, converged] = solutions.newton(f, df, x0, toler, iter_max)
+
+    print("Output:")
+    print(f"\troot = {root:.5f}")
     print(f"\ti = {i}")
     print(f"\tconverged = {converged}")
 
@@ -178,7 +204,7 @@ def run_example_lagrange():
     [y_int] = interpolation.lagrange(x, y, x_int)
 
     print("Output:")
-    print(f"\ty_int = {y_int:.4f}")
+    print(f"\ty_int = {y_int:.5f}")
 
 
 @print_docstring
@@ -196,7 +222,7 @@ def run_example_neville():
     [y_int, q] = interpolation.neville(x, y, x_int)
 
     print("Output:")
-    print(f"\ty_int = {y_int:.4f}")
+    print(f"\ty_int = {y_int:.5f}")
     print(f"\tq =\n{q}")
 
 
@@ -208,7 +234,7 @@ def run_example_briot_ruffini():
 
     print("Input:")
     print(f"\ta = {a}")
-    print(f"\troot = {root:.4f}")
+    print(f"\troot = {root:.5f}")
 
     [b, rest] = polynomials.briot_ruffini(a, root)
 
@@ -296,7 +322,7 @@ def run_example_composite_trapezoidal_array():
     [xi] = integration.composite_trapezoidal_array(x, y)
 
     print("Output:")
-    print(f"\txi = {xi:.4f}")
+    print(f"\txi = {xi:.5f}")
 
 
 @print_docstring
@@ -318,7 +344,7 @@ def run_example_composite_trapezoidal():
     [xi] = integration.composite_trapezoidal(f, b, a, n)
 
     print("Output:")
-    print(f"\txi = {xi:.4f}")
+    print(f"\txi = {xi:.5f}")
 
 
 @print_docstring
@@ -335,7 +361,7 @@ def run_example_composite_simpson_array():
     [xi] = integration.composite_simpson_array(x, y)
 
     print("Output:")
-    print(f"\txi = {xi:.4f}")
+    print(f"\txi = {xi:.5f}")
 
 
 @print_docstring
@@ -357,7 +383,7 @@ def run_example_composite_simpson():
     [xi] = integration.composite_simpson(f, b, a, n)
 
     print("Output:")
-    print(f"\txi = {xi:.4f}")
+    print(f"\txi = {xi:.5f}")
 
 
 @print_docstring
@@ -597,9 +623,10 @@ def run_example_gauss_seidel():
 def main():
     """Run all examples."""
     run_example_bisection()
-    run_example_newton()
-    run_example_regula_falsi()
     run_example_secant()
+    run_example_regula_falsi()
+    run_example_pegasus()
+    run_example_newton()
     run_example_lagrange()
     run_example_neville()
     run_example_briot_ruffini()
