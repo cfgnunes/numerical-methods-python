@@ -51,6 +51,7 @@ python3 main.py
 ### Interpolation
 
 - Lagrange method
+- Newton method
 - Neville method
 
 ### Algorithms for polynomials
