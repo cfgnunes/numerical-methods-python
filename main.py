@@ -253,6 +253,20 @@ def run_example_neville():
 
 
 @print_docstring
+def run_example_root_limits():
+    """Run an example 'Polynomials: Root limits'."""
+    c = np.array([1, 2, -13, -14, 24])
+
+    print("Input:")
+    print(f"\tc = {c}")
+
+    limits = polynomials.root_limits(c)
+
+    print("Output:")
+    print(f"\tlimits = {limits}")
+
+
+@print_docstring
 def run_example_briot_ruffini():
     """Run an example 'Polynomials: Briot-Ruffini'."""
     a = np.array([2, 0, -3, 3, -4])
@@ -656,6 +670,7 @@ def main():
     run_example_newton()
     run_example_lagrange()
     run_example_neville()
+    run_example_root_limits()
     run_example_briot_ruffini()
     run_example_newton_divided_difference()
     run_example_derivative_backward_difference()
