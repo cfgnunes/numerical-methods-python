@@ -25,7 +25,7 @@ def backward_substitution(upper, d):
 
     for i in range(n - 1, -1, -1):
         if upper[i, i] == 0:
-            raise ValueError("Matrix 'upper' is singular.")
+            raise ValueError("'upper' is a singular matrix.")
 
         x[i] = b[i] / upper[i, i]
         b[0:i] = b[0:i] - upper[0:i, i] * x[i]
@@ -53,7 +53,7 @@ def forward_substitution(lower, c):
 
     for i in range(0, n):
         if lower[i, i] == 0:
-            raise ValueError("Matrix 'lower' is singular.")
+            raise ValueError("'lower' is a singular matrix.")
 
         x[i] = b[i] / lower[i, i]
         b[i + 1:n] = b[i + 1:n] - lower[i + 1:n, i] * x[i]

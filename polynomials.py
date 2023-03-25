@@ -88,7 +88,7 @@ def root_limits(c):
     c = np.concatenate((c, [0]))
 
     if c[1] == 0:
-        raise ValueError("The coefficient c[1] is null.")
+        raise ValueError("The first coefficient is null.")
 
     t = n + 1
     c[t + 1] = 0
