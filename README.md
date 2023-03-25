@@ -43,8 +43,9 @@ python3 main.py
 
 - Bisection method
 - Secant method
-- Regula Falsi (False Position)
-- Pegasus
+- Regula Falsi method (False Position)
+- Pegasus method
+- Muller method
 - Newton method
 
 ### Interpolation

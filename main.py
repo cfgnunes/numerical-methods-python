@@ -155,6 +155,32 @@ def run_example_pegasus():
 
 
 @print_docstring
+def run_example_muller():
+    """Run an example 'Solutions: Muller'."""
+
+    def f(x):
+        return 2 * x ** 3 - math.cos(x + 1) - 3
+
+    a = -1.0
+    b = 2.0
+    toler = 0.01
+    iter_max = 100
+
+    print("Input:")
+    print(f"\ta = {a}")
+    print(f"\tb = {b}")
+    print(f"\ttoler = {toler}")
+    print(f"\titer_max = {iter_max}")
+
+    [root, i, converged] = solutions.muller(f, a, b, toler, iter_max)
+
+    print("Output:")
+    print(f"\troot = {root:.5f}")
+    print(f"\ti = {i}")
+    print(f"\tconverged = {converged}")
+
+
+@print_docstring
 def run_example_newton():
     """Run an example 'Solutions: Newton'."""
     # Newton method (find roots of an equation)
@@ -626,6 +652,7 @@ def main():
     run_example_secant()
     run_example_regula_falsi()
     run_example_pegasus()
+    run_example_muller()
     run_example_newton()
     run_example_lagrange()
     run_example_neville()
