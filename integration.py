@@ -5,13 +5,13 @@ def composite_simpson(f, b, a, n):
     """Calculate the integral from 1/3 Simpson's Rule.
 
     Args:
-        f: function f(x).
-        a: the initial point.
-        b: the final point.
-        n: number of intervals.
+        f (function): the equation f(x).
+        a (float): the initial point.
+        b (float): the final point.
+        n (int): number of intervals.
 
     Returns:
-        xi: integral value.
+        xi (float): integral value.
     """
     h = (b - a) / n
 
@@ -33,13 +33,13 @@ def composite_trapezoidal(f, b, a, n):
     """Calculate the integral from the Trapezoidal Rule.
 
     Args:
-        f: function f(x).
-        a: the initial point.
-        b: the final point.
-        n: number of intervals.
+        f (function): the equation f(x).
+        a (float): the initial point.
+        b (float): the final point.
+        n (int): number of intervals.
 
     Returns:
-        xi: integral value.
+        xi (float): integral value.
     """
     h = (b - a) / n
 
@@ -57,11 +57,11 @@ def composite_simpson_array(x, y):
     """Calculate the integral from 1/3 Simpson's Rule.
 
     Args:
-        x: an array containing x values.
-        y: an array containing y values.
+        x (numpy.ndarray): x values.
+        y (numpy.ndarray): y values.
 
     Returns:
-        xi: integral value.
+        xi (float): integral value.
     """
     if y.size != y.size:
         raise ValueError("'x' and 'y' must have same size.")
@@ -86,11 +86,11 @@ def composite_trapezoidal_array(x, y):
     """Calculate the integral from the Trapezoidal Rule.
 
     Args:
-        x: an array containing x values.
-        y: an array containing y values.
+        x (numpy.ndarray): x values.
+        y (numpy.ndarray): y values.
 
     Returns:
-        xi: integral value.
+        xi (float): integral value.
     """
     if y.size != y.size:
         raise ValueError("'x' and 'y' must have same size.")

@@ -7,16 +7,16 @@ def bisection(f, a, b, toler, iter_max):
     """Calculate the root of an equation by the Bisection method.
 
     Args:
-        f: function f(x).
-        a: lower limit.
-        b: upper limit.
-        toler: tolerance (stopping criterion).
-        iter_max: maximum number of iterations (stopping criterion).
+        f (function): equation f(x).
+        a (float): lower limit.
+        b (float): upper limit.
+        toler (float): tolerance (stopping criterion).
+        iter_max (int): maximum number of iterations (stopping criterion).
 
     Returns:
-        root: root value.
-        iter: number of iterations used by the method.
-        converged: flag to indicate if the root was found.
+        root (float): root value.
+        iter (int): number of iterations used by the method.
+        converged (boolean): flag to indicate if the root was found.
     """
     fa = f(a)
     fb = f(b)
@@ -56,16 +56,16 @@ def secant(f, a, b, toler, iter_max):
     """Calculate the root of an equation by the Secant method.
 
     Args:
-        f: function f(x).
-        a: lower limit.
-        b: upper limit.
-        toler: tolerance (stopping criterion).
-        iter_max: maximum number of iterations (stopping criterion).
+        f (function): equation f(x).
+        a (float): lower limit.
+        b (float): upper limit.
+        toler (float): tolerance (stopping criterion).
+        iter_max (int): maximum number of iterations (stopping criterion).
 
     Returns:
-        root: root value.
-        iter: number of iterations used by the method.
-        converged: flag to indicate if the root was found.
+        root (float): root value.
+        iter (int): number of iterations used by the method.
+        converged (boolean): flag to indicate if the root was found.
     """
     fa = f(a)
     fb = f(b)
@@ -107,16 +107,16 @@ def regula_falsi(f, a, b, toler, iter_max):
     """Calculate the root of an equation by the Regula Falsi method.
 
     Args:
-        f: function f(x).
-        a: lower limit.
-        b: upper limit.
-        toler: tolerance (stopping criterion).
-        iter_max: maximum number of iterations (stopping criterion).
+        f (function): equation f(x).
+        a (float): lower limit.
+        b (float): upper limit.
+        toler (float): tolerance (stopping criterion).
+        iter_max (int): maximum number of iterations (stopping criterion).
 
     Returns:
-        root: root value.
-        iter: number of iterations used by the method.
-        converged: flag to indicate if the root was found.
+        root (float): root value.
+        iter (int): number of iterations used by the method.
+        converged (boolean): flag to indicate if the root was found.
     """
     fa = f(a)
     fb = f(b)
@@ -160,16 +160,16 @@ def pegasus(f, a, b, toler, iter_max):
     """Calculate the root of an equation by the Pegasus method.
 
     Args:
-        f: function f(x).
-        a: lower limit.
-        b: upper limit.
-        toler: tolerance (stopping criterion).
-        iter_max: maximum number of iterations (stopping criterion).
+        f (function): equation f(x).
+        a (float): lower limit.
+        b (float): upper limit.
+        toler (float): tolerance (stopping criterion).
+        iter_max (int): maximum number of iterations (stopping criterion).
 
     Returns:
-        root: root value.
-        iter: number of iterations used by the method.
-        converged: flag to indicate if the root was found.
+        root (float): root value.
+        iter (int): number of iterations used by the method.
+        converged (boolean): flag to indicate if the root was found.
     """
     fa = f(a)
     fb = f(b)
@@ -206,16 +206,16 @@ def muller(f, a, c, toler, iter_max):
     """Calculate the root of an equation by the Muller method.
 
     Args:
-        f: function f(x).
-        a: lower limit.
+        f (function): equation f(x).
+        a (float): lower limit.
         c: upper limit.
-        toler: tolerance (stopping criterion).
-        iter_max: maximum number of iterations (stopping criterion).
+        toler (float): tolerance (stopping criterion).
+        iter_max (int): maximum number of iterations (stopping criterion).
 
     Returns:
-        root: root value.
-        iter: number of iterations used by the method.
-        converged: flag to indicate if the root was found.
+        root (float): root value.
+        iter (int): number of iterations used by the method.
+        converged (boolean): flag to indicate if the root was found.
     """
     b = (a + c) / 2
     fa = f(a)
@@ -269,16 +269,16 @@ def newton(f, df, x0, toler, iter_max):
     """Calculate the root of an equation by the Newton method.
 
     Args:
-        f: function f(x).
-        df: derivative of function f(x).
-        x0: initial guess.
-        toler: tolerance (stopping criterion).
-        iter_max: maximum number of iterations (stopping criterion).
+        f (function): equation f(x).
+        df (function): derivative of quation f(x).
+        x0 (float): initial guess.
+        toler (float): tolerance (stopping criterion).
+        iter_max (int): maximum number of iterations (stopping criterion).
 
     Returns:
-        root: root value.
-        iter: number of iterations used by the method.
-        converged: flag to indicate if the root was found.
+        root (float): root value.
+        iter (int): number of iterations used by the method.
+        converged (boolean): flag to indicate if the root was found.
     """
     fx = f(x0)
     dfx = df(x0)

@@ -9,11 +9,11 @@ def derivative_backward_difference(x, y):
     All values in 'x' must be equally spaced.
 
     Args:
-        x: an array containing x values.
-        y: an array containing y values.
+        x (numpy.ndarray): x values.
+        y (numpy.ndarray): y values.
 
     Returns:
-        dy: an array containing the first derivative values.
+        dy (numpy.ndarray): the first derivative values.
     """
     if x.size < 2 or y.size < 2:
         raise ValueError("'x' and 'y' arrays must have 2 values or more.")
@@ -43,11 +43,11 @@ def derivative_three_point(x, y):
     All values in 'x' must be equally spaced.
 
     Args:
-        x: an array containing x values.
-        y: an array containing y values.
+        x (numpy.ndarray): x values.
+        y (numpy.ndarray): y values.
 
     Returns:
-        dy: an array containing the first derivative values.
+        dy (numpy.ndarray): the first derivative values.
     """
     if x.size < 3 or y.size < 3:
         raise ValueError("'x' and 'y' arrays must have 3 values or more.")
@@ -81,11 +81,11 @@ def derivative_five_point(x, y):
     All values in 'x' must be equally spaced.
 
     Args:
-        x: an array containing x values.
-        y: an array containing y values.
+        x (numpy.ndarray): x values.
+        y (numpy.ndarray): y values.
 
     Returns:
-        dy: an array containing the first derivative values.
+        dy (numpy.ndarray): the first derivative values.
     """
     if x.size < 6 or y.size < 6:
         raise ValueError("'x' and 'y' arrays must have 6 values or more.")

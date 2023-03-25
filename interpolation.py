@@ -7,12 +7,12 @@ def lagrange(x, y, x_int):
     """Interpolates a value using the 'Lagrange polynomial'.
 
     Args:
-        x: an array containing x values.
-        y: an array containing y values.
-        x_int: value to interpolate.
+        x (numpy.ndarray): x values.
+        y (numpy.ndarray): y values.
+        x_int (float): value to interpolate.
 
     Returns:
-        y_int: interpolated value.
+        y_int (float): interpolated value.
     """
     m = x.size
     y_int = 0
@@ -31,13 +31,13 @@ def neville(x, y, x_int):
     """Interpolates a value using the 'Neville polynomial'.
 
     Args:
-        x: an array containing x values.
-        y: an array containing y values.
-        x_int: value to interpolate.
+        x (numpy.ndarray): x values.
+        y (numpy.ndarray): y values.
+        x_int (float): value to interpolate.
 
     Returns:
-        y_int: interpolated value.
-        q: coefficients matrix.
+        y_int (float): interpolated value.
+        q (numpy.ndarray): coefficients matrix.
     """
     n = x.size
     q = np.zeros((n, n - 1))
