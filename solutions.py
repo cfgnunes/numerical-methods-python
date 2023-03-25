@@ -202,6 +202,69 @@ def pegasus(f, a, b, toler, iter_max):
     return [root, i, converged]
 
 
+def muller(f, a, c, toler, iter_max):
+    """Calculate the root of an equation by the Muller method.
+
+    Args:
+        f: function f(x).
+        a: lower limit.
+        c: upper limit.
+        toler: tolerance (stopping criterion).
+        iter_max: maximum number of iterations (stopping criterion).
+
+    Returns:
+        root: root value.
+        iter: number of iterations used by the method.
+        converged: flag to indicate if the root was found.
+    """
+    b = (a + c) / 2
+    fa = f(a)
+    fb = f(b)
+    fc = f(c)
+    x = b
+    fx = fb
+    delta_x = c - a
+
+    converged = False
+    for i in range(0, iter_max + 1):
+        h1 = c - b
+        h2 = b - a
+        r = h1 / h2
+        t = x
+
+        aa = (fc - (r + 1) * fb + r * fa) / (h1 * (h1 + h2))
+        bb = (fc - fb) / h1 - aa * h1
+        cc = fb
+
+        signal_bb = int(math.copysign(1, bb))
+
+        z = (-bb + signal_bb * math.sqrt(bb ** 2 - 4 * aa * cc)) / (2 * aa)
+        x = b + z
+
+        delta_x = x - t
+        fx = f(x)
+
+        print(f"i = {i:03d},\tx = {x:+.4f},\t", end="")
+        print(f"fx = {fx:+.4f},\tdx = {delta_x:+.4f}")
+
+        if math.fabs(delta_x) <= toler and math.fabs(fx) <= toler:
+            converged = True
+            break
+
+        if x > b:
+            a = b
+            fa = fb
+        else:
+            c = b
+            fc = fb
+
+        b = x
+        fb = fx
+
+    root = x
+    return [root, i, converged]
+
+
 def newton(f, df, x0, toler, iter_max):
     """Calculate the root of an equation by the Newton method.
 
