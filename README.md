@@ -52,6 +52,7 @@ python3 main.py
 
 - Lagrange method
 - Newton method
+- Gregory-Newton method
 - Neville method
 
 ### Algorithms for polynomials
