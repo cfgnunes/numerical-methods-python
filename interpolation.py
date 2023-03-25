@@ -27,6 +27,33 @@ def lagrange(x, y, x_int):
     return [y_int]
 
 
+def newton(x, y, x_int):
+    """Interpolates a value using the 'Newton polynomial'.
+
+    Args:
+        x (numpy.ndarray): x values.
+        y (numpy.ndarray): y values.
+        x_int (float): value to interpolate.
+
+    Returns:
+        y_int (float): interpolated value.
+    """
+    m = x.size
+    del_y = y.copy()
+
+    # Calculate the divided differences
+    for k in range(1, m):
+        for i in range(m - 1, k - 1, -1):
+            del_y[i] = (del_y[i] - del_y[i - 1]) / (x[i] - x[i - k])
+
+    # Evaluate the Newton polynomial
+    y_int = del_y[-1]
+    for i in range(m - 2, -1, -1):
+        y_int = y_int * (x_int - x[i]) + del_y[i]
+
+    return [y_int]
+
+
 def neville(x, y, x_int):
     """Interpolates a value using the 'Neville polynomial'.
 

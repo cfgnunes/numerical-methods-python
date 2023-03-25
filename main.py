@@ -240,6 +240,24 @@ def run_example_lagrange():
 
 
 @print_docstring
+def run_interpolation_newton():
+    """Run an example 'Interpolation: Newton'."""
+    x = np.array([0.1, 0.3, 0.4, 0.6, 0.7])
+    y = np.array([0.3162, 0.5477, 0.6325, 0.7746, 0.8367])
+    x_int = 0.2
+
+    print("Inputs:")
+    print(f"x = {x}")
+    print(f"y = {y}")
+    print(f"x_int = {x_int}")
+
+    [y_int] = interpolation.newton(x, y, x_int)
+
+    print("Output:")
+    print(f"y_int = {y_int:.5f}")
+
+
+@print_docstring
 def run_example_neville():
     """Run an example 'Interpolation: Neville'."""
     x = np.array([1.0, 1.3, 1.6, 1.9, 2.2])
@@ -679,6 +697,7 @@ def main():
     run_example_muller()
     run_example_newton()
     run_example_lagrange()
+    run_interpolation_newton()
     run_example_neville()
     run_example_root_limits()
     run_example_briot_ruffini()
