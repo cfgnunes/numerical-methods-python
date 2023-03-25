@@ -208,7 +208,7 @@ def muller(f, a, c, toler, iter_max):
     Args:
         f (function): equation f(x).
         a (float): lower limit.
-        c: upper limit.
+        c (float): upper limit.
         toler (float): tolerance (stopping criterion).
         iter_max (int): maximum number of iterations (stopping criterion).
 

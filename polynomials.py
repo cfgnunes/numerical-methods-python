@@ -12,11 +12,11 @@ def briot_ruffini(a, root):
 
     Args:
         a (numpy.ndarray): the coefficients of the input polynomial.
-        root: one of the polynomial roots.
+        root (float): one of the polynomial roots.
 
     Returns:
         b (numpy.ndarray): the coefficients of the output polynomial.
-        rest: polynomial division Rest.
+        rest (float): polynomial division Rest.
     """
     n = a.size - 1
     b = np.zeros(n)
