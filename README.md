@@ -57,6 +57,7 @@ python3 main.py
 
 - Briot-Ruffini method
 - Newton's Divided-Difference method
+- Limits of the real roots
 
 ### Numerical differentiation
 
