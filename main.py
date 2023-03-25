@@ -258,6 +258,24 @@ def example_interpolation_newton():
 
 
 @print_docstring
+def example_interpolation_gregory_newton():
+    """Run an example 'Interpolation: Gregory-Newton'."""
+    x = np.array([110, 120, 130])
+    y = np.array([2.0410, 2.0790, 2.1140])
+    x_int = 115
+
+    print("Inputs:")
+    print(f"x = {x}")
+    print(f"y = {y}")
+    print(f"x_int = {x_int}")
+
+    [y_int] = interpolation.gregory_newton(x, y, x_int)
+
+    print("Output:")
+    print(f"y_int = {y_int:.5f}")
+
+
+@print_docstring
 def example_interpolation_neville():
     """Run an example 'Interpolation: Neville'."""
     x = np.array([1.0, 1.3, 1.6, 1.9, 2.2])
@@ -703,6 +721,7 @@ def main():
     # Interpolation
     example_interpolation_lagrange()
     example_interpolation_newton()
+    example_interpolation_gregory_newton()
     example_interpolation_neville()
 
     # Algorithms for polynomials
