@@ -11,11 +11,11 @@ def briot_ruffini(a, root):
     The format is: P(x) = Q(x) * (x-root) + rest.
 
     Args:
-        a: an array containing the coefficients of the input polynomial.
+        a (numpy.ndarray): the coefficients of the input polynomial.
         root: one of the polynomial roots.
 
     Returns:
-        b: an array containing the coefficients of the output polynomial.
+        b (numpy.ndarray): the coefficients of the output polynomial.
         rest: polynomial division Rest.
     """
     n = a.size - 1
@@ -37,11 +37,11 @@ def newton_divided_difference(x, y):
     Also, find Newton's polynomial.
 
     Args:
-        x: an array containing x values.
-        y: an array containing y values.
+        x (numpy.ndarray): x values.
+        y (numpy.ndarray): y values.
 
     Returns:
-        f: an array containing Newton's divided difference coefficients.
+        f (numpy.ndarray): Newton's divided difference coefficients.
     """
     n = x.size
     q = np.zeros((n, n - 1))
@@ -76,10 +76,11 @@ def root_limits(c):
     Using Lagrange's Theorem, whose proof is given by Demidovich and Maron.
 
     Args:
-        c: polynomial coefficients.
+        c (numpy.ndarray): polynomial coefficients.
 
     Returns:
-        lim: lower and upper limits of positive and negative roots.
+        lim (numpy.ndarray): lower and upper limits of positive and
+            negative roots, respectively.
     """
     lim = np.zeros(4)
     n = len(c) - 1

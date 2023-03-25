@@ -9,11 +9,11 @@ def backward_substitution(upper, d):
     """Solve the upper linear system ux=d.
 
     Args:
-        upper: upper triangular matrix.
-        d: an array containing d values.
+        upper (numpy.ndarray): upper triangular matrix.
+        d (numpy.ndarray): d values.
 
     Returns:
-        x: solution of linear the system.
+        x (float): solution of linear the system.
     """
     [n, m] = upper.shape
     b = d.astype(float)
@@ -37,11 +37,11 @@ def forward_substitution(lower, c):
     """Solve the lower linear system lx=c.
 
     Args:
-        lower: lower triangular matrix.
-        c: an array containing c values.
+        lower (numpy.ndarray): lower triangular matrix.
+        c (numpy.ndarray): c values.
 
     Returns:
-        x: solution of linear the system.
+        x (float): solution of linear the system.
     """
     [n, m] = lower.shape
     b = c.astype(float)
@@ -68,11 +68,11 @@ def gauss_elimination_pp(a, b):
     reduction).
 
     Args:
-        a: matrix A from system Ax=b.
-        b: an array containing b values.
+        a (numpy.ndarray): matrix A from system Ax=b.
+        b (numpy.ndarray): b values.
 
     Returns:
-        a: augmented upper triangular matrix.
+        a (numpy.ndarray): augmented upper triangular matrix.
     """
     [n, m] = a.shape
 
