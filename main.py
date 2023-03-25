@@ -52,18 +52,19 @@ def run_example_bisection():
     toler = 0.01
     iter_max = 100
 
-    print("Input:")
-    print(f"\ta = {a}")
-    print(f"\tb = {b}")
-    print(f"\ttoler = {toler}")
-    print(f"\titer_max = {iter_max}")
+    print("Inputs:")
+    print(f"a = {a}")
+    print(f"b = {b}")
+    print(f"toler = {toler}")
+    print(f"iter_max = {iter_max}")
 
+    print("Execution:")
     [root, i, converged] = solutions.bisection(f, a, b, toler, iter_max)
 
     print("Output:")
-    print(f"\troot = {root:.5f}")
-    print(f"\ti = {i}")
-    print(f"\tconverged = {converged}")
+    print(f"root = {root:.5f}")
+    print(f"i = {i}")
+    print(f"converged = {converged}")
 
 
 @print_docstring
@@ -88,18 +89,19 @@ def run_example_secant():
     toler = 0.01
     iter_max = 100
 
-    print("Input:")
-    print(f"\ta = {a}")
-    print(f"\tb = {b}")
-    print(f"\ttoler = {toler}")
-    print(f"\titer_max = {iter_max}")
+    print("Inputs:")
+    print(f"a = {a}")
+    print(f"b = {b}")
+    print(f"toler = {toler}")
+    print(f"iter_max = {iter_max}")
 
+    print("Execution:")
     [root, i, converged] = solutions.secant(f, a, b, toler, iter_max)
 
     print("Output:")
-    print(f"\troot = {root:.5f}")
-    print(f"\ti = {i}")
-    print(f"\tconverged = {converged}")
+    print(f"root = {root:.5f}")
+    print(f"i = {i}")
+    print(f"converged = {converged}")
 
 
 @print_docstring
@@ -114,18 +116,19 @@ def run_example_regula_falsi():
     toler = 0.01
     iter_max = 100
 
-    print("Input:")
-    print(f"\ta = {a}")
-    print(f"\tb = {b}")
-    print(f"\ttoler = {toler}")
-    print(f"\titer_max = {iter_max}")
+    print("Inputs:")
+    print(f"a = {a}")
+    print(f"b = {b}")
+    print(f"toler = {toler}")
+    print(f"iter_max = {iter_max}")
 
+    print("Execution:")
     [root, i, converged] = solutions.regula_falsi(f, a, b, toler, iter_max)
 
     print("Output:")
-    print(f"\troot = {root:.5f}")
-    print(f"\ti = {i}")
-    print(f"\tconverged = {converged}")
+    print(f"root = {root:.5f}")
+    print(f"i = {i}")
+    print(f"converged = {converged}")
 
 
 @print_docstring
@@ -140,18 +143,19 @@ def run_example_pegasus():
     toler = 0.01
     iter_max = 100
 
-    print("Input:")
-    print(f"\ta = {a}")
-    print(f"\tb = {b}")
-    print(f"\ttoler = {toler}")
-    print(f"\titer_max = {iter_max}")
+    print("Inputs:")
+    print(f"a = {a}")
+    print(f"b = {b}")
+    print(f"toler = {toler}")
+    print(f"iter_max = {iter_max}")
 
+    print("Execution:")
     [root, i, converged] = solutions.pegasus(f, a, b, toler, iter_max)
 
     print("Output:")
-    print(f"\troot = {root:.5f}")
-    print(f"\ti = {i}")
-    print(f"\tconverged = {converged}")
+    print(f"root = {root:.5f}")
+    print(f"i = {i}")
+    print(f"converged = {converged}")
 
 
 @print_docstring
@@ -166,18 +170,19 @@ def run_example_muller():
     toler = 0.01
     iter_max = 100
 
-    print("Input:")
-    print(f"\ta = {a}")
-    print(f"\tb = {b}")
-    print(f"\ttoler = {toler}")
-    print(f"\titer_max = {iter_max}")
+    print("Inputs:")
+    print(f"a = {a}")
+    print(f"b = {b}")
+    print(f"toler = {toler}")
+    print(f"iter_max = {iter_max}")
 
+    print("Execution:")
     [root, i, converged] = solutions.muller(f, a, b, toler, iter_max)
 
     print("Output:")
-    print(f"\troot = {root:.5f}")
-    print(f"\ti = {i}")
-    print(f"\tconverged = {converged}")
+    print(f"root = {root:.5f}")
+    print(f"i = {i}")
+    print(f"converged = {converged}")
 
 
 @print_docstring
@@ -199,20 +204,21 @@ def run_example_newton():
         return 12 * x ** 2 + 1 - math.sin(x)
 
     x0 = 1.0
-    toler = 10 ** -5
+    toler = 0.01
     iter_max = 100
 
-    print("Input:")
-    print(f"\tx0 = {x0}")
-    print(f"\ttoler = {toler}")
-    print(f"\titer_max = {iter_max}")
+    print("Inputs:")
+    print(f"x0 = {x0}")
+    print(f"toler = {toler}")
+    print(f"iter_max = {iter_max}")
 
+    print("Execution:")
     [root, i, converged] = solutions.newton(f, df, x0, toler, iter_max)
 
     print("Output:")
-    print(f"\troot = {root:.5f}")
-    print(f"\ti = {i}")
-    print(f"\tconverged = {converged}")
+    print(f"root = {root:.5f}")
+    print(f"i = {i}")
+    print(f"converged = {converged}")
 
 
 @print_docstring
@@ -222,15 +228,15 @@ def run_example_lagrange():
     y = np.array([1 / 2, 4 / 11, 1 / 4])
     x_int = 3
 
-    print("Input:")
-    print(f"\tx = {x}")
-    print(f"\ty = {y}")
-    print(f"\tx_int = {x_int}")
+    print("Inputs:")
+    print(f"x = {x}")
+    print(f"y = {y}")
+    print(f"x_int = {x_int}")
 
     [y_int] = interpolation.lagrange(x, y, x_int)
 
     print("Output:")
-    print(f"\ty_int = {y_int:.5f}")
+    print(f"y_int = {y_int:.5f}")
 
 
 @print_docstring
@@ -240,16 +246,16 @@ def run_example_neville():
     y = np.array([0.7651977, 0.6200860, 0.4554022, 0.2818186, 0.1103623])
     x_int = 1.5
 
-    print("Input:")
-    print(f"\tx = {x}")
-    print(f"\ty = {y}")
-    print(f"\tx_int = {x_int}")
+    print("Inputs:")
+    print(f"x = {x}")
+    print(f"y = {y}")
+    print(f"x_int = {x_int}")
 
     [y_int, q] = interpolation.neville(x, y, x_int)
 
     print("Output:")
-    print(f"\ty_int = {y_int:.5f}")
-    print(f"\tq =\n{q}")
+    print(f"y_int = {y_int:.5f}")
+    print(f"q =\n{q}")
 
 
 @print_docstring
@@ -257,13 +263,13 @@ def run_example_root_limits():
     """Run an example 'Polynomials: Root limits'."""
     c = np.array([1, 2, -13, -14, 24])
 
-    print("Input:")
-    print(f"\tc = {c}")
+    print("Inputs:")
+    print(f"c = {c}")
 
     limits = polynomials.root_limits(c)
 
     print("Output:")
-    print(f"\tlimits = {limits}")
+    print(f"limits = {limits}")
 
 
 @print_docstring
@@ -272,15 +278,15 @@ def run_example_briot_ruffini():
     a = np.array([2, 0, -3, 3, -4])
     root = -2
 
-    print("Input:")
-    print(f"\ta = {a}")
-    print(f"\troot = {root:.5f}")
+    print("Inputs:")
+    print(f"a = {a}")
+    print(f"root = {root:.5f}")
 
     [b, rest] = polynomials.briot_ruffini(a, root)
 
     print("Output:")
-    print(f"\tb = {b}")
-    print(f"\trest = {rest}")
+    print(f"b = {b}")
+    print(f"rest = {rest}")
 
 
 @print_docstring
@@ -289,14 +295,14 @@ def run_example_newton_divided_difference():
     x = np.array([1.0, 1.3, 1.6, 1.9, 2.2])
     y = np.array([0.7651977, 0.6200860, 0.4554022, 0.2818186, 0.1103623])
 
-    print("Input:")
-    print(f"\tx = {x}")
-    print(f"\ty = {y}")
+    print("Inputs:")
+    print(f"x = {x}")
+    print(f"y = {y}")
 
     [f] = polynomials.newton_divided_difference(x, y)
 
     print("Output:")
-    print(f"\tf = {f}")
+    print(f"f = {f}")
 
 
 @print_docstring
@@ -305,14 +311,14 @@ def run_example_derivative_backward_difference():
     x = np.array([0.0, 0.2, 0.4])
     y = np.array([0.00000, 0.74140, 1.3718])
 
-    print("Input:")
-    print(f"\tx = {x}")
-    print(f"\ty = {y}")
+    print("Inputs:")
+    print(f"x = {x}")
+    print(f"y = {y}")
 
     [dy] = differentiation.derivative_backward_difference(x, y)
 
     print("Output:")
-    print(f"\tdy = {dy}")
+    print(f"dy = {dy}")
 
 
 @print_docstring
@@ -321,14 +327,14 @@ def run_example_derivative_three_point():
     x = np.array([1.1, 1.2, 1.3, 1.4])
     y = np.array([9.025013, 11.02318, 13.46374, 16.44465])
 
-    print("Input:")
-    print(f"\tx = {x}")
-    print(f"\ty = {y}")
+    print("Inputs:")
+    print(f"x = {x}")
+    print(f"y = {y}")
 
     [dy] = differentiation.derivative_three_point(x, y)
 
     print("Output:")
-    print(f"\tdy = {dy}")
+    print(f"dy = {dy}")
 
 
 @print_docstring
@@ -338,14 +344,14 @@ def run_example_derivative_five_point():
     y = np.array([-1.709847, -1.373823, -1.119214,
                   -0.9160143, -0.7470223, -0.6015966])
 
-    print("Input:")
-    print(f"\tx = {x}")
-    print(f"\ty = {y}")
+    print("Inputs:")
+    print(f"x = {x}")
+    print(f"y = {y}")
 
     [dy] = differentiation.derivative_five_point(x, y)
 
     print("Output:")
-    print(f"\tdy = {dy}")
+    print(f"dy = {dy}")
 
 
 @print_docstring
@@ -355,14 +361,14 @@ def run_example_composite_trapezoidal_array():
     y = np.array([124, 134, 148, 156, 147, 133,
                   121, 109, 99, 85, 78, 89, 104, 116, 123])
 
-    print("Input:")
-    print(f"\tx = {x}")
-    print(f"\ty = {y}")
+    print("Inputs:")
+    print(f"x = {x}")
+    print(f"y = {y}")
 
     [xi] = integration.composite_trapezoidal_array(x, y)
 
     print("Output:")
-    print(f"\txi = {xi:.5f}")
+    print(f"xi = {xi:.5f}")
 
 
 @print_docstring
@@ -376,15 +382,15 @@ def run_example_composite_trapezoidal():
     h = 0.25
     n = int((b - a) / h)
 
-    print("Input:")
-    print(f"\ta = {a}")
-    print(f"\tb = {b}")
-    print(f"\tn = {n}")
+    print("Inputs:")
+    print(f"a = {a}")
+    print(f"b = {b}")
+    print(f"n = {n}")
 
     [xi] = integration.composite_trapezoidal(f, b, a, n)
 
     print("Output:")
-    print(f"\txi = {xi:.5f}")
+    print(f"xi = {xi:.5f}")
 
 
 @print_docstring
@@ -394,14 +400,14 @@ def run_example_composite_simpson_array():
     y = np.array([124, 134, 148, 156, 147, 133,
                   121, 109, 99, 85, 78, 89, 104, 116, 123])
 
-    print("Input:")
-    print(f"\tx = {x}")
-    print(f"\ty = {y}")
+    print("Inputs:")
+    print(f"x = {x}")
+    print(f"y = {y}")
 
     [xi] = integration.composite_simpson_array(x, y)
 
     print("Output:")
-    print(f"\txi = {xi:.5f}")
+    print(f"xi = {xi:.5f}")
 
 
 @print_docstring
@@ -415,15 +421,15 @@ def run_example_composite_simpson():
     h = 0.25
     n = int((b - a) / h)
 
-    print("Input:")
-    print(f"\ta = {a}")
-    print(f"\tb = {b}")
-    print(f"\tn = {n}")
+    print("Inputs:")
+    print(f"a = {a}")
+    print(f"b = {b}")
+    print(f"n = {n}")
 
     [xi] = integration.composite_simpson(f, b, a, n)
 
     print("Output:")
-    print(f"\txi = {xi:.5f}")
+    print(f"xi = {xi:.5f}")
 
 
 @print_docstring
@@ -437,17 +443,18 @@ def run_example_euler():
     n = 10
     ya = 0.5
 
-    print("Input:")
-    print(f"\ta = {a}")
-    print(f"\tb = {b}")
-    print(f"\tn = {n}")
-    print(f"\tya = {ya}")
+    print("Inputs:")
+    print(f"a = {a}")
+    print(f"b = {b}")
+    print(f"n = {n}")
+    print(f"ya = {ya}")
 
+    print("Execution:")
     [vx, vy] = ode.euler(f, a, b, n, ya)
 
     print("Output:")
-    print(f"\tvx = {vx}")
-    print(f"\tvy = {vy}")
+    print(f"vx = {vx}")
+    print(f"vy = {vy}")
 
 
 @print_docstring
@@ -464,17 +471,18 @@ def run_example_taylor2():
     n = 10
     ya = 0.5
 
-    print("Input:")
-    print(f"\ta = {a}")
-    print(f"\tb = {b}")
-    print(f"\tn = {n}")
-    print(f"\tya = {ya}")
+    print("Inputs:")
+    print(f"a = {a}")
+    print(f"b = {b}")
+    print(f"n = {n}")
+    print(f"ya = {ya}")
 
+    print("Execution:")
     [vx, vy] = ode.taylor2(f, df1, a, b, n, ya)
 
     print("Output:")
-    print(f"\tvx = {vx}")
-    print(f"\tvy = {vy}")
+    print(f"vx = {vx}")
+    print(f"vy = {vy}")
 
 
 @print_docstring
@@ -497,17 +505,18 @@ def run_example_taylor4():
     n = 10
     ya = 0.5
 
-    print("Input:")
-    print(f"\ta = {a}")
-    print(f"\tb = {b}")
-    print(f"\tn = {n}")
-    print(f"\tya = {ya}")
+    print("Inputs:")
+    print(f"a = {a}")
+    print(f"b = {b}")
+    print(f"n = {n}")
+    print(f"ya = {ya}")
 
+    print("Execution:")
     [vx, vy] = ode.taylor4(f, df1, df2, df3, a, b, n, ya)
 
     print("Output:")
-    print(f"\tvx = {vx}")
-    print(f"\tvy = {vy}")
+    print(f"vx = {vx}")
+    print(f"vy = {vy}")
 
 
 @print_docstring
@@ -521,17 +530,17 @@ def run_example_rk4():
     n = 10
     ya = 0.5
 
-    print("Input:")
-    print(f"\ta = {a}")
-    print(f"\tb = {b}")
-    print(f"\tn = {n}")
-    print(f"\tya = {ya}")
+    print("Inputs:")
+    print(f"a = {a}")
+    print(f"b = {b}")
+    print(f"n = {n}")
+    print(f"ya = {ya}")
 
     [vx, vy] = ode.rk4(f, a, b, n, ya)
 
     print("Output:")
-    print(f"\tvx = {vx}")
-    print(f"\tvy = {vy}")
+    print(f"vx = {vx}")
+    print(f"vy = {vy}")
 
 
 @print_docstring
@@ -548,17 +557,18 @@ def run_example_rk4_system():
     ya[0] = 0.0
     ya[1] = 0.0
 
-    print("Input:")
-    print(f"\ta = {a}")
-    print(f"\tb = {b}")
-    print(f"\tn = {n}")
-    print(f"\tya = {ya}")
+    print("Inputs:")
+    print(f"a = {a}")
+    print(f"b = {b}")
+    print(f"n = {n}")
+    print(f"ya = {ya}")
 
+    print("Execution:")
     [vx, vy] = ode.rk4_system(f, a, b, n, ya)
 
     print("Output:")
-    print(f"\tvx = {vx}")
-    print(f"\tvy = {vy}")
+    print(f"vx = {vx}")
+    print(f"vy = {vy}")
 
 
 @print_docstring
@@ -567,14 +577,14 @@ def run_example_gauss_elimination_pp():
     a = np.array([[1, -1, 2, -1], [2, -2, 3, -3], [1, 1, 1, 0], [1, -1, 4, 3]])
     b = np.array([-8, -20, -2, 4])
 
-    print("Input:")
-    print(f"\ta =\n{a}")
-    print(f"\tb = {b}")
+    print("Inputs:")
+    print(f"a =\n{a}")
+    print(f"b = {b}")
 
     [a] = linear_systems.gauss_elimination_pp(a, b)
 
     print("Output:")
-    print(f"\ta =\n{a}")
+    print(f"a =\n{a}")
 
     return a
 
@@ -585,14 +595,14 @@ def run_example_backward_substitution(a):
     upper = a[:, 0:-1]
     d = a[:, -1]
 
-    print("Input:")
-    print(f"\tupper =\n{upper}")
-    print(f"\td = {d}")
+    print("Inputs:")
+    print(f"upper =\n{upper}")
+    print(f"d = {d}")
 
     [x] = linear_systems.backward_substitution(upper, d)
 
     print("Output:")
-    print(f"\tx = {x}")
+    print(f"x = {x}")
 
 
 @print_docstring
@@ -602,14 +612,14 @@ def run_example_forward_substitution():
                       [3, -2, -1, 0], [1, -2, 6, 2]])
     c = np.array([5, 6, 4, 2])
 
-    print("Input:")
-    print(f"\tlower =\n{lower}")
-    print(f"\tc = {c}")
+    print("Inputs:")
+    print(f"lower =\n{lower}")
+    print(f"c = {c}")
 
     [x] = linear_systems.forward_substitution(lower, c)
 
     print("Output:")
-    print(f"\tx = {x}")
+    print(f"x = {x}")
 
 
 @print_docstring
@@ -622,18 +632,18 @@ def run_example_jacobi():
     toler = 10 ** -3
     iter_max = 10
 
-    print("Input:")
-    print(f"\ta =\n{a}")
-    print(f"\tb = {b}")
-    print(f"\tx0 = {x0}")
-    print(f"\ttoler = {toler}")
-    print(f"\titer_max = {iter_max}")
+    print("Inputs:")
+    print(f"a =\n{a}")
+    print(f"b = {b}")
+    print(f"x0 = {x0}")
+    print(f"toler = {toler}")
+    print(f"iter_max = {iter_max}")
 
     [x, i] = linear_systems_iterative.jacobi(a, b, x0, toler, iter_max)
 
     print("Output:")
-    print(f"\tx = {x}")
-    print(f"\ti = {i}")
+    print(f"x = {x}")
+    print(f"i = {i}")
 
 
 @print_docstring
@@ -646,18 +656,18 @@ def run_example_gauss_seidel():
     toler = 10 ** -3
     iter_max = 10
 
-    print("Input:")
-    print(f"\ta =\n{a}")
-    print(f"\tb = {b}")
-    print(f"\tx0 = {x0}")
-    print(f"\ttoler = {toler}")
-    print(f"\titer_max = {iter_max}")
+    print("Inputs:")
+    print(f"a =\n{a}")
+    print(f"b = {b}")
+    print(f"x0 = {x0}")
+    print(f"toler = {toler}")
+    print(f"iter_max = {iter_max}")
 
     [x, i] = linear_systems_iterative.gauss_seidel(a, b, x0, toler, iter_max)
 
     print("Output:")
-    print(f"\tx = {x}")
-    print(f"\ti = {i}")
+    print(f"x = {x}")
+    print(f"i = {i}")
 
 
 def main():

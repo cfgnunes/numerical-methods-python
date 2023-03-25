@@ -284,7 +284,7 @@ def newton(f, df, x0, toler, iter_max):
     dfx = df(x0)
     x = x0
 
-    print(f"i = 000,\tx = {x:.4f},\tdfx = {dfx:.4f},\tfx = {fx:.4f}")
+    print(f"i = 000,\tx = {x:+.4f},\tfx = {fx:+.4f}")
 
     converged = False
     for i in range(1, iter_max + 1):
@@ -293,8 +293,8 @@ def newton(f, df, x0, toler, iter_max):
         fx = f(x)
         dfx = df(x)
 
-        print(f"i = {i:03d},\tx = {x:.4f},\tdfx = {dfx:.4f},\t", end="")
-        print(f"fx = {fx:.4f},\tdx = {delta_x:.4f}")
+        print(f"i = {i:03d},\tx = {x:+.4f},\t", end="")
+        print(f"fx = {fx:+.4f},\tdx = {delta_x:+.4f}")
 
         if math.fabs(delta_x) <= toler and math.fabs(fx) <= toler or dfx == 0:
             converged = True
