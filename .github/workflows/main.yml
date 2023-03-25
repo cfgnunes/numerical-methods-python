@@ -36,7 +36,7 @@ jobs:
           # More info on options: https://github.com/conda-incubator/setup-miniconda
           python-version: ${{ matrix.python-version }}
           environment-file: environment.yml
-          channels: conda-forge,defaults
+          channels: defaults
           activate-environment: numerical-methods
           auto-update-conda: true
           auto-activate-base: false
