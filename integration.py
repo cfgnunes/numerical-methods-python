@@ -1,7 +1,7 @@
 """Methods for numerical integration."""
 
 
-def composite_simpson(f, b, a, n):
+def simpson(f, b, a, n):
     """Calculate the integral from 1/3 Simpson's Rule.
 
     Args:
@@ -29,7 +29,7 @@ def composite_simpson(f, b, a, n):
     return [xi]
 
 
-def composite_trapezoidal(f, b, a, n):
+def trapezoidal(f, b, a, n):
     """Calculate the integral from the Trapezoidal Rule.
 
     Args:
@@ -53,7 +53,7 @@ def composite_trapezoidal(f, b, a, n):
     return [xi]
 
 
-def composite_simpson_array(x, y):
+def simpson_array(x, y):
     """Calculate the integral from 1/3 Simpson's Rule.
 
     Args:
@@ -82,7 +82,7 @@ def composite_simpson_array(x, y):
     return [xi]
 
 
-def composite_trapezoidal_array(x, y):
+def trapezoidal_array(x, y):
     """Calculate the integral from the Trapezoidal Rule.
 
     Args:

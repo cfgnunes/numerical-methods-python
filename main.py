@@ -31,7 +31,7 @@ def print_docstring(func):
 
 
 @print_docstring
-def run_example_bisection():
+def example_solution_bisection():
     """Run an example 'Solutions: Bisection'."""
     # Bisection method (find roots of an equation)
     #   Pros:
@@ -68,7 +68,7 @@ def run_example_bisection():
 
 
 @print_docstring
-def run_example_secant():
+def example_solution_secant():
     """Run an example 'Solutions: Secant'."""
     # Secant method (find roots of an equation)
     #   Pros:
@@ -105,7 +105,7 @@ def run_example_secant():
 
 
 @print_docstring
-def run_example_regula_falsi():
+def example_solution_regula_falsi():
     """Run an example 'Solutions: Regula Falsi'."""
 
     def f(x):
@@ -132,7 +132,7 @@ def run_example_regula_falsi():
 
 
 @print_docstring
-def run_example_pegasus():
+def example_solution_pegasus():
     """Run an example 'Solutions: Pegasus'."""
 
     def f(x):
@@ -159,7 +159,7 @@ def run_example_pegasus():
 
 
 @print_docstring
-def run_example_muller():
+def example_solution_muller():
     """Run an example 'Solutions: Muller'."""
 
     def f(x):
@@ -186,7 +186,7 @@ def run_example_muller():
 
 
 @print_docstring
-def run_example_newton():
+def example_solution_newton():
     """Run an example 'Solutions: Newton'."""
     # Newton method (find roots of an equation)
     #   Pros:
@@ -222,7 +222,7 @@ def run_example_newton():
 
 
 @print_docstring
-def run_example_lagrange():
+def example_interpolation_lagrange():
     """Run an example 'Interpolation: Lagrange'."""
     x = np.array([2, 11 / 4, 4])
     y = np.array([1 / 2, 4 / 11, 1 / 4])
@@ -240,7 +240,7 @@ def run_example_lagrange():
 
 
 @print_docstring
-def run_interpolation_newton():
+def example_interpolation_newton():
     """Run an example 'Interpolation: Newton'."""
     x = np.array([0.1, 0.3, 0.4, 0.6, 0.7])
     y = np.array([0.3162, 0.5477, 0.6325, 0.7746, 0.8367])
@@ -258,7 +258,7 @@ def run_interpolation_newton():
 
 
 @print_docstring
-def run_example_neville():
+def example_interpolation_neville():
     """Run an example 'Interpolation: Neville'."""
     x = np.array([1.0, 1.3, 1.6, 1.9, 2.2])
     y = np.array([0.7651977, 0.6200860, 0.4554022, 0.2818186, 0.1103623])
@@ -277,7 +277,7 @@ def run_example_neville():
 
 
 @print_docstring
-def run_example_root_limits():
+def example_polynomial_root_limits():
     """Run an example 'Polynomials: Root limits'."""
     c = np.array([1, 2, -13, -14, 24])
 
@@ -291,7 +291,7 @@ def run_example_root_limits():
 
 
 @print_docstring
-def run_example_briot_ruffini():
+def example_polynomial_briot_ruffini():
     """Run an example 'Polynomials: Briot-Ruffini'."""
     a = np.array([2, 0, -3, 3, -4])
     root = -2
@@ -308,7 +308,7 @@ def run_example_briot_ruffini():
 
 
 @print_docstring
-def run_example_newton_divided_difference():
+def example_polynomial_newton_divided_difference():
     """Run an example 'Polynomials: Newton's Divided-Difference'."""
     x = np.array([1.0, 1.3, 1.6, 1.9, 2.2])
     y = np.array([0.7651977, 0.6200860, 0.4554022, 0.2818186, 0.1103623])
@@ -324,7 +324,7 @@ def run_example_newton_divided_difference():
 
 
 @print_docstring
-def run_example_derivative_backward_difference():
+def example_differentiation_backward_difference():
     """Run an example 'Differentiation: Backward-difference'."""
     x = np.array([0.0, 0.2, 0.4])
     y = np.array([0.00000, 0.74140, 1.3718])
@@ -333,14 +333,14 @@ def run_example_derivative_backward_difference():
     print(f"x = {x}")
     print(f"y = {y}")
 
-    [dy] = differentiation.derivative_backward_difference(x, y)
+    [dy] = differentiation.backward_difference(x, y)
 
     print("Output:")
     print(f"dy = {dy}")
 
 
 @print_docstring
-def run_example_derivative_three_point():
+def example_differentiation_three_point():
     """Run an example 'Differentiation: Three-Point'."""
     x = np.array([1.1, 1.2, 1.3, 1.4])
     y = np.array([9.025013, 11.02318, 13.46374, 16.44465])
@@ -349,14 +349,14 @@ def run_example_derivative_three_point():
     print(f"x = {x}")
     print(f"y = {y}")
 
-    [dy] = differentiation.derivative_three_point(x, y)
+    [dy] = differentiation.three_point(x, y)
 
     print("Output:")
     print(f"dy = {dy}")
 
 
 @print_docstring
-def run_example_derivative_five_point():
+def example_differentiation_five_point():
     """Run an example 'Differentiation: Five-Point'."""
     x = np.array([2.1, 2.2, 2.3, 2.4, 2.5, 2.6])
     y = np.array([-1.709847, -1.373823, -1.119214,
@@ -366,14 +366,14 @@ def run_example_derivative_five_point():
     print(f"x = {x}")
     print(f"y = {y}")
 
-    [dy] = differentiation.derivative_five_point(x, y)
+    [dy] = differentiation.five_point(x, y)
 
     print("Output:")
     print(f"dy = {dy}")
 
 
 @print_docstring
-def run_example_composite_trapezoidal_array():
+def example_trapezoidal_array():
     """Run an example 'Integration: Trapezoidal Rule'."""
     x = np.array([0, 6, 12, 18, 24, 30, 36, 42, 48, 54, 60, 66, 72, 78, 84])
     y = np.array([124, 134, 148, 156, 147, 133,
@@ -383,14 +383,14 @@ def run_example_composite_trapezoidal_array():
     print(f"x = {x}")
     print(f"y = {y}")
 
-    [xi] = integration.composite_trapezoidal_array(x, y)
+    [xi] = integration.trapezoidal_array(x, y)
 
     print("Output:")
     print(f"xi = {xi:.5f}")
 
 
 @print_docstring
-def run_example_composite_trapezoidal():
+def example_trapezoidal():
     """Run an example 'Integration: Trapezoidal Rule'."""
     def f(x):
         return x ** 2 * math.log(x ** 2 + 1)
@@ -405,14 +405,14 @@ def run_example_composite_trapezoidal():
     print(f"b = {b}")
     print(f"n = {n}")
 
-    [xi] = integration.composite_trapezoidal(f, b, a, n)
+    [xi] = integration.trapezoidal(f, b, a, n)
 
     print("Output:")
     print(f"xi = {xi:.5f}")
 
 
 @print_docstring
-def run_example_composite_simpson_array():
+def example_simpson_array():
     """Run an example 'Integration: Composite 1/3 Simpsons Rule'."""
     x = np.array([0, 6, 12, 18, 24, 30, 36, 42, 48, 54, 60, 66, 72, 78, 84])
     y = np.array([124, 134, 148, 156, 147, 133,
@@ -422,14 +422,14 @@ def run_example_composite_simpson_array():
     print(f"x = {x}")
     print(f"y = {y}")
 
-    [xi] = integration.composite_simpson_array(x, y)
+    [xi] = integration.simpson_array(x, y)
 
     print("Output:")
     print(f"xi = {xi:.5f}")
 
 
 @print_docstring
-def run_example_composite_simpson():
+def example_simpson():
     """Run an example 'Integration: Composite 1/3 Simpsons Rule'."""
     def f(x):
         return x ** 2 * math.log(x ** 2 + 1)
@@ -444,14 +444,14 @@ def run_example_composite_simpson():
     print(f"b = {b}")
     print(f"n = {n}")
 
-    [xi] = integration.composite_simpson(f, b, a, n)
+    [xi] = integration.simpson(f, b, a, n)
 
     print("Output:")
     print(f"xi = {xi:.5f}")
 
 
 @print_docstring
-def run_example_euler():
+def example_ode_euler():
     """Run an example 'ODE: Euler'."""
     def f(x, y):
         return y - x ** 2 + 1
@@ -476,7 +476,7 @@ def run_example_euler():
 
 
 @print_docstring
-def run_example_taylor2():
+def example_ode_taylor2():
     """Run an example 'ODE: Taylor (Order 2)'."""
     def f(x, y):
         return y - x ** 2 + 1
@@ -504,7 +504,7 @@ def run_example_taylor2():
 
 
 @print_docstring
-def run_example_taylor4():
+def example_ode_taylor4():
     """Run an example 'ODE: Taylor (Order 4)'."""
     def f(x, y):
         return y - x ** 2 + 1
@@ -538,7 +538,7 @@ def run_example_taylor4():
 
 
 @print_docstring
-def run_example_rk4():
+def example_ode_rk4():
     """Run an example 'ODE: Runge-Kutta (Order 4)'."""
     def f(x, y):
         return y - x ** 2 + 1
@@ -562,7 +562,7 @@ def run_example_rk4():
 
 
 @print_docstring
-def run_example_rk4_system():
+def example_ode_rk4_system():
     """Run an example 'ODE: Runge-Kutta (Order 4) for systems of diff. eq.'."""
     f = []
     f.append(lambda x, y: - 4 * y[0] + 3 * y[1] + 6)
@@ -590,7 +590,7 @@ def run_example_rk4_system():
 
 
 @print_docstring
-def run_example_gauss_elimination_pp():
+def example_gauss_elimination_pp():
     """Run an example 'Linear Systems: Gaussian Elimination'."""
     a = np.array([[1, -1, 2, -1], [2, -2, 3, -3], [1, 1, 1, 0], [1, -1, 4, 3]])
     b = np.array([-8, -20, -2, 4])
@@ -608,7 +608,7 @@ def run_example_gauss_elimination_pp():
 
 
 @print_docstring
-def run_example_backward_substitution(a):
+def example_backward_substitution(a):
     """Run an example 'Linear Systems: Backward Substitution'."""
     upper = a[:, 0:-1]
     d = a[:, -1]
@@ -624,7 +624,7 @@ def run_example_backward_substitution(a):
 
 
 @print_docstring
-def run_example_forward_substitution():
+def example_forward_substitution():
     """Run an example 'Linear Systems: Forward Substitution'."""
     lower = np.array([[3, 0, 0, 0], [-1, 1, 0, 0],
                       [3, -2, -1, 0], [1, -2, 6, 2]])
@@ -641,7 +641,7 @@ def run_example_forward_substitution():
 
 
 @print_docstring
-def run_example_jacobi():
+def example_jacobi():
     """Run an example 'Iterative Linear Systems: Jacobi'."""
     a = np.array([[10, -1, 2, 0], [-1, 11, -1, 3],
                   [2, -1, 10, -1], [0, 3, -1, 8]])
@@ -665,7 +665,7 @@ def run_example_jacobi():
 
 
 @print_docstring
-def run_example_gauss_seidel():
+def example_gauss_seidel():
     """Run an example 'Iterative Linear Systems: Gauss-Seidel'."""
     a = np.array([[10, -1, 2, 0], [-1, 11, -1, 3],
                   [2, -1, 10, -1], [0, 3, -1, 8]])
@@ -689,36 +689,55 @@ def run_example_gauss_seidel():
 
 
 def main():
-    """Run all examples."""
-    run_example_bisection()
-    run_example_secant()
-    run_example_regula_falsi()
-    run_example_pegasus()
-    run_example_muller()
-    run_example_newton()
-    run_example_lagrange()
-    run_interpolation_newton()
-    run_example_neville()
-    run_example_root_limits()
-    run_example_briot_ruffini()
-    run_example_newton_divided_difference()
-    run_example_derivative_backward_difference()
-    run_example_derivative_three_point()
-    run_example_derivative_five_point()
-    run_example_composite_trapezoidal_array()
-    run_example_composite_trapezoidal()
-    run_example_composite_simpson_array()
-    run_example_composite_simpson()
-    run_example_euler()
-    run_example_taylor2()
-    run_example_taylor4()
-    run_example_rk4()
-    run_example_rk4_system()
-    a = run_example_gauss_elimination_pp()
-    run_example_backward_substitution(a)
-    run_example_forward_substitution()
-    run_example_jacobi()
-    run_example_gauss_seidel()
+    """Run the main function."""
+    # Execute all examples
+
+    # Solutions of equations
+    example_solution_bisection()
+    example_solution_secant()
+    example_solution_regula_falsi()
+    example_solution_pegasus()
+    example_solution_muller()
+    example_solution_newton()
+
+    # Interpolation
+    example_interpolation_lagrange()
+    example_interpolation_newton()
+    example_interpolation_neville()
+
+    # Algorithms for polynomials
+    example_polynomial_root_limits()
+    example_polynomial_briot_ruffini()
+    example_polynomial_newton_divided_difference()
+
+    # Numerical differentiation
+    example_differentiation_backward_difference()
+    example_differentiation_three_point()
+    example_differentiation_five_point()
+
+    # Numerical integration
+    example_trapezoidal_array()
+    example_trapezoidal()
+    example_simpson_array()
+    example_simpson()
+
+    # Initial-value problems for ordinary differential equations
+    example_ode_euler()
+    example_ode_taylor2()
+    example_ode_taylor4()
+    example_ode_rk4()
+
+    # Systems of differential equations
+    example_ode_rk4_system()
+
+    # Methods for Linear Systems
+    a = example_gauss_elimination_pp()
+    example_backward_substitution(a)
+    example_forward_substitution()
+
+    # Iterative Methods for Linear Systems
+    example_jacobi()
+    example_gauss_seidel()
 
 
 if __name__ == '__main__':
