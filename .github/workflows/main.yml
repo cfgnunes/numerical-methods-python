@@ -28,14 +28,14 @@ jobs:
 
     steps:
       - name: Set up git repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Set up Miniconda
         uses: conda-incubator/setup-miniconda@v2
         with:
           # More info on options: https://github.com/conda-incubator/setup-miniconda
           python-version: ${{ matrix.python-version }}
-          environment-file: requirements.txt
+          environment-file: environment.yml
           channels: defaults
           activate-environment: numerical-methods
           auto-update-conda: true

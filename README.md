@@ -11,7 +11,7 @@ For the implementation in MATLAB, see [this repository](https://github.com/cfgnu
 #### Using Conda (recommended)
 
 ```sh
-conda env create --file "requirements.txt" --name "numerical-methods"
+conda env create
 conda activate numerical-methods
 ```
 
