@@ -71,6 +71,7 @@ python3 main.py
 
 - Composite Trapezoidal method
 - Composite 1/3 Simpson's method
+- Romberg method
 
 ### Initial-value problems for ordinary differential equations
 

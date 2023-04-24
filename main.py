@@ -469,6 +469,28 @@ def example_simpson():
 
 
 @print_docstring
+def example_romberg():
+    """Run an example 'Integration: Romberg method'."""
+    def f(x):
+        return x ** 2 * math.log(x ** 2 + 1)
+
+    a = 0.0
+    b = 2.0
+    h = 0.25
+    n = int((b - a) / h)
+
+    print("Inputs:")
+    print(f"a = {a}")
+    print(f"b = {b}")
+    print(f"n = {n}")
+
+    [xi] = integration.romberg(f, a, b, n)
+
+    print("Output:")
+    print(f"xi = {xi:.5f}")
+
+
+@print_docstring
 def example_ode_euler():
     """Run an example 'ODE: Euler'."""
     def f(x, y):
@@ -739,6 +761,7 @@ def main():
     example_trapezoidal()
     example_simpson_array()
     example_simpson()
+    example_romberg()
 
     # Initial-value problems for ordinary differential equations
     example_ode_euler()
