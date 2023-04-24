@@ -59,7 +59,7 @@ def example_solution_bisection():
     print(f"iter_max = {iter_max}")
 
     print("Execution:")
-    [root, i, converged] = solutions.bisection(f, a, b, toler, iter_max)
+    root, i, converged = solutions.bisection(f, a, b, toler, iter_max)
 
     print("Output:")
     print(f"root = {root:.5f}")
@@ -96,7 +96,7 @@ def example_solution_secant():
     print(f"iter_max = {iter_max}")
 
     print("Execution:")
-    [root, i, converged] = solutions.secant(f, a, b, toler, iter_max)
+    root, i, converged = solutions.secant(f, a, b, toler, iter_max)
 
     print("Output:")
     print(f"root = {root:.5f}")
@@ -123,7 +123,7 @@ def example_solution_regula_falsi():
     print(f"iter_max = {iter_max}")
 
     print("Execution:")
-    [root, i, converged] = solutions.regula_falsi(f, a, b, toler, iter_max)
+    root, i, converged = solutions.regula_falsi(f, a, b, toler, iter_max)
 
     print("Output:")
     print(f"root = {root:.5f}")
@@ -150,7 +150,7 @@ def example_solution_pegasus():
     print(f"iter_max = {iter_max}")
 
     print("Execution:")
-    [root, i, converged] = solutions.pegasus(f, a, b, toler, iter_max)
+    root, i, converged = solutions.pegasus(f, a, b, toler, iter_max)
 
     print("Output:")
     print(f"root = {root:.5f}")
@@ -177,7 +177,7 @@ def example_solution_muller():
     print(f"iter_max = {iter_max}")
 
     print("Execution:")
-    [root, i, converged] = solutions.muller(f, a, b, toler, iter_max)
+    root, i, converged = solutions.muller(f, a, b, toler, iter_max)
 
     print("Output:")
     print(f"root = {root:.5f}")
@@ -213,7 +213,7 @@ def example_solution_newton():
     print(f"iter_max = {iter_max}")
 
     print("Execution:")
-    [root, i, converged] = solutions.newton(f, df, x0, toler, iter_max)
+    root, i, converged = solutions.newton(f, df, x0, toler, iter_max)
 
     print("Output:")
     print(f"root = {root:.5f}")
@@ -233,7 +233,7 @@ def example_interpolation_lagrange():
     print(f"y = {y}")
     print(f"x_int = {x_int}")
 
-    [y_int] = interpolation.lagrange(x, y, x_int)
+    y_int = interpolation.lagrange(x, y, x_int)
 
     print("Output:")
     print(f"y_int = {y_int:.5f}")
@@ -251,7 +251,7 @@ def example_interpolation_newton():
     print(f"y = {y}")
     print(f"x_int = {x_int}")
 
-    [y_int] = interpolation.newton(x, y, x_int)
+    y_int = interpolation.newton(x, y, x_int)
 
     print("Output:")
     print(f"y_int = {y_int:.5f}")
@@ -269,7 +269,7 @@ def example_interpolation_gregory_newton():
     print(f"y = {y}")
     print(f"x_int = {x_int}")
 
-    [y_int] = interpolation.gregory_newton(x, y, x_int)
+    y_int = interpolation.gregory_newton(x, y, x_int)
 
     print("Output:")
     print(f"y_int = {y_int:.5f}")
@@ -287,7 +287,7 @@ def example_interpolation_neville():
     print(f"y = {y}")
     print(f"x_int = {x_int}")
 
-    [y_int, q] = interpolation.neville(x, y, x_int)
+    y_int, q = interpolation.neville(x, y, x_int)
 
     print("Output:")
     print(f"y_int = {y_int:.5f}")
@@ -318,7 +318,7 @@ def example_polynomial_briot_ruffini():
     print(f"a = {a}")
     print(f"root = {root:.5f}")
 
-    [b, rest] = polynomials.briot_ruffini(a, root)
+    b, rest = polynomials.briot_ruffini(a, root)
 
     print("Output:")
     print(f"b = {b}")
@@ -335,7 +335,7 @@ def example_polynomial_newton_divided_difference():
     print(f"x = {x}")
     print(f"y = {y}")
 
-    [f] = polynomials.newton_divided_difference(x, y)
+    f = polynomials.newton_divided_difference(x, y)
 
     print("Output:")
     print(f"f = {f}")
@@ -351,7 +351,7 @@ def example_differentiation_backward_difference():
     print(f"x = {x}")
     print(f"y = {y}")
 
-    [dy] = differentiation.backward_difference(x, y)
+    dy = differentiation.backward_difference(x, y)
 
     print("Output:")
     print(f"dy = {dy}")
@@ -367,7 +367,7 @@ def example_differentiation_three_point():
     print(f"x = {x}")
     print(f"y = {y}")
 
-    [dy] = differentiation.three_point(x, y)
+    dy = differentiation.three_point(x, y)
 
     print("Output:")
     print(f"dy = {dy}")
@@ -384,7 +384,7 @@ def example_differentiation_five_point():
     print(f"x = {x}")
     print(f"y = {y}")
 
-    [dy] = differentiation.five_point(x, y)
+    dy = differentiation.five_point(x, y)
 
     print("Output:")
     print(f"dy = {dy}")
@@ -401,7 +401,7 @@ def example_trapezoidal_array():
     print(f"x = {x}")
     print(f"y = {y}")
 
-    [xi] = integration.trapezoidal_array(x, y)
+    xi = integration.trapezoidal_array(x, y)
 
     print("Output:")
     print(f"xi = {xi:.5f}")
@@ -423,7 +423,7 @@ def example_trapezoidal():
     print(f"b = {b}")
     print(f"n = {n}")
 
-    [xi] = integration.trapezoidal(f, a, b, n)
+    xi = integration.trapezoidal(f, a, b, n)
 
     print("Output:")
     print(f"xi = {xi:.5f}")
@@ -440,7 +440,7 @@ def example_simpson_array():
     print(f"x = {x}")
     print(f"y = {y}")
 
-    [xi] = integration.simpson_array(x, y)
+    xi = integration.simpson_array(x, y)
 
     print("Output:")
     print(f"xi = {xi:.5f}")
@@ -462,7 +462,7 @@ def example_simpson():
     print(f"b = {b}")
     print(f"n = {n}")
 
-    [xi] = integration.simpson(f, a, b, n)
+    xi = integration.simpson(f, a, b, n)
 
     print("Output:")
     print(f"xi = {xi:.5f}")
@@ -484,7 +484,7 @@ def example_romberg():
     print(f"b = {b}")
     print(f"n = {n}")
 
-    [xi] = integration.romberg(f, a, b, n)
+    xi = integration.romberg(f, a, b, n)
 
     print("Output:")
     print(f"xi = {xi:.5f}")
@@ -508,7 +508,7 @@ def example_ode_euler():
     print(f"ya = {ya}")
 
     print("Execution:")
-    [vx, vy] = ode.euler(f, a, b, n, ya)
+    vx, vy = ode.euler(f, a, b, n, ya)
 
     print("Output:")
     print(f"vx = {vx}")
@@ -536,7 +536,7 @@ def example_ode_taylor2():
     print(f"ya = {ya}")
 
     print("Execution:")
-    [vx, vy] = ode.taylor2(f, df1, a, b, n, ya)
+    vx, vy = ode.taylor2(f, df1, a, b, n, ya)
 
     print("Output:")
     print(f"vx = {vx}")
@@ -570,7 +570,7 @@ def example_ode_taylor4():
     print(f"ya = {ya}")
 
     print("Execution:")
-    [vx, vy] = ode.taylor4(f, df1, df2, df3, a, b, n, ya)
+    vx, vy = ode.taylor4(f, df1, df2, df3, a, b, n, ya)
 
     print("Output:")
     print(f"vx = {vx}")
@@ -594,7 +594,7 @@ def example_ode_rk4():
     print(f"n = {n}")
     print(f"ya = {ya}")
 
-    [vx, vy] = ode.rk4(f, a, b, n, ya)
+    vx, vy = ode.rk4(f, a, b, n, ya)
 
     print("Output:")
     print(f"vx = {vx}")
@@ -622,7 +622,7 @@ def example_ode_rk4_system():
     print(f"ya = {ya}")
 
     print("Execution:")
-    [vx, vy] = ode.rk4_system(f, a, b, n, ya)
+    vx, vy = ode.rk4_system(f, a, b, n, ya)
 
     print("Output:")
     print(f"vx = {vx}")
@@ -639,7 +639,7 @@ def example_gauss_elimination_pp():
     print(f"a =\n{a}")
     print(f"b = {b}")
 
-    [a] = linear_systems.gauss_elimination_pp(a, b)
+    a = linear_systems.gauss_elimination_pp(a, b)
 
     print("Output:")
     print(f"a =\n{a}")
@@ -657,7 +657,7 @@ def example_backward_substitution(a):
     print(f"upper =\n{upper}")
     print(f"d = {d}")
 
-    [x] = linear_systems.backward_substitution(upper, d)
+    x = linear_systems.backward_substitution(upper, d)
 
     print("Output:")
     print(f"x = {x}")
@@ -674,7 +674,7 @@ def example_forward_substitution():
     print(f"lower =\n{lower}")
     print(f"c = {c}")
 
-    [x] = linear_systems.forward_substitution(lower, c)
+    x = linear_systems.forward_substitution(lower, c)
 
     print("Output:")
     print(f"x = {x}")
@@ -697,7 +697,7 @@ def example_jacobi():
     print(f"toler = {toler}")
     print(f"iter_max = {iter_max}")
 
-    [x, i] = linear_systems_iterative.jacobi(a, b, x0, toler, iter_max)
+    x, i = linear_systems_iterative.jacobi(a, b, x0, toler, iter_max)
 
     print("Output:")
     print(f"x = {x}")
@@ -721,7 +721,7 @@ def example_gauss_seidel():
     print(f"toler = {toler}")
     print(f"iter_max = {iter_max}")
 
-    [x, i] = linear_systems_iterative.gauss_seidel(a, b, x0, toler, iter_max)
+    x, i = linear_systems_iterative.gauss_seidel(a, b, x0, toler, iter_max)
 
     print("Output:")
     print(f"x = {x}")

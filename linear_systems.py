@@ -30,7 +30,7 @@ def backward_substitution(upper, d):
         x[i] = b[i] / upper[i, i]
         b[0:i] = b[0:i] - upper[0:i, i] * x[i]
 
-    return [x]
+    return x
 
 
 def forward_substitution(lower, c):
@@ -58,7 +58,7 @@ def forward_substitution(lower, c):
         x[i] = b[i] / lower[i, i]
         b[i + 1:n] = b[i + 1:n] - lower[i + 1:n, i] * x[i]
 
-    return [x]
+    return x
 
 
 def gauss_elimination_pp(a, b):
@@ -110,4 +110,4 @@ def gauss_elimination_pp(a, b):
     if a[n - 1, n - 1] == 0:
         print("Info: No unique solution.")
 
-    return [a]
+    return a

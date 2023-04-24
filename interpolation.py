@@ -24,7 +24,7 @@ def lagrange(x, y, x_int):
                 p = p * (x_int - x[j]) / (x[i] - x[j])
         y_int = y_int + p
 
-    return [y_int]
+    return y_int
 
 
 def newton(x, y, x_int):
@@ -51,7 +51,7 @@ def newton(x, y, x_int):
     for i in range(m - 2, -1, -1):
         y_int = y_int * (x_int - x[i]) + del_y[i]
 
-    return [y_int]
+    return y_int
 
 
 def gregory_newton(x, y, x_int):
@@ -79,7 +79,7 @@ def gregory_newton(x, y, x_int):
     for i in range(m - 2, -1, -1):
         y_int = y_int * (u - i) / (i + 1) + del_y[i]
 
-    return [y_int]
+    return y_int
 
 
 def neville(x, y, x_int):
@@ -106,4 +106,4 @@ def neville(x, y, x_int):
                        (x_int - x[i]) * q[i - 1, j - 1]) / (x[i] - x[i - j])
 
     y_int = q[n - 1, n - 1]
-    return [y_int, q]
+    return y_int, q

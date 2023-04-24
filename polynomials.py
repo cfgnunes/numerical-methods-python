@@ -28,7 +28,7 @@ def briot_ruffini(a, root):
 
     rest = b[n - 1] * root + a[n]
 
-    return [b, rest]
+    return b, rest
 
 
 def newton_divided_difference(x, y):
@@ -67,7 +67,7 @@ def newton_divided_difference(x, y):
             print(f"(x{(x[j] * -1):+.3f})", end="")
     print("")
 
-    return [f]
+    return f
 
 
 def root_limits(c):

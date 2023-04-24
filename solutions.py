@@ -49,7 +49,7 @@ def bisection(f, a, b, toler, iter_max):
         delta_x = delta_x / 2
 
     root = x
-    return [root, i, converged]
+    return root, i, converged
 
 
 def secant(f, a, b, toler, iter_max):
@@ -100,7 +100,7 @@ def secant(f, a, b, toler, iter_max):
         fa, fb = fb, fx
 
     root = x
-    return [root, i, converged]
+    return root, i, converged
 
 
 def regula_falsi(f, a, b, toler, iter_max):
@@ -153,7 +153,7 @@ def regula_falsi(f, a, b, toler, iter_max):
             fb = fx
 
     root = x
-    return [root, i, converged]
+    return root, i, converged
 
 
 def pegasus(f, a, b, toler, iter_max):
@@ -199,7 +199,7 @@ def pegasus(f, a, b, toler, iter_max):
         fb = fx
 
     root = x
-    return [root, i, converged]
+    return root, i, converged
 
 
 def muller(f, a, c, toler, iter_max):
@@ -262,7 +262,7 @@ def muller(f, a, c, toler, iter_max):
         fb = fx
 
     root = x
-    return [root, i, converged]
+    return root, i, converged
 
 
 def newton(f, df, x0, toler, iter_max):
@@ -301,4 +301,4 @@ def newton(f, df, x0, toler, iter_max):
             break
 
     root = x
-    return [root, i, converged]
+    return root, i, converged

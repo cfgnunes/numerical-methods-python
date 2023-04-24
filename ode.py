@@ -41,7 +41,7 @@ def euler(f, a, b, n, ya):
         vx[i] = x
         vy[i] = y
 
-    return [vx, vy]
+    return vx, vy
 
 
 def taylor2(f, df1, a, b, n, ya):
@@ -81,7 +81,7 @@ def taylor2(f, df1, a, b, n, ya):
         vx[i] = x
         vy[i] = y
 
-    return [vx, vy]
+    return vx, vy
 
 
 def taylor4(f, df1, df2, df3, a, b, n, ya):
@@ -124,7 +124,7 @@ def taylor4(f, df1, df2, df3, a, b, n, ya):
         vx[i] = x
         vy[i] = y
 
-    return [vx, vy]
+    return vx, vy
 
 
 def rk4(f, a, b, n, ya):
@@ -170,7 +170,7 @@ def rk4(f, a, b, n, ya):
         vx[i] = x
         vy[i] = y
 
-    return [vx, vy]
+    return vx, vy
 
 
 def rk4_system(f, a, b, n, ya):
@@ -224,4 +224,4 @@ def rk4_system(f, a, b, n, ya):
         vx[i + 1] = x
         vy[:, i + 1] = y
 
-    return [vx, vy]
+    return vx, vy
