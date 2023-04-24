@@ -28,7 +28,7 @@ def simpson(f, a, b, n):
             sum_odd += f(x)
 
     xi = h / 3 * (f(a) + 2 * sum_even + 4 * sum_odd + f(b))
-    return [xi]
+    return xi
 
 
 def trapezoidal(f, a, b, n):
@@ -52,7 +52,7 @@ def trapezoidal(f, a, b, n):
         sum_x += f(x)
 
     xi = h / 2 * (f(a) + 2 * sum_x + f(b))
-    return [xi]
+    return xi
 
 
 def simpson_array(x, y):
@@ -81,7 +81,7 @@ def simpson_array(x, y):
             sum_odd += y[i]
 
     xi = h / 3 * (y[0] + 2 * sum_even + 4 * sum_odd + y[n - 1])
-    return [xi]
+    return xi
 
 
 def trapezoidal_array(x, y):
@@ -106,7 +106,7 @@ def trapezoidal_array(x, y):
         sum_x += y[i]
 
     xi = h / 2 * (y[0] + 2 * sum_x + y[n - 1])
-    return [xi]
+    return xi
 
 
 def romberg(f, a, b, n):
@@ -143,4 +143,4 @@ def romberg(f, a, b, n):
             r[i, k] = r[i, k - 1] + \
                 (r[i, k - 1] - r[i - 1, k - 1]) / ((4**k) - 1)
 
-    return [float(r[n - 1, n - 1])]
+    return float(r[n - 1, n - 1])

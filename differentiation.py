@@ -34,7 +34,7 @@ def backward_difference(x, y):
             hx = x[i + 1] - x[i]
             dy[i] = dy_difference(hx, y[i], y[i + 1])
 
-    return [dy]
+    return dy
 
 
 def three_point(x, y):
@@ -72,7 +72,7 @@ def three_point(x, y):
         else:
             dy[i] = dy_mid(hx, y[i - 1], y[i + 1])
 
-    return [dy]
+    return dy
 
 
 def five_point(x, y):
@@ -111,4 +111,4 @@ def five_point(x, y):
         else:
             dy[i] = dy_mid(hx, y[i - 2], y[i - 1], y[i + 1], y[i + 2])
 
-    return [dy]
+    return dy

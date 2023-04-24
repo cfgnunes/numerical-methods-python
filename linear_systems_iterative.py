@@ -30,7 +30,7 @@ def jacobi(a, b, x0, toler, iter_max):
             break
         x0 = x.copy()
 
-    return [x, i]
+    return x, i
 
 
 def gauss_seidel(a, b, x0, toler, iter_max):
@@ -60,4 +60,4 @@ def gauss_seidel(a, b, x0, toler, iter_max):
             break
         x0 = x.copy()
 
-    return [x, i]
+    return x, i
