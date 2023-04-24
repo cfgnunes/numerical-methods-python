@@ -1,7 +1,7 @@
 """Methods for numerical integration."""
 
 
-def simpson(f, b, a, n):
+def simpson(f, a, b, n):
     """Calculate the integral from 1/3 Simpson's Rule.
 
     Args:
@@ -29,7 +29,7 @@ def simpson(f, b, a, n):
     return [xi]
 
 
-def trapezoidal(f, b, a, n):
+def trapezoidal(f, a, b, n):
     """Calculate the integral from the Trapezoidal Rule.
 
     Args:
