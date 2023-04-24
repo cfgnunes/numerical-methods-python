@@ -423,7 +423,7 @@ def example_trapezoidal():
     print(f"b = {b}")
     print(f"n = {n}")
 
-    [xi] = integration.trapezoidal(f, b, a, n)
+    [xi] = integration.trapezoidal(f, a, b, n)
 
     print("Output:")
     print(f"xi = {xi:.5f}")
@@ -462,7 +462,7 @@ def example_simpson():
     print(f"b = {b}")
     print(f"n = {n}")
 
-    [xi] = integration.simpson(f, b, a, n)
+    [xi] = integration.simpson(f, a, b, n)
 
     print("Output:")
     print(f"xi = {xi:.5f}")
