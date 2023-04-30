@@ -25,16 +25,16 @@ def limit_epsilon_delta(f, x, toler, iter_max):
         limit_low = f(x - delta)
         limit_up = f(x + delta)
 
-        if math.fabs(limit_low_prev - limit_low) <= toler \
-           and math.fabs(limit_up_prev - limit_up) <= toler \
-           and math.fabs(limit_up_prev - limit_low_prev) <= toler:
+        if math.fabs(limit_low - limit_low_prev) <= toler \
+           and math.fabs(limit_up - limit_up_prev) <= toler \
+           and math.fabs(limit_up - limit_low) <= toler:
             converged = True
             break
 
         limit_up_prev = limit_up
         limit_low_prev = limit_low
 
-    if limit_low * limit_up < 0 or math.fabs(limit_up - limit_low) > toler:
+    if math.fabs(limit_up - limit_low) > 10 * toler:
         raise ValueError("Two sided limit does not exist.")
 
     return limit_low, i, converged
