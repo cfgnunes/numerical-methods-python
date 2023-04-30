@@ -15,7 +15,7 @@ def limit_epsilon_delta(f, x, toler, iter_max):
     Returns:
         limit (float): the limit value.
     """
-    delta = 0.5
+    delta = 0.1
     limit_low_prev = -math.inf
     limit_up_prev = math.inf
 
