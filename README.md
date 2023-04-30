@@ -39,6 +39,10 @@ python3 main.py
 
 ## Implementations
 
+### Limits
+
+- Epsilon-delta method
+
 ### Solutions of equations
 
 - Bisection method

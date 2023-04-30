@@ -13,6 +13,7 @@ import numpy as np
 import differentiation
 import integration
 import interpolation
+import limits
 import linear_systems
 import linear_systems_iterative
 import ode
@@ -28,6 +29,30 @@ def print_docstring(func):
         print("\n")
         return result
     return wrapper
+
+
+@print_docstring
+def example_limit_epsilon_delta():
+    """Run an example 'Limits: epsilon-delta definition'."""
+    def f(x):
+        return math.sin(x) / x
+
+    x = 0
+    toler = 10 ** -5
+    iter_max = 100
+
+    print("Inputs:")
+    print(f"x = {x}")
+    print(f"toler = {toler}")
+    print(f"iter_max = {iter_max}")
+
+    print("Execution:")
+    limit, i, converged = limits.limit_epsilon_delta(f, x, toler, iter_max)
+
+    print("Output:")
+    print(f"limit = {limit:.5f}")
+    print(f"i = {i}")
+    print(f"converged = {converged}")
 
 
 @print_docstring
@@ -731,6 +756,9 @@ def example_gauss_seidel():
 def main():
     """Run the main function."""
     # Execute all examples
+
+    # Limits
+    example_limit_epsilon_delta()
 
     # Solutions of equations
     example_solution_bisection()
