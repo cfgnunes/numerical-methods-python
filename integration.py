@@ -65,7 +65,7 @@ def simpson_array(x, y):
     Returns:
         xi (float): numerical approximation of the definite integral.
     """
-    if y.size != y.size:
+    if x.size != y.size:
         raise ValueError("'x' and 'y' must have same size.")
 
     h = x[1] - x[0]
@@ -94,7 +94,7 @@ def trapezoidal_array(x, y):
     Returns:
         xi (float): numerical approximation of the definite integral.
     """
-    if y.size != y.size:
+    if x.size != y.size:
         raise ValueError("'x' and 'y' must have same size.")
 
     h = x[1] - x[0]
