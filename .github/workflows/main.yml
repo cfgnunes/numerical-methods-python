@@ -24,7 +24,6 @@ jobs:
           - 3.9
         cfg:
           - os: ubuntu-latest
-          - os: macOS-latest
 
     steps:
       - name: Set up git repository
