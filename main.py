@@ -327,10 +327,10 @@ def example_polynomial_root_limits():
     print("Inputs:")
     print(f"c = {c}")
 
-    limits = polynomials.root_limits(c)
+    root_limits = polynomials.root_limits(c)
 
     print("Output:")
-    print(f"limits = {limits}")
+    print(f"limits = {root_limits}")
 
 
 @print_docstring
