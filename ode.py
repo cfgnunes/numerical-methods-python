@@ -37,7 +37,7 @@ def euler(f, a, b, n, ya):
         y += h * fxy
 
         fxy = f(x, y)
-        print(f"i = {(i+1):03d},\tx = {x:+.4f},\ty = {y:+.4f}")
+        print(f"i = {(i + 1):03d},\tx = {x:+.4f},\ty = {y:+.4f}")
         vx[i] = x
         vy[i] = y
 
@@ -166,7 +166,7 @@ def rk4(f, a, b, n, ya):
         x = a + (i + 1) * h
         y += (k[0] + 2 * k[1] + 2 * k[2] + k[3]) / 6
 
-        print(f"i = {(i+1):03d},\tx = {x:+.4f},\ty = {y:+.4f}")
+        print(f"i = {(i + 1):03d},\tx = {x:+.4f},\ty = {y:+.4f}")
         vx[i] = x
         vy[i] = y
 
