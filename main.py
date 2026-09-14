@@ -226,7 +226,7 @@ def example_solution_newton():
         return 2 * x ** 3 - math.cos(x + 1) - 3
 
     def df(x):
-        return 12 * x ** 2 + 1 - math.sin(x)
+        return 6 * x ** 2 + math.sin(x + 1)
 
     x0 = 1.0
     toler = 0.01
