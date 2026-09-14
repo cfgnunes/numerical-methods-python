@@ -63,7 +63,7 @@ def newton_divided_difference(x, y):
     print(f"p(x)={f[0]:+.3f}", end="")
     for i in range(1, n):
         print(f"{f[i]:+.3f}", end="")
-        for j in range(1, i + 1):
+        for j in range(0, i):
             print(f"(x{(x[j] * -1):+.3f})", end="")
     print("")
 
