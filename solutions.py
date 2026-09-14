@@ -22,7 +22,7 @@ def bisection(f, a, b, toler, iter_max):
     fb = f(b)
 
     if fa * fb > 0:
-        raise ValueError("The function does not change signal at \
+        raise ValueError("The function does not change sign at \
               the ends of the given interval.")
 
     delta_x = math.fabs(b - a) / 2
@@ -122,7 +122,7 @@ def regula_falsi(f, a, b, toler, iter_max):
     fb = f(b)
 
     if fa * fb > 0:
-        raise ValueError("The function does not change signal at \
+        raise ValueError("The function does not change sign at \
               the ends of the given interval.")
 
     if fa > 0:
@@ -175,7 +175,7 @@ def pegasus(f, a, b, toler, iter_max):
     fb = f(b)
 
     if fa * fb > 0:
-        raise ValueError("The function does not change signal at \
+        raise ValueError("The function does not change sign at \
               the ends of the given interval.")
 
     x = b
@@ -275,7 +275,7 @@ def newton(f, df, x0, toler, iter_max):
 
     Args:
         f (function): equation f(x).
-        df (function): derivative of quation f(x).
+        df (function): derivative of equation f(x).
         x0 (float): initial guess.
         toler (float): tolerance (stopping criterion).
         iter_max (int): maximum number of iterations (stopping criterion).

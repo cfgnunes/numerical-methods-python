@@ -67,7 +67,7 @@ def example_solution_bisection():
     #   Cons:
     #       Slow convergence;
     #       It is necessary to enter a search interval [a, b];
-    #       The interval reported must have a signal exchange, f (a) * f (b)<0.
+    #       The interval reported must have a sign change, f(a) * f(b)<0.
 
     def f(x):
         return 2 * x ** 3 - math.cos(x + 1) - 3
@@ -456,7 +456,7 @@ def example_trapezoidal():
 
 @print_docstring
 def example_simpson_array():
-    """Run an example 'Integration: Composite 1/3 Simpsons Rule'."""
+    """Run an example 'Integration: Composite 1/3 Simpson's Rule'."""
     x = np.array([0, 6, 12, 18, 24, 30, 36, 42, 48, 54, 60, 66, 72, 78, 84])
     y = np.array([124, 134, 148, 156, 147, 133,
                   121, 109, 99, 85, 78, 89, 104, 116, 123])
@@ -473,7 +473,7 @@ def example_simpson_array():
 
 @print_docstring
 def example_simpson():
-    """Run an example 'Integration: Composite 1/3 Simpsons Rule'."""
+    """Run an example 'Integration: Composite 1/3 Simpson's Rule'."""
     def f(x):
         return x ** 2 * math.log(x ** 2 + 1)
 

@@ -4,7 +4,7 @@ import numpy as np
 
 
 def simpson(f, a, b, n):
-    """Calculate the integral from 1/3 Simpson's Rule.
+    """Calculate the integral using 1/3 Simpson's Rule.
 
     Args:
         f (function): the equation f(x).
@@ -32,7 +32,7 @@ def simpson(f, a, b, n):
 
 
 def trapezoidal(f, a, b, n):
-    """Calculate the integral from the Trapezoidal Rule.
+    """Calculate the integral using the Trapezoidal Rule.
 
     Args:
         f (function): the equation f(x).
@@ -56,7 +56,7 @@ def trapezoidal(f, a, b, n):
 
 
 def simpson_array(x, y):
-    """Calculate the integral from 1/3 Simpson's Rule.
+    """Calculate the integral using 1/3 Simpson's Rule.
 
     Args:
         x (numpy.ndarray): x values.
@@ -85,7 +85,7 @@ def simpson_array(x, y):
 
 
 def trapezoidal_array(x, y):
-    """Calculate the integral from the Trapezoidal Rule.
+    """Calculate the integral using the Trapezoidal Rule.
 
     Args:
         x (numpy.ndarray): x values.
@@ -110,7 +110,7 @@ def trapezoidal_array(x, y):
 
 
 def romberg(f, a, b, n):
-    """Calculate the integral from the Romberg method.
+    """Calculate the integral using the Romberg method.
 
     Args:
         f (function): the equation f(x).

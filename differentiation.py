@@ -6,7 +6,8 @@ import numpy as np
 def backward_difference(x, y):
     """Calculate the first derivative.
 
-    All values in 'x' must be equally spaced.
+    Uses a forward difference at the first point and backward differences
+    at the remaining points. Spacing in 'x' need not be uniform.
 
     Args:
         x (numpy.ndarray): x values.

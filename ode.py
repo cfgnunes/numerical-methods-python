@@ -9,11 +9,11 @@ def euler(f, a, b, n, ya):
     Solve the IVP from the Euler method.
 
     Args:
-        f (function): equation f(x).
+        f (function): equation f(x, y).
         a (float): the initial point.
         b (float): the final point.
         n (int): number of intervals.
-        ya (numpy.ndarray): initial values.
+        ya (float): initial value.
 
     Returns:
         vx (numpy.ndarray): x values.
@@ -50,12 +50,12 @@ def taylor2(f, df1, a, b, n, ya):
     Solve the IVP from the Taylor (Order Two) method.
 
     Args:
-        f (function): equation f(x).
-        df1 (function): 1's derivative of equation f(x).
+        f (function): equation f(x, y).
+        df1 (function): first derivative of equation f(x, y).
         a (float): the initial point.
         b (float): the final point.
         n (int): number of intervals.
-        ya (numpy.ndarray): initial values.
+        ya (float): initial value.
 
     Returns:
         vx (numpy.ndarray): x values.
@@ -90,14 +90,14 @@ def taylor4(f, df1, df2, df3, a, b, n, ya):
     Solve the IVP from the Taylor (Order Four) method.
 
     Args:
-        f (function): equation f(x).
-        df1 (function): 1's derivative of equation f(x).
-        df2 (function): 2's derivative of equation f(x).
-        df3 (function): 3's derivative of equation f(x).
+        f (function): equation f(x, y).
+        df1 (function): first derivative of equation f(x, y).
+        df2 (function): second derivative of equation f(x, y).
+        df3 (function): third derivative of equation f(x, y).
         a (float): the initial point.
         b (float): the final point.
         n (int): number of intervals.
-        ya (numpy.ndarray): initial values.
+        ya (float): initial value.
 
     Returns:
         vx (numpy.ndarray): x values.
@@ -133,11 +133,11 @@ def rk4(f, a, b, n, ya):
     Solve the IVP from the Runge-Kutta (Order Four) method.
 
     Args:
-        f (function): equation f(x).
+        f (function): equation f(x, y).
         a (float): the initial point.
         b (float): the final point.
         n (int): number of intervals.
-        ya (numpy.ndarray): initial values.
+        ya (float): initial value.
 
     Returns:
         vx (numpy.ndarray): x values.
@@ -179,7 +179,7 @@ def rk4_system(f, a, b, n, ya):
     Solve from Runge-Kutta (Order Four) method.
 
     Args:
-        f (numpy.ndarray): equations f(x).
+        f (sequence): equations f_j(x, y).
         a (float): the initial point.
         b (float): the final point.
         n (int): number of intervals.

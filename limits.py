@@ -1,4 +1,4 @@
-"""Methods for compute limits."""
+"""Methods for computing limits."""
 
 import math
 
@@ -14,6 +14,8 @@ def limit_epsilon_delta(f, x, toler, iter_max):
 
     Returns:
         limit (float): the limit value.
+        iter (int): number of iterations used by the method.
+        converged (boolean): flag to indicate if the limit was found.
     """
     delta = 0.1
     limit_low_prev = -math.inf

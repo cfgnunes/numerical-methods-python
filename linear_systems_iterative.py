@@ -14,7 +14,7 @@ def jacobi(a, b, x0, toler, iter_max):
         iter_max (int): maximum number of iterations (stopping criterion).
 
     Returns:
-        x (float): solution of linear the system.
+        x (numpy.ndarray): solution of the linear system.
         iter (int): number of iterations used by the method.
     """
     # D and M matrices
@@ -44,7 +44,7 @@ def gauss_seidel(a, b, x0, toler, iter_max):
         iter_max (int): maximum number of iterations (stopping criterion).
 
     Returns:
-        x (float): solution of linear the system.
+        x (numpy.ndarray): solution of the linear system.
         iter (int): number of iterations used by the method.
     """
     # L and U matrices

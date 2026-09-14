@@ -6,17 +6,17 @@ import numpy as np
 
 
 def briot_ruffini(a, root):
-    """Divide a polynomial by another polynomial.
+    """Divide a polynomial by the linear factor (x - root).
 
     The format is: P(x) = Q(x) * (x-root) + rest.
 
     Args:
         a (numpy.ndarray): the coefficients of the input polynomial.
-        root (float): one of the polynomial roots.
+        root (float): root of the linear divisor (x - root).
 
     Returns:
         b (numpy.ndarray): the coefficients of the output polynomial.
-        rest (float): polynomial division Rest.
+        rest (float): remainder of the polynomial division.
     """
     n = a.size - 1
     b = np.zeros(n)
@@ -93,7 +93,7 @@ def root_limits(c):
     t = n + 1
     c[t + 1] = 0
 
-    # If c[t+1] is null, then the polynomial is deflated.
+    # If c[t] is null, then the polynomial is deflated.
     while True:
         if c[t] != 0:
             break
@@ -114,7 +114,7 @@ def root_limits(c):
                 for j in range(t - 1, 0, -2):
                     c[j] = -c[j]
 
-        # If c[1] is negative, then all coefficients are swapped.
+        # If c[1] is negative, then all coefficients are negated.
         if c[1] < 0:
             for j in range(1, t + 1):
                 c[j] = -c[j]

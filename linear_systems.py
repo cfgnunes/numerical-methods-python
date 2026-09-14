@@ -13,7 +13,7 @@ def backward_substitution(upper, d):
         d (numpy.ndarray): d values.
 
     Returns:
-        x (float): solution of linear the system.
+        x (numpy.ndarray): solution of the linear system.
     """
     [n, m] = upper.shape
     b = d.astype(float)
@@ -41,7 +41,7 @@ def forward_substitution(lower, c):
         c (numpy.ndarray): c values.
 
     Returns:
-        x (float): solution of linear the system.
+        x (numpy.ndarray): solution of the linear system.
     """
     [n, m] = lower.shape
     b = c.astype(float)
