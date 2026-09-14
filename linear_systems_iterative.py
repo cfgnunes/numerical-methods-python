@@ -1,4 +1,4 @@
-"""Methods for Linear Systems."""
+"""Iterative Methods for Linear Systems."""
 
 import numpy as np
 

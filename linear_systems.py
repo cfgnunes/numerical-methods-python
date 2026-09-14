@@ -1,4 +1,4 @@
-"""Iterative Methods for Linear Systems."""
+"""Methods for Linear Systems."""
 
 import math
 
