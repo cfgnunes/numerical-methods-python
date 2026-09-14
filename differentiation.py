@@ -27,12 +27,12 @@ def backward_difference(x, y):
     n = x.size
     dy = np.zeros(n)
     for i in range(0, n):
-        if i == n - 1:
-            hx = x[i] - x[i - 1]
-            dy[i] = dy_difference(-hx, y[i], y[i - 1])
-        else:
+        if i == 0:
             hx = x[i + 1] - x[i]
             dy[i] = dy_difference(hx, y[i], y[i + 1])
+        else:
+            hx = x[i] - x[i - 1]
+            dy[i] = dy_difference(hx, y[i - 1], y[i])
 
     return dy
 
@@ -100,14 +100,22 @@ def five_point(x, y):
         return (1 / (12 * h)) * \
             (-25 * y0 + 48 * y1 - 36 * y2 + 16 * y3 - 3 * y4)
 
+    def dy_near(h, y0, y1, y2, y3, y4):
+        return (1 / (12 * h)) * \
+            (-3 * y0 - 10 * y1 + 18 * y2 - 6 * y3 + y4)
+
     hx = x[1] - x[0]
     n = x.size
     dy = np.zeros(n)
     for i in range(0, n):
-        if i in (0, 1):
+        if i == 0:
             dy[i] = dy_end(hx, y[i], y[i + 1], y[i + 2], y[i + 3], y[i + 4])
-        elif i in (n - 1, n - 2):
+        elif i == 1:
+            dy[i] = dy_near(hx, y[i - 1], y[i], y[i + 1], y[i + 2], y[i + 3])
+        elif i == n - 1:
             dy[i] = dy_end(-hx, y[i], y[i - 1], y[i - 2], y[i - 3], y[i - 4])
+        elif i == n - 2:
+            dy[i] = dy_near(-hx, y[i + 1], y[i], y[i - 1], y[i - 2], y[i - 3])
         else:
             dy[i] = dy_mid(hx, y[i - 2], y[i - 1], y[i + 1], y[i + 2])
 
