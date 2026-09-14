@@ -98,10 +98,11 @@ def gauss_elimination_pp(a, b):
 
         if p == n:
             print("Info: No unique solution.")
-        else:
-            if p != i:
-                # Swap rows
-                a[[i, p]] = a[[p, i]]
+            return a
+
+        if p != i:
+            # Swap rows
+            a[[i, p]] = a[[p, i]]
 
         for j in range(i + 1, n):
             a[j, :] = a[j, :] - a[i, :] * (a[j, i] / a[i, i])
