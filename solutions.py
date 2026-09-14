@@ -173,6 +173,11 @@ def pegasus(f, a, b, toler, iter_max):
     """
     fa = f(a)
     fb = f(b)
+
+    if fa * fb > 0:
+        raise ValueError("The function does not change signal at \
+              the ends of the given interval.")
+
     x = b
     fx = fb
 
