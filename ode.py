@@ -19,8 +19,8 @@ def euler(f, a, b, n, ya):
         vx (numpy.ndarray): x values.
         vy (numpy.ndarray): y values (solution of IVP).
     """
-    vx = np.zeros(n)
-    vy = np.zeros(n)
+    vx = np.zeros(n + 1)
+    vy = np.zeros(n + 1)
 
     h = (b - a) / n
     x = a
@@ -38,8 +38,8 @@ def euler(f, a, b, n, ya):
 
         fxy = f(x, y)
         print(f"i = {(i + 1):03d},\tx = {x:+.4f},\ty = {y:+.4f}")
-        vx[i] = x
-        vy[i] = y
+        vx[i + 1] = x
+        vy[i + 1] = y
 
     return vx, vy
 
@@ -61,8 +61,8 @@ def taylor2(f, df1, a, b, n, ya):
         vx (numpy.ndarray): x values.
         vy (numpy.ndarray): y values (solution of IVP).
     """
-    vx = np.zeros(n)
-    vy = np.zeros(n)
+    vx = np.zeros(n + 1)
+    vy = np.zeros(n + 1)
 
     h = (b - a) / n
     x = a
@@ -78,8 +78,8 @@ def taylor2(f, df1, a, b, n, ya):
         x = a + (i + 1) * h
 
         print(f"i = {(i + 1):03d},\tx = {x:+.4f},\ty = {y:+.4f}")
-        vx[i] = x
-        vy[i] = y
+        vx[i + 1] = x
+        vy[i + 1] = y
 
     return vx, vy
 
@@ -103,8 +103,8 @@ def taylor4(f, df1, df2, df3, a, b, n, ya):
         vx (numpy.ndarray): x values.
         vy (numpy.ndarray): y values (solution of IVP).
     """
-    vx = np.zeros(n)
-    vy = np.zeros(n)
+    vx = np.zeros(n + 1)
+    vy = np.zeros(n + 1)
 
     h = (b - a) / n
     x = a
@@ -121,8 +121,8 @@ def taylor4(f, df1, df2, df3, a, b, n, ya):
         x = a + (i + 1) * h
 
         print(f"i = {(i + 1):03d},\tx = {x:+.4f},\ty = {y:+.4f}")
-        vx[i] = x
-        vy[i] = y
+        vx[i + 1] = x
+        vy[i + 1] = y
 
     return vx, vy
 
@@ -143,8 +143,8 @@ def rk4(f, a, b, n, ya):
         vx (numpy.ndarray): x values.
         vy (numpy.ndarray): y values (solution of IVP).
     """
-    vx = np.zeros(n)
-    vy = np.zeros(n)
+    vx = np.zeros(n + 1)
+    vy = np.zeros(n + 1)
 
     h = (b - a) / n
     x = a
@@ -167,8 +167,8 @@ def rk4(f, a, b, n, ya):
         y += (k[0] + 2 * k[1] + 2 * k[2] + k[3]) / 6
 
         print(f"i = {(i + 1):03d},\tx = {x:+.4f},\ty = {y:+.4f}")
-        vx[i] = x
-        vy[i] = y
+        vx[i + 1] = x
+        vy[i + 1] = y
 
     return vx, vy
 
@@ -218,7 +218,7 @@ def rk4_system(f, a, b, n, ya):
         for j in range(0, m):
             k[3][j] = h * f[j](x + h, y + k[2])
 
-        x = a + i * h
+        x = a + (i + 1) * h
         y = y + (k[0] + 2 * k[1] + 2 * k[2] + k[3]) / 6
 
         vx[i + 1] = x
