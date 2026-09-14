@@ -87,8 +87,8 @@ def five_point(x, y):
     Returns:
         dy (numpy.ndarray): the first derivative values.
     """
-    if x.size < 6 or y.size < 6:
-        raise ValueError("'x' and 'y' arrays must have 6 values or more.")
+    if x.size < 5 or y.size < 5:
+        raise ValueError("'x' and 'y' arrays must have 5 values or more.")
 
     if x.size != y.size:
         raise ValueError("'x' and 'y' must have same size.")
