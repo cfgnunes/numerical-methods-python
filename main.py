@@ -56,7 +56,7 @@ def example_limit_epsilon_delta():
 @print_docstring
 def example_solution_bisection():
     """Run an example 'Solutions: Bisection'."""
-    # Algoritmos Numericos (Campos, 2ed), Chap. 6.2, Example 6.20, p. 290.
+    # Algoritmos Numericos (Campos, 2nd), Chap. 6.2, Example 6.20, p. 290.
     # Bisection method (find roots of an equation)
     #   Pros:
     #       It is a reliable method with guaranteed convergence;
@@ -94,7 +94,7 @@ def example_solution_bisection():
 @print_docstring
 def example_solution_secant():
     """Run an example 'Solutions: Secant'."""
-    # Algoritmos Numericos (Campos, 2ed), Chap. 6.3.1, Example 6.22, p. 293.
+    # Algoritmos Numericos (Campos, 2nd), Chap. 6.3.1, Example 6.22, p. 293.
     # Secant method (find roots of an equation)
     #   Pros:
     #       It is a fast method (slower than Newton's method);
@@ -132,7 +132,7 @@ def example_solution_secant():
 @print_docstring
 def example_solution_regula_falsi():
     """Run an example 'Solutions: Regula Falsi'."""
-    # Algoritmos Numericos (Campos, 2ed), Chap. 6.3.2, Example 6.23, p. 295.
+    # Algoritmos Numericos (Campos, 2nd), Chap. 6.3.2, Example 6.23, p. 295.
 
     def f(x):
         return 2 * x ** 3 - math.cos(x + 1) - 3
@@ -160,7 +160,7 @@ def example_solution_regula_falsi():
 @print_docstring
 def example_solution_pegasus():
     """Run an example 'Solutions: Pegasus'."""
-    # Algoritmos Numericos (Campos, 2ed), Chap. 6.3.3, Example 6.24, p. 298.
+    # Algoritmos Numericos (Campos, 2nd), Chap. 6.3.3, Example 6.24, p. 298.
 
     def f(x):
         return 2 * x ** 3 - math.cos(x + 1) - 3
@@ -188,7 +188,7 @@ def example_solution_pegasus():
 @print_docstring
 def example_solution_muller():
     """Run an example 'Solutions: Muller'."""
-    # Algoritmos Numericos (Campos, 2ed), Chap. 6.4.1, Example 6.26, p. 303.
+    # Algoritmos Numericos (Campos, 2nd), Chap. 6.4.1, Example 6.26, p. 303.
 
     def f(x):
         return 2 * x ** 3 - math.cos(x + 1) - 3
@@ -252,7 +252,7 @@ def example_solution_newton():
 @print_docstring
 def example_interpolation_lagrange():
     """Run an example 'Interpolation: Lagrange'."""
-    # Numerical Analysis (Burden, 9ed), Chap. 3.1, Example 2, p. 110.
+    # Numerical Analysis (Burden, 9th), Chap. 3.1, Example 2, p. 110.
     x = np.array([2, 11 / 4, 4])
     y = np.array([1 / 2, 4 / 11, 1 / 4])
     x_int = 3
@@ -271,7 +271,7 @@ def example_interpolation_lagrange():
 @print_docstring
 def example_interpolation_newton():
     """Run an example 'Interpolation: Newton'."""
-    # Algoritmos Numericos (Campos, 2ed), Chap. 3.3, Example 3.11, p. 137.
+    # Algoritmos Numericos (Campos, 2nd), Chap. 3.3, Example 3.11, p. 137.
     x = np.array([0.1, 0.3, 0.4, 0.6, 0.7])
     y = np.array([0.3162, 0.5477, 0.6325, 0.7746, 0.8367])
     x_int = 0.2
@@ -290,7 +290,7 @@ def example_interpolation_newton():
 @print_docstring
 def example_interpolation_gregory_newton():
     """Run an example 'Interpolation: Gregory-Newton'."""
-    # Algoritmos Numericos (Campos, 2ed), Chap. 3.4, Example 3.17, p. 143.
+    # Algoritmos Numericos (Campos, 2nd), Chap. 3.4, Example 3.17, p. 143.
     x = np.array([110, 120, 130])
     y = np.array([2.0410, 2.0790, 2.1140])
     x_int = 115
@@ -309,7 +309,7 @@ def example_interpolation_gregory_newton():
 @print_docstring
 def example_interpolation_neville():
     """Run an example 'Interpolation: Neville'."""
-    # Numerical Analysis (Burden, 9ed), Chap. 3.2, Example 2, p. 120.
+    # Numerical Analysis (Burden, 9th), Chap. 3.2, Example 2, p. 120.
     x = np.array([1.0, 1.3, 1.6, 1.9, 2.2])
     y = np.array([0.7651977, 0.6200860, 0.4554022, 0.2818186, 0.1103623])
     x_int = 1.5
@@ -329,7 +329,7 @@ def example_interpolation_neville():
 @print_docstring
 def example_polynomial_root_limits():
     """Run an example 'Polynomials: Root limits'."""
-    # Algoritmos Numericos (Campos, 2ed), Chap. 6.1, Example 6.13, p. 280.
+    # Algoritmos Numericos (Campos, 2nd), Chap. 6.1, Example 6.13, p. 280.
     c = np.array([1, 2, -13, -14, 24])
 
     print("Inputs:")
@@ -344,7 +344,7 @@ def example_polynomial_root_limits():
 @print_docstring
 def example_polynomial_briot_ruffini():
     """Run an example 'Polynomials: Briot-Ruffini'."""
-    # Numerical Analysis (Burden, 9ed), Chap. 2.6, Example 2, p. 93.
+    # Numerical Analysis (Burden, 9th), Chap. 2.6, Example 2, p. 93.
     a = np.array([2, 0, -3, 3, -4])
     root = -2
 
@@ -362,7 +362,7 @@ def example_polynomial_briot_ruffini():
 @print_docstring
 def example_polynomial_newton_divided_difference():
     """Run an example 'Polynomials: Newton's Divided-Difference'."""
-    # Numerical Analysis (Burden, 9ed), Chap. 3.3, Example 1, p. 127.
+    # Numerical Analysis (Burden, 9th), Chap. 3.3, Example 1, p. 127.
     x = np.array([1.0, 1.3, 1.6, 1.9, 2.2])
     y = np.array([0.7651977, 0.6200860, 0.4554022, 0.2818186, 0.1103623])
 
@@ -379,7 +379,7 @@ def example_polynomial_newton_divided_difference():
 @print_docstring
 def example_differentiation_backward_difference():
     """Run an example 'Differentiation: Backward-difference'."""
-    # Numerical Analysis (Burden, 9ed), Chap. 4.1, Exercise 1(b), p. 182.
+    # Numerical Analysis (Burden, 9th), Chap. 4.1, Exercise 1(b), p. 182.
     x = np.array([0.0, 0.2, 0.4])
     y = np.array([0.00000, 0.74140, 1.3718])
 
@@ -396,7 +396,7 @@ def example_differentiation_backward_difference():
 @print_docstring
 def example_differentiation_three_point():
     """Run an example 'Differentiation: Three-Point'."""
-    # Numerical Analysis (Burden, 9ed), Chap. 4.1, Exercise 5(a), p. 182.
+    # Numerical Analysis (Burden, 9th), Chap. 4.1, Exercise 5(a), p. 182.
     x = np.array([1.1, 1.2, 1.3, 1.4])
     y = np.array([9.025013, 11.02318, 13.46374, 16.44465])
 
@@ -413,7 +413,7 @@ def example_differentiation_three_point():
 @print_docstring
 def example_differentiation_five_point():
     """Run an example 'Differentiation: Five-Point'."""
-    # Numerical Analysis (Burden, 9ed), Chap. 4.1, Exercise 9(a), p. 183.
+    # Numerical Analysis (Burden, 9th), Chap. 4.1, Exercise 9(a), p. 183.
     x = np.array([2.1, 2.2, 2.3, 2.4, 2.5, 2.6])
     y = np.array([-1.709847, -1.373823, -1.119214,
                   -0.9160143, -0.7470223, -0.6015966])
@@ -431,7 +431,7 @@ def example_differentiation_five_point():
 @print_docstring
 def example_trapezoidal_array():
     """Run an example 'Integration: Trapezoidal Rule'."""
-    # Numerical Analysis (Burden, 9ed), Chap. 4.4, Exercise 22, p. 211.
+    # Numerical Analysis (Burden, 9th), Chap. 4.4, Exercise 22, p. 211.
     x = np.array([0, 6, 12, 18, 24, 30, 36, 42, 48, 54, 60, 66, 72, 78, 84])
     y = np.array([124, 134, 148, 156, 147, 133,
                   121, 109, 99, 85, 78, 89, 104, 116, 123])
@@ -449,7 +449,7 @@ def example_trapezoidal_array():
 @print_docstring
 def example_trapezoidal():
     """Run an example 'Integration: Trapezoidal Rule'."""
-    # Numerical Analysis (Burden, 9ed), Chap. 4.4, Exercise 7(a), p. 210.
+    # Numerical Analysis (Burden, 9th), Chap. 4.4, Exercise 7(a), p. 210.
     def f(x):
         return x ** 2 * math.log(x ** 2 + 1)
 
@@ -472,7 +472,7 @@ def example_trapezoidal():
 @print_docstring
 def example_simpson_array():
     """Run an example 'Integration: Composite 1/3 Simpson's Rule'."""
-    # Numerical Analysis (Burden, 9ed), Chap. 4.4, Exercise 22, p. 211.
+    # Numerical Analysis (Burden, 9th), Chap. 4.4, Exercise 22, p. 211.
     x = np.array([0, 6, 12, 18, 24, 30, 36, 42, 48, 54, 60, 66, 72, 78, 84])
     y = np.array([124, 134, 148, 156, 147, 133,
                   121, 109, 99, 85, 78, 89, 104, 116, 123])
@@ -490,7 +490,7 @@ def example_simpson_array():
 @print_docstring
 def example_simpson():
     """Run an example 'Integration: Composite 1/3 Simpson's Rule'."""
-    # Numerical Analysis (Burden, 9ed), Chap. 4.4, Exercise 7(b), p. 210.
+    # Numerical Analysis (Burden, 9th), Chap. 4.4, Exercise 7(b), p. 210.
     def f(x):
         return x ** 2 * math.log(x ** 2 + 1)
 
@@ -513,7 +513,7 @@ def example_simpson():
 @print_docstring
 def example_romberg():
     """Run an example 'Integration: Romberg method'."""
-    # Numerical Analysis (Burden, 9ed), Chap. 4.4, Exercise 7, p. 210.
+    # Numerical Analysis (Burden, 9th), Chap. 4.4, Exercise 7, p. 210.
     def f(x):
         return x ** 2 * math.log(x ** 2 + 1)
 
@@ -536,7 +536,7 @@ def example_romberg():
 @print_docstring
 def example_ode_euler():
     """Run an example 'ODE: Euler'."""
-    # Numerical Analysis (Burden, 9ed), Chap. 5.2, Example 1, p. 268.
+    # Numerical Analysis (Burden, 9th), Chap. 5.2, Example 1, p. 268.
     def f(x, y):
         return y - x ** 2 + 1
 
@@ -562,7 +562,7 @@ def example_ode_euler():
 @print_docstring
 def example_ode_taylor2():
     """Run an example 'ODE: Taylor (Order 2)'."""
-    # Numerical Analysis (Burden, 9ed), Chap. 5.3, Example 1(a), p. 278.
+    # Numerical Analysis (Burden, 9th), Chap. 5.3, Example 1(a), p. 278.
     def f(x, y):
         return y - x ** 2 + 1
 
@@ -591,7 +591,7 @@ def example_ode_taylor2():
 @print_docstring
 def example_ode_taylor4():
     """Run an example 'ODE: Taylor (Order 4)'."""
-    # Numerical Analysis (Burden, 9ed), Chap. 5.3, Example 1(b), p. 278.
+    # Numerical Analysis (Burden, 9th), Chap. 5.3, Example 1(b), p. 278.
     def f(x, y):
         return y - x ** 2 + 1
 
@@ -626,7 +626,7 @@ def example_ode_taylor4():
 @print_docstring
 def example_ode_rk4():
     """Run an example 'ODE: Runge-Kutta (Order 4)'."""
-    # Numerical Analysis (Burden, 9ed), Chap. 5.4, Example 3, p. 289.
+    # Numerical Analysis (Burden, 9th), Chap. 5.4, Example 3, p. 289.
     def f(x, y):
         return y - x ** 2 + 1
 
@@ -651,7 +651,7 @@ def example_ode_rk4():
 @print_docstring
 def example_ode_rk4_system():
     """Run an example 'ODE: Runge-Kutta (Order 4) for systems of diff. eq.'."""
-    # Numerical Analysis (Burden, 9ed), Chap. 5.9, Illustration, p. 331.
+    # Numerical Analysis (Burden, 9th), Chap. 5.9, Illustration, p. 331.
     f = []
     f.append(lambda x, y: - 4 * y[0] + 3 * y[1] + 6)
     f.append(lambda x, y: - 2.4 * y[0] + 1.6 * y[1] + 3.6)
@@ -680,7 +680,7 @@ def example_ode_rk4_system():
 @print_docstring
 def example_gauss_elimination_pp():
     """Run an example 'Linear Systems: Gaussian Elimination'."""
-    # Numerical Analysis (Burden, 9ed), Chap. 6.1, Example 2, p. 363.
+    # Numerical Analysis (Burden, 9th), Chap. 6.1, Example 2, p. 363.
     a = np.array([[1, -1, 2, -1], [2, -2, 3, -3], [1, 1, 1, 0], [1, -1, 4, 3]])
     b = np.array([-8, -20, -2, 4])
 
@@ -699,7 +699,7 @@ def example_gauss_elimination_pp():
 @print_docstring
 def example_backward_substitution(a):
     """Run an example 'Linear Systems: Backward Substitution'."""
-    # Numerical Analysis (Burden, 9ed), Chap. 6.1, Example 2, p. 363.
+    # Numerical Analysis (Burden, 9th), Chap. 6.1, Example 2, p. 363.
     upper = a[:, 0:-1]
     d = a[:, -1]
 
@@ -733,7 +733,7 @@ def example_forward_substitution():
 @print_docstring
 def example_jacobi():
     """Run an example 'Iterative Linear Systems: Jacobi'."""
-    # Numerical Analysis (Burden, 9ed), Chap. 7.3, Example 1, p. 451.
+    # Numerical Analysis (Burden, 9th), Chap. 7.3, Example 1, p. 451.
     a = np.array([[10, -1, 2, 0], [-1, 11, -1, 3],
                   [2, -1, 10, -1], [0, 3, -1, 8]])
     b = np.array([6, 25, -11, 15])
@@ -758,7 +758,7 @@ def example_jacobi():
 @print_docstring
 def example_gauss_seidel():
     """Run an example 'Iterative Linear Systems: Gauss-Seidel'."""
-    # Numerical Analysis (Burden, 9ed), Chap. 7.3, Example 2, p. 453.
+    # Numerical Analysis (Burden, 9th), Chap. 7.3, Example 2, p. 453.
     a = np.array([[10, -1, 2, 0], [-1, 11, -1, 3],
                   [2, -1, 10, -1], [0, 3, -1, 8]])
     b = np.array([6, 25, -11, 15])
