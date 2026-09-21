@@ -505,7 +505,7 @@ def example_simpson():
 @print_docstring
 def example_romberg():
     """Run an example 'Integration: Romberg method'."""
-    # Numerical Analysis (Burden, 9ed, 2010), Chap. 4.4, Exercise 7, p. 210; method in Chap. 4.5,.
+    # Numerical Analysis (Burden, 9ed, 2010), Chap. 4.4, Exercise 7, p. 210.
     def f(x):
         return x ** 2 * math.log(x ** 2 + 1)
 
