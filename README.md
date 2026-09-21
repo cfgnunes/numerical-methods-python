@@ -2,7 +2,7 @@
 
 Numerical methods implementation in Python.
 
-For the implementation in MATLAB, see [this repository](https://github.com/cfgnunes/numerical-methods-matlab).
+For the implementation in MATLAB/Octave, see [this repository](https://github.com/cfgnunes/numerical-methods-matlab).
 
 ## Getting Started
 
@@ -21,9 +21,9 @@ conda activate numerical-methods
 pip install -r requirements.txt
 ```
 
-#### Using Ubuntu
+#### Using Ubuntu/Debian
 
-This section assumes Ubuntu 18.04 (also tested on Ubuntu 22.04), but the procedure is similar for other Linux distributions.
+This section assumes an Ubuntu/Debian system, but the procedure is similar on other Linux distributions.
 
 ```sh
 sudo apt -y install python3-numpy
