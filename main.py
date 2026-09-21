@@ -371,7 +371,7 @@ def example_polynomial_newton_divided_difference():
 @print_docstring
 def example_differentiation_backward_difference():
     """Run an example 'Differentiation: Backward-difference'."""
-    # Numerical Analysis (Burden, 9ed, 2010), Chap. 4.1, Exercise 1, p. 182.
+    # Numerical Analysis (Burden, 9ed, 2010), Chap. 4.1, Exercise 1(b), p. 182.
     x = np.array([0.0, 0.2, 0.4])
     y = np.array([0.00000, 0.74140, 1.3718])
 
@@ -388,7 +388,7 @@ def example_differentiation_backward_difference():
 @print_docstring
 def example_differentiation_three_point():
     """Run an example 'Differentiation: Three-Point'."""
-    # Numerical Analysis (Burden, 9ed, 2010), Chap. 4.1, Exercise 5, p. 183.
+    # Numerical Analysis (Burden, 9ed, 2010), Chap. 4.1, Exercise 5(a), p. 182.
     x = np.array([1.1, 1.2, 1.3, 1.4])
     y = np.array([9.025013, 11.02318, 13.46374, 16.44465])
 
@@ -405,7 +405,7 @@ def example_differentiation_three_point():
 @print_docstring
 def example_differentiation_five_point():
     """Run an example 'Differentiation: Five-Point'."""
-    # Numerical Analysis (Burden, 9ed, 2010), Chap. 4.1, Exercise 7, p. 183.
+    # Numerical Analysis (Burden, 9ed, 2010), Chap. 4.1, Exercise 9(a), p. 183.
     x = np.array([2.1, 2.2, 2.3, 2.4, 2.5, 2.6])
     y = np.array([-1.709847, -1.373823, -1.119214,
                   -0.9160143, -0.7470223, -0.6015966])
@@ -423,7 +423,7 @@ def example_differentiation_five_point():
 @print_docstring
 def example_trapezoidal_array():
     """Run an example 'Integration: Trapezoidal Rule'."""
-    # Numerical Analysis (Burden, 9ed, 2010), Chap. 4.4, Exercise 22, p. 212.
+    # Numerical Analysis (Burden, 9ed, 2010), Chap. 4.4, Exercise 22, p. 211.
     x = np.array([0, 6, 12, 18, 24, 30, 36, 42, 48, 54, 60, 66, 72, 78, 84])
     y = np.array([124, 134, 148, 156, 147, 133,
                   121, 109, 99, 85, 78, 89, 104, 116, 123])
@@ -441,7 +441,7 @@ def example_trapezoidal_array():
 @print_docstring
 def example_trapezoidal():
     """Run an example 'Integration: Trapezoidal Rule'."""
-    # Numerical Analysis (Burden, 9ed, 2010), Chap. 4.4, Exercise 7, p. 210.
+    # Numerical Analysis (Burden, 9ed, 2010), Chap. 4.4, Exercise 7(a), p. 210.
     def f(x):
         return x ** 2 * math.log(x ** 2 + 1)
 
@@ -464,7 +464,7 @@ def example_trapezoidal():
 @print_docstring
 def example_simpson_array():
     """Run an example 'Integration: Composite 1/3 Simpson's Rule'."""
-    # Numerical Analysis (Burden, 9ed, 2010), Chap. 4.4, Exercise 22, p. 212.
+    # Numerical Analysis (Burden, 9ed, 2010), Chap. 4.4, Exercise 22, p. 211.
     x = np.array([0, 6, 12, 18, 24, 30, 36, 42, 48, 54, 60, 66, 72, 78, 84])
     y = np.array([124, 134, 148, 156, 147, 133,
                   121, 109, 99, 85, 78, 89, 104, 116, 123])
@@ -482,7 +482,7 @@ def example_simpson_array():
 @print_docstring
 def example_simpson():
     """Run an example 'Integration: Composite 1/3 Simpson's Rule'."""
-    # Numerical Analysis (Burden, 9ed, 2010), Chap. 4.4, Exercise 7, p. 210.
+    # Numerical Analysis (Burden, 9ed, 2010), Chap. 4.4, Exercise 7(b), p. 210.
     def f(x):
         return x ** 2 * math.log(x ** 2 + 1)
 
@@ -618,7 +618,7 @@ def example_ode_taylor4():
 @print_docstring
 def example_ode_rk4():
     """Run an example 'ODE: Runge-Kutta (Order 4)'."""
-    # Numerical Analysis (Burden, 9ed, 2010), Chap. 5.4, Example 3, p. 288.
+    # Numerical Analysis (Burden, 9ed, 2010), Chap. 5.4, Example 3, p. 289.
     def f(x, y):
         return y - x ** 2 + 1
 
@@ -750,7 +750,7 @@ def example_jacobi():
 @print_docstring
 def example_gauss_seidel():
     """Run an example 'Iterative Linear Systems: Gauss-Seidel'."""
-    # Numerical Analysis (Burden, 9ed, 2010), Chap. 7.3, Example 2, p. 454.
+    # Numerical Analysis (Burden, 9ed, 2010), Chap. 7.3, Example 2, p. 453.
     a = np.array([[10, -1, 2, 0], [-1, 11, -1, 3],
                   [2, -1, 10, -1], [0, 3, -1, 8]])
     b = np.array([6, 25, -11, 15])
