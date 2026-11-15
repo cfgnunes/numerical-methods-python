@@ -23,8 +23,6 @@ pip install -r requirements.txt
 
 #### Using Ubuntu/Debian
 
-This section assumes an Ubuntu/Debian system, but the procedure is similar on other Linux distributions.
-
 ```sh
 sudo apt -y install python3-numpy
 ```
