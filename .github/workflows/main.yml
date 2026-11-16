@@ -12,9 +12,10 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v7
 
-    - name: Set up Miniconda
-      uses: conda-incubator/setup-miniconda@v3
+    - name: Set up Conda
+      uses: conda-incubator/setup-miniconda@v4
       with:
+        miniforge-version: latest
         activate-environment: numerical-methods
         environment-file: environment.yml
 

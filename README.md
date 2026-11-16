@@ -15,12 +15,6 @@ conda env create
 conda activate numerical-methods
 ```
 
-#### Using Pip
-
-```sh
-pip install -r requirements.txt
-```
-
 #### Using Ubuntu/Debian
 
 ```sh
